@@ -16,9 +16,9 @@ Para sustentar o termo **especulação**, porém, será necessário provar pelo 
 
 1. **escassez administrada** de terrenos, gavetas, ossuários ou jazigos;
 2. **valorização sistemática** dos direitos de uso em determinados cemitérios;
-3. **conversão de permanência em receita**, por manutenção, renovação, transferência ou novas cessões;
+3. **conversão de permanência em receita**, por manutenção, renovação ou novas cessões;
 4. **recuperação e recomercialização de espaços** após abandono, extinção da cessão ou exumação;
-5. **mercado secundário, intermediação ou circulação econômica** de direitos funerários;
+5. intermediação econômica formal ou informal de direitos e serviços funerários;
 6. relação entre localização urbana, prestígio simbólico, patrimônio funerário e preço.
 
 Sem esses elementos, a formulação mais segura é **estratificação necroimobiliária** ou **segmentação territorial do mercado funerário**.
@@ -117,7 +117,52 @@ Evolução real das tarifas de cessão e manutenção, procura, disponibilidade 
 
 Distância e tempo de viagem entre o distrito de origem da família e o cemitério de destino, preferencialmente por transporte coletivo.
 
-## 5. Cautelas
+## 5. Evidências institucionais já localizadas
+
+### 5.1. Escassez formalmente reconhecida
+
+A Resolução SFMSP nº 17/2001 previa a suspensão de novas cessões quando se esgotassem os terrenos disponíveis em uma necrópole. A escassez do solo funerário, portanto, já era uma categoria administrativa explícita antes da concessão privada.
+
+A Resolução SFMSP nº 18/2016 determinou a publicação semanal dos terrenos disponíveis e das outorgas expedidas. Isso mostra uma oferta controlada, inventariada e alocada administrativamente.
+
+### 5.2. Conversão física do espaço funerário
+
+A Resolução SFMSP nº 45/2006 transformou a quadra geral A-29 do Cemitério São Pedro em quadra de concessão. O ato mencionava a procura por terrenos e a existência de apenas quatro unidades disponíveis.
+
+Em 2011, nova fase da mesma quadra foi liberada, criando 64 terrenos para concessão. Atos de 2011 e 2012 também converteram espaços residuais nos cemitérios da Penha e da Lapa em novas unidades concedíveis, justificando a medida pela demanda existente.
+
+Esses atos constituem evidência histórica de **produção administrativa de solo funerário comercializável**, inclusive pela transformação de espaços antes gerais ou não concedidos.
+
+### 5.3. Extinção, desocupação e nova cessão
+
+O Decreto Municipal nº 59.196/2020 prevê que abandono, ruína, inadimplência ou descumprimento das condições podem extinguir o direito ao sepulcro. Após a retirada dos materiais e a destinação dos restos mortais, a sepultura ou o ossuário pode receber novos direitos de uso.
+
+Há, portanto, um circuito jurídico possível:
+
+`cessão → cobrança de manutenção → inadimplência ou abandono → exumação/remoção → desocupação → nova cessão`.
+
+Esse circuito demonstra **recirculação econômica e administrativa do espaço cemiterial**, mas ainda não prova que as concessionárias produzam artificialmente escassez ou pratiquem especulação.
+
+### 5.4. Limite ao conceito de propriedade privada
+
+Desde o Ato nº 326/1932, as concessões funerárias não podem ser objeto de transação comercial ou transferência comum. O regime atual também trata o sepulcro como direito de uso regulado, não como propriedade imobiliária plena.
+
+Por isso, “necroimobiliário” é uma analogia sociológica fundada em localização, escassez, preço, duração, manutenção e reconcessão. Não significa que jazigos públicos sejam imóveis privados livremente negociáveis.
+
+### 5.5. Um documento-chave ainda ausente
+
+A Portaria SMSO nº 1/2018 determinou uma recontagem completa por cemitério e por quadra, incluindo:
+
+- concessões por prazo indeterminado;
+- concessões por cinco e 25 anos;
+- terrenos de três anos em terra;
+- gavetas construídas;
+- ossuários, columbários e salas de velório;
+- levantamentos planimétricos.
+
+O relatório produzido em resposta a essa Portaria é uma fonte prioritária. Ele permitiria medir a proporção de espaços permanentes e temporários em cada cemitério antes da concessão.
+
+## 6. Cautelas
 
 - IPVS do entorno não equivale ao perfil social dos mortos.
 - Local de óbito não equivale a residência.
@@ -125,14 +170,18 @@ Distância e tempo de viagem entre o distrito de origem da família e o cemitér
 - Categoria tarifária não equivale automaticamente a prestígio percebido.
 - Tarifa regulada não prova especulação por si só.
 - Escassez física não prova manipulação deliberada da oferta.
+- A proibição de comércio formal não elimina mercados informais, mas estes precisam ser demonstrados empiricamente.
 - A expressão “apartheid post mortem” pode ser usada como conceito crítico, mas os resultados empíricos devem ser apresentados com linguagem mensurável e auditável.
 
-## 6. Fontes oficiais iniciais
+## 7. Fontes oficiais iniciais
 
 - Fundação Seade — IPVS 2022, bases cartográficas e anexo metodológico.
 - GeoSampa — cemitérios, setores censitários, distritos e indicadores sociais.
 - Secretaria Municipal da Saúde — TabNet, SIM e PRO-AIM.
 - Prefeitura de São Paulo — edital, contratos, política tarifária e legislação cemiterial.
 - SP Regula — gratuidade, fiscalização, tarifas e concessionárias.
+- Resoluções SFMSP nº 17/2001, 45/2006, 31/2011, 34/2011, 5/2012 e 18/2016.
+- Portaria SMSO nº 1/2018.
+- Decreto Municipal nº 59.196/2020.
 
 A reportagem “Geografia das mortes na cidade de São Paulo”, publicada pelo Le Monde Diplomatique Brasil em 2020, será usada como **fonte de hipóteses e relatos**, não como comprovação independente de percentuais, fluxos ou regras atuais.

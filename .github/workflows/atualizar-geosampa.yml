@@ -5,7 +5,9 @@ on:
   push:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/fetch_geosampa_contexto.py"
       - "scripts/build_cemiterios_concessao.py"
+      - "scripts/build_interactive_map.py"
       - "data/reference/cemiterios_crematorio.csv"
       - "data/reference/geosampa_mapping.csv"
       - ".github/workflows/atualizar-geosampa.yml"
@@ -16,7 +18,7 @@ permissions:
 jobs:
   coletar-e-processar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
 
     steps:
       - name: Baixar repositório
@@ -28,22 +30,28 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: python -m pip install --upgrade pip pyproj shapely
+        run: python -m pip install --upgrade pip pyproj shapely folium
 
-      - name: Consultar WFS do GeoSampa
+      - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
+
+      - name: Consultar distritos e subprefeituras
+        run: python scripts/fetch_geosampa_contexto.py
 
       - name: Filtrar equipamentos da concessão e calcular centroides
         run: python scripts/build_cemiterios_concessao.py
+
+      - name: Gerar mapa interativo
+        run: python scripts/build_interactive_map.py
 
       - name: Registrar produtos atualizados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/processed
+          git add data/raw/geosampa data/processed maps/cemiterios_concessao_interativo.html
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados do GeoSampa."
           else
-            git commit -m "Atualiza polígonos e centroides da concessão"
+            git commit -m "Atualiza dados e mapa interativo da concessão"
             git push
           fi

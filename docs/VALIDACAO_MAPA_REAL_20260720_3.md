@@ -1,0 +1,1 @@
+Execução de teste do pipeline cartográfico.

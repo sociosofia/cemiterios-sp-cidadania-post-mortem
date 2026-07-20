@@ -1,6 +1,6 @@
 # Cemitérios de São Paulo — cidadania post mortem
 
-Dados, mapas e rotinas reproduzíveis para analisar tarifas, gratuidade e desigualdade socioespacial nos cemitérios públicos concedidos do município de São Paulo.
+Dados, mapas e rotinas reproduzíveis para analisar tarifas, gratuidade, permanência e desigualdade socioespacial nos cemitérios públicos concedidos do Município de São Paulo.
 
 ![Mapa dos estratos tarifários e destinos gratuitos](maps/mapa_estratos_gratuidade.png)
 
@@ -19,6 +19,35 @@ O mapa utiliza:
 
 Os marcadores estão posicionados nos **centroides geométricos** dos polígonos e não representam portões ou entradas. Os pontos de acesso público serão construídos como uma camada separada.
 
+## Resultado descritivo de centro e periferia
+
+Tomando o centroide geométrico do distrito Sé como referência analítica:
+
+| Estrato tarifário | Média de distância | Mediana |
+|---:|---:|---:|
+| 1 | 5,0 km | 4,6 km |
+| 2 | 10,1 km | 9,6 km |
+| 3 | 20,7 km | 20,3 km |
+| 4 | 13,0 km | 11,0 km |
+
+Os cinco destinos ordinários de sepultamento gratuito por hipossuficiência pertencem aos estratos 3 ou 4. Eles apresentam distância média de **15,9 km** e mediana de **17,2 km** em relação à referência central. Nos demais cemitérios, a média é **10,9 km** e a mediana, **8,6 km**.
+
+O resultado demonstra uma distribuição territorial desigual dos equipamentos e dos destinos gratuitos. Ainda não demonstra, isoladamente, o perfil social das pessoas enterradas em cada local nem mede distância viária, tempo de viagem ou acessibilidade por transporte coletivo.
+
+A tabela completa e as limitações estão em [`docs/RESULTADOS_PRELIMINARES.md`](docs/RESULTADOS_PRELIMINARES.md).
+
+## Eixo analítico: cidadania post mortem
+
+O projeto investiga cinco dimensões mensuráveis:
+
+1. **acesso econômico:** quanto custa conseguir sepultar alguém;
+2. **localização:** onde os diferentes regimes tarifários e destinos gratuitos estão situados;
+3. **acessibilidade:** quanto a família precisa se deslocar e quais meios de transporte possui;
+4. **permanência:** por quanto tempo o morto permanece identificado e localizado;
+5. **memória:** quais condições materiais existem para registro, visita e continuidade dos vínculos.
+
+O plano analítico e seus limites de inferência estão em [`docs/PLANO_ANALISE_SOCIOESPACIAL.md`](docs/PLANO_ANALISE_SOCIOESPACIAL.md).
+
 ## Arquivos principais
 
 ### Inventários documentais
@@ -33,7 +62,8 @@ Os marcadores estão posicionados nos **centroides geométricos** dos polígonos
 - [`data/processed/cemiterios_concessao_4326.geojson`](data/processed/cemiterios_concessao_4326.geojson) — polígonos para mapas web;
 - [`data/processed/cemiterios_concessao_centroides.csv`](data/processed/cemiterios_concessao_centroides.csv) — área, perímetro e centroides;
 - [`data/processed/distritos_4326.geojson`](data/processed/distritos_4326.geojson) — limites distritais;
-- [`data/processed/subprefeituras_4326.geojson`](data/processed/subprefeituras_4326.geojson) — limites das subprefeituras.
+- [`data/processed/subprefeituras_4326.geojson`](data/processed/subprefeituras_4326.geojson) — limites das subprefeituras;
+- [`data/processed/distancias_centroide_se.csv`](data/processed/distancias_centroide_se.csv) — indicador preliminar de centralidade.
 
 ### Mapas
 
@@ -47,6 +77,8 @@ A tarifa indicada no inventário é a tarifa **avulsa de sepultamento ou inumaç
 
 A gratuidade também não é uma categoria tarifária. O campo correspondente identifica os destinos oficialmente disponibilizados para sepultamentos gratuitos por hipossuficiência; doadores de órgãos possuem regra específica que pode permitir sepultamento em qualquer cemitério público.
 
+O perfil socioeconômico do território onde está um cemitério não equivale ao perfil individual das pessoas enterradas nele. Para testar a distribuição social efetiva dos mortos, serão necessários registros administrativos anonimizados de origem, modalidade de atendimento e destino.
+
 ## Automação
 
 O workflow do GitHub Actions:
@@ -58,21 +90,24 @@ O workflow do GitHub Actions:
 5. dissolve feições múltiplas do mesmo equipamento;
 6. calcula área, perímetro e centroides;
 7. baixa distritos e subprefeituras;
-8. recria os mapas estático e interativo.
+8. coleta agregados do Censo 2022 no nível correspondente aos 96 distritos paulistanos;
+9. extrai o anexo contratual sobre tratamento de ossadas;
+10. recria os mapas estático e interativo.
 
 ## Próximas etapas
 
 - localizar e validar os portões de acesso público;
 - georreferenciar as 40 agências funerárias;
-- associar cada equipamento a distrito e subprefeitura;
-- medir distâncias e tempos de deslocamento;
-- cruzar os estratos com renda, raça/cor e vulnerabilidade territorial;
-- reconstruir o fluxo após o prazo dos sepultamentos temporários.
+- integrar renda e composição racial dos territórios;
+- medir distâncias e tempos de deslocamento pela rede;
+- reconstruir documentalmente o fluxo após o prazo dos sepultamentos temporários;
+- buscar registros anonimizados de origem e destino dos sepultamentos.
 
 ## Fontes principais
 
 - Prefeitura de São Paulo — edital, contratos e anexos da concessão;
 - SP Regula — endereços, concessionárias, agências, gratuidades e tarifas;
-- GeoSampa — camadas geográficas municipais, sob licença CC BY-SA 4.0.
+- GeoSampa — camadas geográficas municipais, sob licença CC BY-SA 4.0;
+- IBGE — Censo Demográfico 2022.
 
 A metodologia completa está em [`docs/METODOLOGIA.md`](docs/METODOLOGIA.md).

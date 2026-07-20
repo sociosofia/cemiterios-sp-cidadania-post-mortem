@@ -1,0 +1,25 @@
+id_equipamento,feature_id_geosampa,observacoes
+cem_consolacao,equipamento_cemiterio.160034,
+cem_quarta_parada,equipamento_cemiterio.160026,
+cem_santana,equipamento_cemiterio.160025,
+cem_tremembe,equipamento_cemiterio.160030,
+cem_vila_formosa_i,equipamento_cemiterio.160038,
+cem_vila_formosa_ii,equipamento_cemiterio.160037,
+cem_vila_mariana,equipamento_cemiterio.160021,
+cem_araca,equipamento_cemiterio.160022,
+cem_dom_bosco,equipamento_cemiterio.160031,
+cem_santo_amaro,equipamento_cemiterio.160020,
+cem_sao_paulo,equipamento_cemiterio.160023,
+cem_vila_nova_cachoeirinha,equipamento_cemiterio.160032,
+cem_campo_grande,equipamento_cemiterio.160019,
+cem_lageado,equipamento_cemiterio.160039,Primeira feição do equipamento; será dissolvida com a segunda.
+cem_lageado,equipamento_cemiterio.160040,Segunda feição do equipamento; será dissolvida com a primeira.
+cem_lapa,equipamento_cemiterio.160033,
+cem_parelheiros,equipamento_cemiterio.160018,
+cem_saudade,equipamento_cemiterio.160028,O endereço cadastrado no GeoSampa difere do endereço de atendimento publicado pela SP Regula.
+cem_freguesia_do_o,equipamento_cemiterio.160024,O bairro e o CEP da feição devem ser tratados com cautela; o polígono foi associado pelo nome e endereço do equipamento.
+cem_itaquera,equipamento_cemiterio.160027,
+cem_penha,equipamento_cemiterio.160029,
+cem_sao_luiz,equipamento_cemiterio.160035,
+cem_sao_pedro,equipamento_cemiterio.160041,
+crem_vila_alpina,equipamento_cemiterio.160042,A camada denomina a feição Vila Alpina e a classifica genericamente como cemitério; no contrato é o crematório.

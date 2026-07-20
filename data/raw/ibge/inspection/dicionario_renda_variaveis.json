@@ -1,0 +1,87 @@
+{
+  "generated_at_utc": "2026-07-20T20:16:21.649910+00:00",
+  "source_url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios_Rendimento_do_Responsavel/dicionario_de_dados_renda_responsavel_20260508.xlsx",
+  "variables_requested": [
+    "PERE0115_NOVA",
+    "V06001",
+    "V06002",
+    "V06003",
+    "V06004",
+    "V06005",
+    "V06006"
+  ],
+  "matches": [
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 2,
+      "variables": [
+        "V06001"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06001",
+        "Pessoas responsáveis em domicílios particulares permanentes ocupados"
+      ]
+    },
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 3,
+      "variables": [
+        "V06002"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06002",
+        "Moradores em domicílios particulares permanentes ocupados"
+      ]
+    },
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 4,
+      "variables": [
+        "V06003"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06003",
+        "Variância do número de moradores em domicílios particulares permanentes ocupados"
+      ]
+    },
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 5,
+      "variables": [
+        "V06004"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06004",
+        "Valor do rendimento nominal médio mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados"
+      ]
+    },
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 6,
+      "variables": [
+        "V06005"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06005",
+        "Variância do rendimento nominal mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados"
+      ]
+    },
+    {
+      "sheet": "Dicionário Renda Responsável",
+      "row": 7,
+      "variables": [
+        "V06006"
+      ],
+      "values": [
+        "Renda do Responsável",
+        "V06006",
+        "Valor do rendimento nominal mediano mensal das pessoas responsáveis com rendimentos por domicílios particulares permanentes ocupados"
+      ]
+    }
+  ]
+}

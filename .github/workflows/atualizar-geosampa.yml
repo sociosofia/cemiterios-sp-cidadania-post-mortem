@@ -1,4 +1,4 @@
-name: Atualizar camada de cemitérios do GeoSampa
+name: Atualizar dados territoriais dos cemitérios
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
+      - "scripts/inspect_ibge_district_data.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
       - "scripts/analyze_center_periphery.py"
@@ -21,7 +22,7 @@ permissions:
 jobs:
   coletar-e-processar:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 18
 
     steps:
       - name: Baixar repositório
@@ -40,6 +41,9 @@ jobs:
 
       - name: Consultar distritos e subprefeituras
         run: python scripts/fetch_geosampa_contexto.py
+
+      - name: Inspecionar agregados distritais do Censo 2022
+        run: python scripts/inspect_ibge_district_data.py
 
       - name: Filtrar equipamentos da concessão e calcular centroides
         run: python scripts/build_cemiterios_concessao.py
@@ -60,10 +64,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/processed maps docs/RESULTADOS_PRELIMINARES.md
+          git add data/raw/geosampa data/raw/ibge data/processed maps docs/RESULTADOS_PRELIMINARES.md
           if git diff --cached --quiet; then
-            echo "Nenhuma alteração nos dados do GeoSampa."
+            echo "Nenhuma alteração nos dados territoriais."
           else
-            git commit -m "Atualiza dados, indicadores territoriais e mapas"
+            git commit -m "Atualiza dados do GeoSampa e inventário distrital do Censo 2022"
             git push
           fi

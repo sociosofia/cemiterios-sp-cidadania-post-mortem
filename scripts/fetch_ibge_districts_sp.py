@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Coleta agregados do Censo 2022 para os 96 distritos de São Paulo.
 
-A rotina usa arquivos temáticos explícitos, evitando selecionar por engano
-arquivos de populações específicas. Preserva amostras e códigos para auditoria.
+Os arquivos temáticos são descobertos no índice oficial do IBGE para evitar
+quebras causadas por datas ou sufixos acrescentados aos nomes dos ZIPs.
 """
 
 from __future__ import annotations
@@ -11,6 +11,8 @@ import csv
 import io
 import json
 import re
+import unicodedata
+import urllib.parse
 import urllib.request
 import zipfile
 from collections import Counter
@@ -24,20 +26,14 @@ UA = "cemiterios-sp-cidadania-post-mortem/1.0"
 MUNICIPIO_COMPLETO = "3550308"
 MUNICIPIO_RAIZ = "355030"
 
+DISTRICT_DIRECTORY = (
+    "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/"
+    "Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/"
+)
 RENDA = (
     "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/"
     "Agregados_por_Setores_Censitarios_Rendimento_do_Responsavel/"
     "Agregados_por_distritos_renda_responsavel_BR_20260508_csv.zip"
-)
-RACA = (
-    "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/"
-    "Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/"
-    "Agregados_por_distritos_cor_ou_raca_BR.zip"
-)
-BASICO = (
-    "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/"
-    "Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/"
-    "Agregados_por_distritos_basico_BR_20260520.zip"
 )
 
 
@@ -45,6 +41,32 @@ def get(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(request, timeout=180) as response:
         return response.read()
+
+
+def normalize(value: object) -> str:
+    text = unicodedata.normalize("NFKD", str(value or ""))
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    return re.sub(r"[^A-Z0-9]+", "", text.upper())
+
+
+def directory_zips() -> list[str]:
+    html = get(DISTRICT_DIRECTORY).decode("utf-8", errors="replace")
+    links = re.findall(r'href=["\']([^"\']+\.zip)["\']', html, re.I)
+    return sorted({urllib.parse.urljoin(DISTRICT_DIRECTORY, link) for link in links})
+
+
+def choose(urls: list[str], required: tuple[str, ...], excluded: tuple[str, ...] = ()) -> str:
+    candidates = []
+    for url in urls:
+        name = normalize(Path(urllib.parse.urlparse(url).path).name)
+        if all(normalize(token) in name for token in required) and not any(
+            normalize(token) in name for token in excluded
+        ):
+            candidates.append(url)
+    if not candidates:
+        raise RuntimeError(f"Nenhum arquivo encontrado para os termos: {required}")
+    dated = [url for url in candidates if re.search(r"20\d{6}", url)]
+    return sorted(dated or candidates)[-1]
 
 
 def decode(raw: bytes) -> tuple[str, str]:
@@ -79,7 +101,7 @@ def extract(url: str, prefix: str) -> dict:
         reader = csv.DictReader(io.StringIO(text), delimiter=delimiter)
         fields = list(reader.fieldnames or [])
         code_column = next(
-            (c for c in fields if re.sub(r"[^A-Z0-9]", "", c.upper()) in {"CDDIST", "CDDISTRITO"}),
+            (c for c in fields if normalize(c) in {"CDDIST", "CDDISTRITO"}),
             None,
         )
         all_rows = list(reader)
@@ -118,14 +140,20 @@ def extract(url: str, prefix: str) -> dict:
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     META.mkdir(parents=True, exist_ok=True)
+    urls = directory_zips()
+    race_url = choose(urls, ("cor", "raca"), ("indigena", "quilombola"))
+    basic_url = choose(urls, ("basico",))
     result = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "geographic_level": "distrito",
         "municipality_code_full": MUNICIPIO_COMPLETO,
         "municipality_code_root": MUNICIPIO_RAIZ,
+        "directory": DISTRICT_DIRECTORY,
+        "available_zips": urls,
+        "resolved_urls": {"income": RENDA, "race": race_url, "basic": basic_url},
         "income": extract(RENDA, "renda_responsavel"),
-        "race": extract(RACA, "cor_ou_raca"),
-        "basic": extract(BASICO, "basico"),
+        "race": extract(race_url, "cor_ou_raca"),
+        "basic": extract(basic_url, "basico"),
         "validation_rule": (
             "A coleta só será integrada ao mapa se retornar 96 distritos e se os nomes "
             "forem conciliados de modo auditável com o GeoSampa."

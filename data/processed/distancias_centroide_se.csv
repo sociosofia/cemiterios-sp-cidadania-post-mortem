@@ -1,0 +1,24 @@
+id_equipamento,nome_oficial,tipo,categoria_tarifaria,destino_gratuidade_hipossuficiencia,modalidade_gratuita,distrito_principal,subprefeitura_principal,distancia_centroide_distrito_se_km,metodo_distancia
+cem_consolacao,Cemitério da Consolação,cemiterio,1,False,,CONSOLACAO,SE,2.667,euclidiana_entre_centroides_EPSG_31983
+cem_vila_mariana,Cemitério Vila Mariana,cemiterio,1,False,,VILA MARIANA,VILA MARIANA,3.557,euclidiana_entre_centroides_EPSG_31983
+cem_araca,Cemitério do Araçá,cemiterio,1,False,,CONSOLACAO,SE,4.091,euclidiana_entre_centroides_EPSG_31983
+cem_quarta_parada,Cemitério da Quarta Parada,cemiterio,1,False,,BELEM,MOOCA,5.087,euclidiana_entre_centroides_EPSG_31983
+cem_sao_paulo,Cemitério São Paulo,cemiterio,1,False,,PINHEIROS,PINHEIROS,5.569,euclidiana_entre_centroides_EPSG_31983
+cem_santana,Cemitério Santana (Chora Menino),cemiterio,2,False,,SANTANA,SANTANA-TUCURUVI,5.686,euclidiana_entre_centroides_EPSG_31983
+crem_vila_alpina,Crematório Vila Alpina,crematorio,,True,cremacao,VILA PRUDENTE,VILA PRUDENTE,7.929,euclidiana_entre_centroides_EPSG_31983
+cem_sao_pedro,Cemitério São Pedro,cemiterio,2,False,,VILA PRUDENTE,VILA PRUDENTE,8.342,euclidiana_entre_centroides_EPSG_31983
+cem_vila_nova_cachoeirinha,Cemitério Vila Nova Cachoeirinha,cemiterio,3,False,,CACHOEIRINHA,CASA VERDE-LIMAO-CACHOEIRINHA,8.499,euclidiana_entre_centroides_EPSG_31983
+cem_freguesia_do_o,Cemitério da Freguesia do Ó,cemiterio,2,False,,FREGUESIA DO O,FREGUESIA-BRASILANDIA,8.646,euclidiana_entre_centroides_EPSG_31983
+cem_lapa,Cemitério da Lapa,cemiterio,1,False,,VILA LEOPOLDINA,LAPA,9.279,euclidiana_entre_centroides_EPSG_31983
+cem_penha,Cemitério da Penha,cemiterio,2,False,,PENHA,PENHA,9.621,euclidiana_entre_centroides_EPSG_31983
+cem_tremembe,Cemitério do Tremembé,cemiterio,2,False,,TREMEMBE,JACANA-TREMEMBE,10.493,euclidiana_entre_centroides_EPSG_31983
+cem_vila_formosa_i,Cemitério Vila Formosa I,cemiterio,4,True,sepultamento,CARRAO,ARICANDUVA-FORMOSA-CARRAO,10.647,euclidiana_entre_centroides_EPSG_31983
+cem_vila_formosa_ii,Cemitério Vila Formosa II,cemiterio,4,True,sepultamento,CARRAO,ARICANDUVA-FORMOSA-CARRAO,10.991,euclidiana_entre_centroides_EPSG_31983
+cem_santo_amaro,Cemitério Santo Amaro,cemiterio,2,False,,SANTO AMARO,SANTO AMARO,13.582,euclidiana_entre_centroides_EPSG_31983
+cem_campo_grande,Cemitério Campo Grande,cemiterio,2,False,,CAMPO GRANDE,SANTO AMARO,14.418,euclidiana_entre_centroides_EPSG_31983
+cem_sao_luiz,Cemitério São Luiz,cemiterio,4,True,sepultamento,JARDIM SAO LUIS,M BOI MIRIM,17.219,euclidiana_entre_centroides_EPSG_31983
+cem_itaquera,Cemitério de Itaquera,cemiterio,3,False,,PARQUE DO CARMO,ITAQUERA,18.155,euclidiana_entre_centroides_EPSG_31983
+cem_saudade,Cemitério da Saudade,cemiterio,3,True,sepultamento,SAO MIGUEL,SAO MIGUEL,19.879,euclidiana_entre_centroides_EPSG_31983
+cem_dom_bosco,Cemitério Dom Bosco,cemiterio,3,True,sepultamento,PERUS,PERUS-ANHANGUERA,20.683,euclidiana_entre_centroides_EPSG_31983
+cem_lageado,Cemitério do Lageado,cemiterio,3,False,,LAJEADO,GUAIANASES,24.107,euclidiana_entre_centroides_EPSG_31983
+cem_parelheiros,Cemitério de Parelheiros,cemiterio,3,False,,PARELHEIROS,PARELHEIROS,32.747,euclidiana_entre_centroides_EPSG_31983

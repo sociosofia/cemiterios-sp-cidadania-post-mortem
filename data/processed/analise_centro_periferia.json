@@ -1,0 +1,56 @@
+{
+  "generated_at_utc": "2026-07-20T17:49:06.064054+00:00",
+  "central_reference": "centroide geométrico do distrito Sé",
+  "central_reference_x_31983": 333473.496,
+  "central_reference_y_31983": 7394899.116,
+  "distance_method": "distância euclidiana entre centroides em EPSG:31983",
+  "categories": {
+    "1": {
+      "count": 6,
+      "mean_km": 5.042,
+      "median_km": 4.589,
+      "minimum_km": 2.667,
+      "maximum_km": 9.279
+    },
+    "2": {
+      "count": 7,
+      "mean_km": 10.113,
+      "median_km": 9.621,
+      "minimum_km": 5.686,
+      "maximum_km": 14.418
+    },
+    "3": {
+      "count": 6,
+      "mean_km": 20.678,
+      "median_km": 20.281,
+      "minimum_km": 8.499,
+      "maximum_km": 32.747
+    },
+    "4": {
+      "count": 3,
+      "mean_km": 12.952,
+      "median_km": 10.991,
+      "minimum_km": 10.647,
+      "maximum_km": 17.219
+    }
+  },
+  "free_burial_destinations": {
+    "count": 5,
+    "mean_km": 15.884,
+    "median_km": 17.219,
+    "minimum_km": 10.647,
+    "maximum_km": 20.683
+  },
+  "other_cemeteries": {
+    "count": 17,
+    "mean_km": 10.856,
+    "median_km": 8.646,
+    "minimum_km": 2.667,
+    "maximum_km": 32.747
+  },
+  "limitations": [
+    "Não representa distância viária nem tempo de deslocamento.",
+    "O centroide do distrito Sé é uma referência analítica, não uma definição única de centro urbano.",
+    "Os centroides dos cemitérios não representam portões de acesso."
+  ]
+}

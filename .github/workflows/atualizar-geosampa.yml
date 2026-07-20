@@ -11,6 +11,7 @@ on:
       - "scripts/fetch_ossuary_annex.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
+      - "scripts/build_socioeconomic_context.py"
       - "scripts/analyze_center_periphery.py"
       - "scripts/build_interactive_map.py"
       - "scripts/build_static_map.py"
@@ -59,6 +60,9 @@ jobs:
       - name: Associar distritos e subprefeituras por área
         run: python scripts/spatial_join_admin.py
 
+      - name: Integrar renda e composição racial do contexto distrital
+        run: python scripts/build_socioeconomic_context.py
+
       - name: Calcular indicadores de centro e periferia
         run: python scripts/analyze_center_periphery.py
 
@@ -72,10 +76,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/contracts data/processed maps docs/RESULTADOS_PRELIMINARES.md
+          git add data/raw/geosampa data/raw/ibge data/raw/contracts data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza GeoSampa, Censo 2022, dicionários e anexo de ossadas"
+            git commit -m "Atualiza GeoSampa, Censo 2022 e contexto socioeconômico"
             git push
           fi

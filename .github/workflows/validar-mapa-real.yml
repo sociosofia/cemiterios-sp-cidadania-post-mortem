@@ -1,0 +1,48 @@
+name: Validar mapa real da rede funerária
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/geocode_agencias.py"
+      - "scripts/build_network_map.py"
+      - "data/reference/agencias_funerarias.csv"
+      - ".github/workflows/validar-mapa-real.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  mapa-real:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências mínimas
+        run: python -m pip install --upgrade pip pyproj shapely matplotlib adjustText
+
+      - name: Geocodificar agências
+        run: python scripts/geocode_agencias.py
+
+      - name: Gerar mapa real
+        run: python scripts/build_network_map.py
+
+      - name: Publicar mapa e auditoria
+        uses: actions/upload-artifact@v4
+        with:
+          name: mapa-real-rede-funeraria
+          if-no-files-found: error
+          path: |
+            maps/mapa_rede_funeraria_real.png
+            maps/mapa_rede_funeraria_real.svg
+            data/processed/agencias_geocodificadas.csv
+            data/processed/agencias_geocodificadas_4326.geojson
+            docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
+            docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md

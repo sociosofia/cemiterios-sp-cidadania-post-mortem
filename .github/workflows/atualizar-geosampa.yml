@@ -8,6 +8,9 @@ on:
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/fetch_ibge_districts_sp.py"
       - "scripts/extract_ibge_income_dictionary.py"
+      - "scripts/fetch_ipvs_2022.py"
+      - "scripts/build_ipvs_context.py"
+      - "scripts/inspect_sim_mortality.py"
       - "scripts/fetch_ossuary_annex.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
@@ -25,7 +28,7 @@ permissions:
 jobs:
   coletar-e-processar:
     runs-on: ubuntu-latest
-    timeout-minutes: 22
+    timeout-minutes: 35
 
     steps:
       - name: Baixar repositório
@@ -37,7 +40,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl
+        run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl pyshp dbfread
 
       - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
@@ -51,6 +54,12 @@ jobs:
       - name: Extrair dicionário oficial das variáveis de renda
         run: python scripts/extract_ibge_income_dictionary.py
 
+      - name: Coletar e filtrar o IPVS 2022 para o Município de São Paulo
+        run: python scripts/fetch_ipvs_2022.py
+
+      - name: Inspecionar estrutura do SIM sem persistir microdados
+        run: python scripts/inspect_sim_mortality.py
+
       - name: Extrair anexo contratual sobre tratamento de ossadas
         run: python scripts/fetch_ossuary_annex.py
 
@@ -62,6 +71,9 @@ jobs:
 
       - name: Integrar renda e composição racial do contexto distrital
         run: python scripts/build_socioeconomic_context.py
+
+      - name: Calcular o IPVS no entorno dos cemitérios
+        run: python scripts/build_ipvs_context.py
 
       - name: Calcular indicadores de centro e periferia
         run: python scripts/analyze_center_periphery.py
@@ -76,10 +88,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/contracts data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md
+          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza GeoSampa, Censo 2022 e contexto socioeconômico"
+            git commit -m "Atualiza GeoSampa, Censo 2022, IPVS, SIM e contexto socioespacial"
             git push
           fi

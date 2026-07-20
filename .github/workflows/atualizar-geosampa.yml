@@ -7,6 +7,7 @@ on:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/build_cemiterios_concessao.py"
+      - "scripts/spatial_join_admin.py"
       - "scripts/build_interactive_map.py"
       - "scripts/build_static_map.py"
       - "data/reference/cemiterios_crematorio.csv"
@@ -42,6 +43,9 @@ jobs:
       - name: Filtrar equipamentos da concessão e calcular centroides
         run: python scripts/build_cemiterios_concessao.py
 
+      - name: Associar distritos e subprefeituras por área
+        run: python scripts/spatial_join_admin.py
+
       - name: Gerar mapa interativo
         run: python scripts/build_interactive_map.py
 
@@ -56,6 +60,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados do GeoSampa."
           else
-            git commit -m "Atualiza dados e mapas da concessão"
+            git commit -m "Atualiza dados, contexto administrativo e mapas"
             git push
           fi

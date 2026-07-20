@@ -7,6 +7,7 @@ on:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/fetch_ibge_districts_sp.py"
+      - "scripts/extract_ibge_income_dictionary.py"
       - "scripts/fetch_ossuary_annex.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
@@ -35,7 +36,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf
+        run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl
 
       - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
@@ -45,6 +46,9 @@ jobs:
 
       - name: Coletar renda e cor ou raça nos 96 distritos paulistanos
         run: python scripts/fetch_ibge_districts_sp.py
+
+      - name: Extrair dicionário oficial das variáveis de renda
+        run: python scripts/extract_ibge_income_dictionary.py
 
       - name: Extrair anexo contratual sobre tratamento de ossadas
         run: python scripts/fetch_ossuary_annex.py
@@ -72,6 +76,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza GeoSampa, distritos do Censo 2022 e anexo de ossadas"
+            git commit -m "Atualiza GeoSampa, Censo 2022, dicionários e anexo de ossadas"
             git push
           fi

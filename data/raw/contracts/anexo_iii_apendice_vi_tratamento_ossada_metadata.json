@@ -1,0 +1,11 @@
+{
+  "captured_at_utc": "2026-07-20T20:02:23.569021+00:00",
+  "source_page": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/340988",
+  "source_pdf": "https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/desestatizacao/cemiterios-publicos/contratos/10._Anexo_III___Apendice_VI___Tratamento_de_Ossada_v22.pdf",
+  "document": "Anexo III — Apêndice VI — Tratamento de Ossada",
+  "bytes": 228412,
+  "sha256": "f1f6171c1e53c750f77c66108a4cab9c6b814a0b34e96c720d09c05db3fc67fc",
+  "pages": 10,
+  "text_output": "data/raw/contracts/anexo_iii_apendice_vi_tratamento_ossada.txt",
+  "preservation_note": "O PDF original não é versionado no repositório. O hash permite conferir se futuras coletas correspondem ao mesmo arquivo."
+}

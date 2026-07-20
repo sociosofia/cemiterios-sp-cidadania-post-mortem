@@ -6,7 +6,7 @@ on:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
-      - "scripts/fetch_ibge_subdistricts.py"
+      - "scripts/fetch_ibge_districts_sp.py"
       - "scripts/fetch_ossuary_annex.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
@@ -44,7 +44,7 @@ jobs:
         run: python scripts/fetch_geosampa_contexto.py
 
       - name: Coletar renda e cor ou raça nos 96 distritos paulistanos
-        run: python scripts/fetch_ibge_subdistricts.py
+        run: python scripts/fetch_ibge_districts_sp.py
 
       - name: Extrair anexo contratual sobre tratamento de ossadas
         run: python scripts/fetch_ossuary_annex.py
@@ -72,6 +72,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza GeoSampa, Censo 2022 e anexo de tratamento de ossadas"
+            git commit -m "Atualiza GeoSampa, distritos do Censo 2022 e anexo de ossadas"
             git push
           fi

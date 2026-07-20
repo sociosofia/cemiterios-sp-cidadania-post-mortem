@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-07-20T19:50:06.563976+00:00",
+  "label": "Agregados distritais — rendimento do responsável",
+  "source_url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios_Rendimento_do_Responsavel/Agregados_por_distritos_renda_responsavel_BR_20260508_csv.zip",
+  "zip_size_bytes": 331760,
+  "members_total": 1,
+  "tabular_members_inspected": 1,
+  "files": [
+    {
+      "member": "Agregados_por_distritos_renda_responsavel_BR.csv",
+      "delimiter": ";",
+      "columns": [
+        "CD_DIST",
+        "NM_DIST",
+        "PERE0115_NOVA",
+        "V06001",
+        "V06002",
+        "V06003",
+        "V06004",
+        "V06005",
+        "V06006"
+      ],
+      "geographic_columns_detected": {
+        "municipality_code": null,
+        "municipality_name": null,
+        "district_code": "CD_DIST",
+        "district_name": "NM_DIST"
+      },
+      "sao_paulo_row_count": 0,
+      "sao_paulo_samples": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "generated_at_utc": "2026-07-20T19:50:06.564670+00:00",
+  "universe_directory": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/",
+  "universe_zip_resolved": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/Agregados_por_distritos_pessoas_quilombolas_BR.zip",
+  "income_zip": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios_Rendimento_do_Responsavel/Agregados_por_distritos_renda_responsavel_BR_20260508_csv.zip",
+  "municipality_filter": {
+    "code": "3550308",
+    "name": "SAO PAULO"
+  },
+  "note": "Inventário exploratório. A seleção de indicadores será feita somente após conferência do dicionário oficial do IBGE."
+}

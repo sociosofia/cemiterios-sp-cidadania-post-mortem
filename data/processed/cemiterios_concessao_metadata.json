@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-07-20T17:37:03.167239+00:00",
+  "source_crs": "EPSG:31983",
+  "web_crs": "EPSG:4326",
+  "equipment_count": 23,
+  "source_feature_count_used": 24,
+  "source_feature_count_total": 46,
+  "notes": [
+    "A camada WFS contém cemitérios fora do escopo da concessão; o produto filtrado usa somente as associações auditadas em data/reference/geosampa_mapping.csv.",
+    "Feições múltiplas do mesmo equipamento são dissolvidas em uma única geometria.",
+    "Centroides são derivados analíticos e não representam acessos públicos."
+  ]
+}

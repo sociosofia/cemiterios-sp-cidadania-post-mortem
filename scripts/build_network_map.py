@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Gera mapa cartográfico real da rede funerária concedida de São Paulo."""
+"""Gera mapa cartográfico real da rede funerária concedida de São Paulo.
+
+A execução em pull request é usada como teste de regressão cartográfica.
+"""
 
 from __future__ import annotations
 
@@ -49,7 +52,7 @@ SHORT_NAMES = {
     "Cemitério São Paulo": "São Paulo",
     "Cemitério Vila Nova Cachoeirinha": "V. N. Cachoeirinha",
     "Cemitério Campo Grande": "Campo Grande",
-    "Cemitério do Lageado": "Lajeado",
+    "Cemitério do Lageado": "Lageado",
     "Cemitério da Lapa": "Lapa",
     "Cemitério de Parelheiros": "Parelheiros",
     "Cemitério da Saudade": "Saudade",

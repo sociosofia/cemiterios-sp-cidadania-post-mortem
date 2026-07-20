@@ -12,13 +12,16 @@ on:
       - "scripts/build_ipvs_context.py"
       - "scripts/inspect_sim_mortality.py"
       - "scripts/fetch_ossuary_annex.py"
+      - "scripts/geocode_agencias.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
       - "scripts/build_socioeconomic_context.py"
       - "scripts/analyze_center_periphery.py"
       - "scripts/build_interactive_map.py"
       - "scripts/build_static_map.py"
+      - "scripts/build_network_map.py"
       - "data/reference/cemiterios_crematorio.csv"
+      - "data/reference/agencias_funerarias.csv"
       - "data/reference/geosampa_mapping.csv"
       - ".github/workflows/atualizar-geosampa.yml"
 
@@ -78,20 +81,39 @@ jobs:
       - name: Calcular indicadores de centro e periferia
         run: python scripts/analyze_center_periphery.py
 
+      - name: Geocodificar agências funerárias
+        run: python scripts/geocode_agencias.py
+
       - name: Gerar mapa interativo
         run: python scripts/build_interactive_map.py
 
-      - name: Gerar mapa estático
+      - name: Gerar mapa estático dos estratos
         run: python scripts/build_static_map.py
+
+      - name: Gerar mapa real da rede funerária
+        run: python scripts/build_network_map.py
+
+      - name: Publicar artefato cartográfico e metodológico
+        uses: actions/upload-artifact@v4
+        with:
+          name: mapa-rede-funeraria-e-metodologia
+          if-no-files-found: error
+          path: |
+            maps/mapa_rede_funeraria_real.png
+            maps/mapa_rede_funeraria_real.svg
+            data/processed/agencias_geocodificadas.csv
+            data/processed/agencias_geocodificadas_4326.geojson
+            docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
+            docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md
 
       - name: Registrar produtos atualizados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md
+          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza GeoSampa, Censo 2022, IPVS, SIM e contexto socioespacial"
+            git commit -m "Atualiza mapa real, agências e contexto socioespacial"
             git push
           fi

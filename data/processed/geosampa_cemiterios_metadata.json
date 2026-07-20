@@ -1,0 +1,16 @@
+{
+  "captured_at_utc": "2026-07-20T17:34:42.985966+00:00",
+  "source": "GeoSampa — Prefeitura do Município de São Paulo",
+  "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aequipamento_cemiterio&outputFormat=application%2Fjson&srsName=EPSG%3A31983",
+  "layer": "geoportal:equipamento_cemiterio",
+  "source_crs": "EPSG:31983",
+  "derived_crs": "EPSG:4326",
+  "feature_count": 46,
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "notes": [
+    "A geometria bruta é preservada em data/raw/geosampa.",
+    "A transformação para EPSG:4326 usa pyproj com always_xy=True.",
+    "A camada do GeoSampa é uma fonte espacial; nomes e vínculos contratuais serão confrontados com o inventário documental."
+  ]
+}

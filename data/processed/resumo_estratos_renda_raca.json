@@ -1,0 +1,101 @@
+{
+  "generated_at_utc": "2026-07-20T20:22:09.834477+00:00",
+  "unit": "cemiterio_associado_ao_distrito_de_maior_area_de_intersecao",
+  "all_burial_cemeteries": {
+    "n_equipamentos": 22,
+    "n_distritos_unicos": 20,
+    "renda_mediana_distritos_media": 4304.590909090909,
+    "renda_mediana_distritos_mediana": 3500.0,
+    "renda_media_distritos_media": 6340.676363636364,
+    "proporcao_preta_parda_media": 0.33983886768174004,
+    "proporcao_preta_parda_mediana": 0.3120293108907442
+  },
+  "free_burial_destinations": {
+    "n_equipamentos": 5,
+    "n_distritos_unicos": 4,
+    "renda_mediana_distritos_media": 2560.0,
+    "renda_mediana_distritos_mediana": 2000.0,
+    "renda_media_distritos_media": 3826.3199999999997,
+    "proporcao_preta_parda_media": 0.41801833114254033,
+    "proporcao_preta_parda_mediana": 0.4989744223402941
+  },
+  "other_burial_cemeteries": {
+    "n_equipamentos": 17,
+    "n_distritos_unicos": 16,
+    "renda_mediana_distritos_media": 4817.705882352941,
+    "renda_mediana_distritos_mediana": 3800.0,
+    "renda_media_distritos_media": 7080.19294117647,
+    "proporcao_preta_parda_media": 0.31684490784032826,
+    "proporcao_preta_parda_mediana": 0.27944034201321416
+  },
+  "free_burial_unique_districts": {
+    "n_equipamentos": 4,
+    "n_distritos_unicos": 4,
+    "renda_mediana_distritos_media": 2325.0,
+    "renda_mediana_distritos_mediana": 2000.0,
+    "renda_media_distritos_media": 3356.2775,
+    "proporcao_preta_parda_media": 0.46414696319428594,
+    "proporcao_preta_parda_mediana": 0.5248872728498921,
+    "unidade": "distrito_unico"
+  },
+  "other_unique_districts": {
+    "n_equipamentos": 16,
+    "n_distritos_unicos": 16,
+    "renda_mediana_distritos_media": 4650.0625,
+    "renda_mediana_distritos_mediana": 3650.0,
+    "renda_media_distritos_media": 6826.82875,
+    "proporcao_preta_parda_media": 0.32696099329363126,
+    "proporcao_preta_parda_mediana": 0.3120293108907442,
+    "unidade": "distrito_unico"
+  },
+  "by_tariff_category": {
+    "1": {
+      "n_equipamentos": 6,
+      "n_distritos_unicos": 5,
+      "renda_mediana_distritos_media": 7733.333333333333,
+      "renda_mediana_distritos_mediana": 7750.0,
+      "renda_media_distritos_media": 10957.175000000001,
+      "proporcao_preta_parda_media": 0.17532355508463168,
+      "proporcao_preta_parda_mediana": 0.15498754058748018
+    },
+    "2": {
+      "n_equipamentos": 7,
+      "n_distritos_unicos": 7,
+      "renda_mediana_distritos_media": 4071.5714285714284,
+      "renda_mediana_distritos_mediana": 3500.0,
+      "renda_media_distritos_media": 6366.161428571429,
+      "proporcao_preta_parda_media": 0.301787321271184,
+      "proporcao_preta_parda_mediana": 0.27944034201321416
+    },
+    "3": {
+      "n_equipamentos": 6,
+      "n_distritos_unicos": 6,
+      "renda_mediana_distritos_media": 1800.0,
+      "renda_mediana_distritos_mediana": 1900.0,
+      "renda_media_distritos_media": 2509.186666666667,
+      "proporcao_preta_parda_media": 0.545280899929881,
+      "proporcao_preta_parda_mediana": 0.5310885923436341
+    },
+    "4": {
+      "n_equipamentos": 3,
+      "n_distritos_unicos": 2,
+      "renda_mediana_distritos_media": 3000.0,
+      "renda_mediana_distritos_mediana": 3500.0,
+      "renda_media_distritos_media": 4711.193333333334,
+      "proporcao_preta_parda_media": 0.3467723700043057,
+      "proporcao_preta_parda_mediana": 0.23350380293555775
+    }
+  },
+  "methodological_warning": "O perfil distrital descreve a localização do equipamento. Não permite concluir, sem dados de origem e destino, o perfil socioeconômico individual dos usuários.",
+  "income_variables": {
+    "V06004": "rendimento nominal médio mensal do responsável com rendimento",
+    "V06006": "rendimento nominal mediano mensal do responsável com rendimento"
+  },
+  "race_variables": {
+    "branca": "V01317",
+    "preta": "V01318",
+    "amarela": "V01319",
+    "parda": "V01320",
+    "indigena": "V01321"
+  }
+}

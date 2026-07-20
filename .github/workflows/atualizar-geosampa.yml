@@ -8,6 +8,7 @@ on:
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/build_interactive_map.py"
+      - "scripts/build_static_map.py"
       - "data/reference/cemiterios_crematorio.csv"
       - "data/reference/geosampa_mapping.csv"
       - ".github/workflows/atualizar-geosampa.yml"
@@ -30,7 +31,7 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: python -m pip install --upgrade pip pyproj shapely folium
+        run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText
 
       - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
@@ -44,14 +45,17 @@ jobs:
       - name: Gerar mapa interativo
         run: python scripts/build_interactive_map.py
 
+      - name: Gerar mapa estático
+        run: python scripts/build_static_map.py
+
       - name: Registrar produtos atualizados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/processed maps/cemiterios_concessao_interativo.html
+          git add data/raw/geosampa data/processed maps
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados do GeoSampa."
           else
-            git commit -m "Atualiza dados e mapa interativo da concessão"
+            git commit -m "Atualiza dados e mapas da concessão"
             git push
           fi

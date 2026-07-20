@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Coleta renda e cor ou raça para os 96 recortes internos de São Paulo.
+"""Coleta renda e cor ou raça para os recortes internos de São Paulo.
 
-No IBGE, os 96 distritos administrativos da Prefeitura correspondem ao nível
-``subdistrito``. Por isso a filtragem usa ``CD_SUBDIST`` e não somente
-``CD_DIST``.
+O script primeiro registra amostras brutas dos códigos territoriais. A filtragem
+municipal aceita o código IBGE completo (3550308) e a raiz sem dígito verificador
+(355030), pois os agregados podem empregar códigos hierárquicos diferentes.
 """
 
 from __future__ import annotations
@@ -16,13 +16,15 @@ import unicodedata
 import urllib.parse
 import urllib.request
 import zipfile
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "raw" / "ibge" / "subdistritos_sp"
 META = ROOT / "data" / "raw" / "ibge" / "inspection"
-MUNICIPIO = "3550308"
+MUNICIPIO_COMPLETO = "3550308"
+MUNICIPIO_RAIZ = "355030"
 UA = "cemiterios-sp-cidadania-post-mortem/1.0"
 
 BASE = (
@@ -79,6 +81,11 @@ def decode(raw: bytes) -> tuple[str, str]:
     return text, delimiter
 
 
+def belongs_to_sao_paulo(code: str) -> bool:
+    digits = re.sub(r"\D", "", code)
+    return digits.startswith(MUNICIPIO_COMPLETO) or digits.startswith(MUNICIPIO_RAIZ)
+
+
 def filter_zip(url: str, prefix: str) -> dict:
     archive_bytes = get(url)
     archive = zipfile.ZipFile(io.BytesIO(archive_bytes))
@@ -92,11 +99,11 @@ def filter_zip(url: str, prefix: str) -> dict:
         subdistrict = next((c for c in fields if norm(c) in {"CDSUBDIST", "CDSUBDISTRITO"}), None)
         district = next((c for c in fields if norm(c) in {"CDDIST", "CDDISTRITO"}), None)
         code_column = subdistrict or district
-        rows = []
-        for row in reader:
-            code = re.sub(r"\D", "", row.get(code_column, "")) if code_column else ""
-            if code.startswith(MUNICIPIO):
-                rows.append(row)
+        all_rows = list(reader)
+        rows = [
+            row for row in all_rows
+            if code_column and belongs_to_sao_paulo(row.get(code_column, ""))
+        ]
         output = None
         if rows:
             safe = re.sub(r"[^A-Za-z0-9._-]+", "_", Path(member).stem)
@@ -105,13 +112,20 @@ def filter_zip(url: str, prefix: str) -> dict:
                 writer = csv.DictWriter(file, fieldnames=fields)
                 writer.writeheader()
                 writer.writerows(rows)
+        code_values = [str(row.get(code_column, "")) for row in all_rows] if code_column else []
+        lengths = Counter(len(re.sub(r"\D", "", code)) for code in code_values)
         members.append(
             {
                 "member": member,
                 "columns": fields,
+                "delimiter": delimiter,
                 "code_column": code_column,
+                "total_rows": len(all_rows),
+                "raw_samples": all_rows[:5],
+                "raw_code_samples": code_values[:20],
+                "numeric_code_lengths": dict(sorted(lengths.items())),
                 "sao_paulo_rows": len(rows),
-                "samples": rows[:2],
+                "sao_paulo_samples": rows[:3],
                 "output": str(output.relative_to(ROOT)) if output else None,
             }
         )
@@ -130,20 +144,21 @@ def main() -> int:
     result = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "geographic_level": "subdistrito",
-        "municipality_prefix": MUNICIPIO,
+        "municipality_code_full": MUNICIPIO_COMPLETO,
+        "municipality_code_root": MUNICIPIO_RAIZ,
         "available_universe_zips": urls,
         "selected_race_zips": selected,
         "income": filter_zip(RENDA, "renda_responsavel"),
         "race": [filter_zip(url, f"cor_raca_{index}") for index, url in enumerate(selected, 1)],
         "warning": (
-            "Os 96 distritos administrativos municipais correspondem ao nível subdistrito do IBGE. "
-            "Os códigos técnicos ainda precisam ser lidos com o dicionário oficial."
+            "O inventário registra amostras brutas para validar a hierarquia territorial antes "
+            "da junção com os limites distritais do GeoSampa."
         ),
     }
     (META / "subdistritos_sp_inventory.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print("Dados dos subdistritos paulistanos coletados.")
+    print("Dados dos recortes paulistanos coletados e códigos auditados.")
     return 0
 
 

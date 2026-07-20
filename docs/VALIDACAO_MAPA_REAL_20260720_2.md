@@ -1,0 +1,1 @@
+Validação automatizada do mapa real.

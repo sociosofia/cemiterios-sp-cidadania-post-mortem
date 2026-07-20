@@ -19,7 +19,7 @@ O mapa utiliza:
 
 Os marcadores estão posicionados nos **centroides geométricos** dos polígonos e não representam portões ou entradas. Os pontos de acesso público serão construídos como uma camada separada.
 
-## Resultado descritivo de centro e periferia
+## Centro e periferia
 
 Tomando o centroide geométrico do distrito Sé como referência analítica:
 
@@ -32,9 +32,35 @@ Tomando o centroide geométrico do distrito Sé como referência analítica:
 
 Os cinco destinos ordinários de sepultamento gratuito por hipossuficiência pertencem aos estratos 3 ou 4. Eles apresentam distância média de **15,9 km** e mediana de **17,2 km** em relação à referência central. Nos demais cemitérios, a média é **10,9 km** e a mediana, **8,6 km**.
 
-O resultado demonstra uma distribuição territorial desigual dos equipamentos e dos destinos gratuitos. Ainda não demonstra, isoladamente, o perfil social das pessoas enterradas em cada local nem mede distância viária, tempo de viagem ou acessibilidade por transporte coletivo.
+## Contexto socioeconômico dos territórios
 
-A tabela completa e as limitações estão em [`docs/RESULTADOS_PRELIMINARES.md`](docs/RESULTADOS_PRELIMINARES.md).
+Cada equipamento foi associado ao distrito que contém a maior parcela de sua área. Os indicadores vêm dos agregados distritais do Censo 2022.
+
+| Grupo | Equipamentos | Renda mediana distrital — média entre equipamentos | Mediana das rendas distritais | Proporção preta+parda média |
+|---|---:|---:|---:|---:|
+| Destinos gratuitos | 5 | R$ 2.560 | R$ 2.000 | 41,8% |
+| Demais cemitérios | 17 | R$ 4.818 | R$ 3.800 | 31,7% |
+
+Por estrato tarifário:
+
+| Estrato | Cemitérios | Renda mediana distrital média | Proporção preta+parda média |
+|---:|---:|---:|---:|
+| 1 | 6 | R$ 7.733 | 17,5% |
+| 2 | 7 | R$ 4.072 | 30,2% |
+| 3 | 6 | R$ 1.800 | 54,5% |
+| 4 | 3 | R$ 3.000 | 34,7% |
+
+Os resultados são descritivos e se referem à **localização do cemitério**, não ao perfil individual dos mortos ou de suas famílias. A tabela completa está em [`docs/RESULTADOS_SOCIOECONOMICOS.md`](docs/RESULTADOS_SOCIOECONOMICOS.md).
+
+## Desigualdade temporal do direito ao sepulcro
+
+O Decreto Municipal nº 59.196/2020 distingue:
+
+- gaveta comum de três anos, renovável mediante pagamento;
+- gaveta social por hipossuficiência de três anos, **não renovável e não transmissível**;
+- terreno comum de prazo indeterminado, sujeito às regras de manutenção, sucessão e extinção.
+
+Depois do fim da cessão fixa, a administração pode realizar a exumação se o interessado não a requerer em 30 dias. Restos não requisitados podem ser levados ao ossuário geral e, após os procedimentos legais, incinerados. A reconstrução do fluxo e suas ressalvas está em [`docs/TEMPORARIEDADE_E_OSSADAS.md`](docs/TEMPORARIEDADE_E_OSSADAS.md).
 
 ## Eixo analítico: cidadania post mortem
 
@@ -50,62 +76,49 @@ O plano analítico e seus limites de inferência estão em [`docs/PLANO_ANALISE_
 
 ## Arquivos principais
 
-### Inventários documentais
+### Inventários e dados processados
 
 - [`data/reference/cemiterios_crematorio.csv`](data/reference/cemiterios_crematorio.csv) — endereços, blocos, concessionárias, estratos, gratuidade e tarifa avulsa de sepultamento;
 - [`data/reference/agencias_funerarias.csv`](data/reference/agencias_funerarias.csv) — 40 agências funerárias;
-- [`data/reference/geosampa_mapping.csv`](data/reference/geosampa_mapping.csv) — associação auditável entre os equipamentos da concessão e as feições do GeoSampa.
-
-### Dados geográficos processados
-
+- [`data/reference/geosampa_mapping.csv`](data/reference/geosampa_mapping.csv) — associação auditável entre equipamentos e GeoSampa;
 - [`data/processed/cemiterios_concessao_31983.geojson`](data/processed/cemiterios_concessao_31983.geojson) — polígonos para análise métrica;
 - [`data/processed/cemiterios_concessao_4326.geojson`](data/processed/cemiterios_concessao_4326.geojson) — polígonos para mapas web;
-- [`data/processed/cemiterios_concessao_centroides.csv`](data/processed/cemiterios_concessao_centroides.csv) — área, perímetro e centroides;
-- [`data/processed/distritos_4326.geojson`](data/processed/distritos_4326.geojson) — limites distritais;
-- [`data/processed/subprefeituras_4326.geojson`](data/processed/subprefeituras_4326.geojson) — limites das subprefeituras;
+- [`data/processed/cemiterios_contexto_socioeconomico.csv`](data/processed/cemiterios_contexto_socioeconomico.csv) — renda e composição racial do distrito de localização;
+- [`data/processed/resumo_estratos_renda_raca.json`](data/processed/resumo_estratos_renda_raca.json) — resultados agregados;
 - [`data/processed/distancias_centroide_se.csv`](data/processed/distancias_centroide_se.csv) — indicador preliminar de centralidade.
 
 ### Mapas
 
 - [`maps/mapa_estratos_gratuidade.png`](maps/mapa_estratos_gratuidade.png) — mapa estático;
 - [`maps/mapa_estratos_gratuidade.svg`](maps/mapa_estratos_gratuidade.svg) — versão vetorial;
-- [`maps/cemiterios_concessao_interativo.html`](maps/cemiterios_concessao_interativo.html) — mapa interativo com camadas e informações tarifárias.
+- [`maps/cemiterios_concessao_interativo.html`](maps/cemiterios_concessao_interativo.html) — mapa interativo.
 
 ## Cuidado interpretativo
 
-A tarifa indicada no inventário é a tarifa **avulsa de sepultamento ou inumação por categoria**, na referência de janeiro de 2026. Ela não deve ser somada automaticamente a todos os pacotes funerários: a política tarifária possui regras próprias de composição, isenção e contratação.
+A tarifa indicada no inventário é a tarifa **avulsa de sepultamento ou inumação por categoria**, na referência de janeiro de 2026. Ela não deve ser somada automaticamente a todos os pacotes funerários.
 
-A gratuidade também não é uma categoria tarifária. O campo correspondente identifica os destinos oficialmente disponibilizados para sepultamentos gratuitos por hipossuficiência; doadores de órgãos possuem regra específica que pode permitir sepultamento em qualquer cemitério público.
+A gratuidade não é uma categoria tarifária. O campo correspondente identifica os destinos disponibilizados para sepultamentos gratuitos por hipossuficiência; doadores de órgãos possuem regra específica.
 
 O perfil socioeconômico do território onde está um cemitério não equivale ao perfil individual das pessoas enterradas nele. Para testar a distribuição social efetiva dos mortos, serão necessários registros administrativos anonimizados de origem, modalidade de atendimento e destino.
 
 ## Automação
 
-O workflow do GitHub Actions:
-
-1. consulta o WFS oficial do GeoSampa;
-2. preserva a resposta bruta;
-3. transforma as geometrias para uso web;
-4. filtra os equipamentos da concessão;
-5. dissolve feições múltiplas do mesmo equipamento;
-6. calcula área, perímetro e centroides;
-7. baixa distritos e subprefeituras;
-8. coleta agregados do Censo 2022 no nível correspondente aos 96 distritos paulistanos;
-9. extrai o anexo contratual sobre tratamento de ossadas;
-10. recria os mapas estático e interativo.
+O workflow consulta o GeoSampa, preserva dados brutos, filtra e dissolve geometrias, baixa os 96 distritos, integra o Censo 2022, extrai o anexo contratual sobre ossadas, calcula indicadores e recria os mapas.
 
 ## Próximas etapas
 
 - localizar e validar os portões de acesso público;
 - georreferenciar as 40 agências funerárias;
-- integrar renda e composição racial dos territórios;
 - medir distâncias e tempos de deslocamento pela rede;
-- reconstruir documentalmente o fluxo após o prazo dos sepultamentos temporários;
+- obter atas e propostas dos grupos de trabalho sobre ossadas;
+- localizar relatórios de estoque de ossadas por cemitério;
 - buscar registros anonimizados de origem e destino dos sepultamentos.
+
+As pendências documentais estão em [`docs/PENDENCIAS_DOCUMENTAIS.md`](docs/PENDENCIAS_DOCUMENTAIS.md).
 
 ## Fontes principais
 
-- Prefeitura de São Paulo — edital, contratos e anexos da concessão;
+- Prefeitura de São Paulo — edital, contratos, anexos e legislação;
 - SP Regula — endereços, concessionárias, agências, gratuidades e tarifas;
 - GeoSampa — camadas geográficas municipais, sob licença CC BY-SA 4.0;
 - IBGE — Censo Demográfico 2022.

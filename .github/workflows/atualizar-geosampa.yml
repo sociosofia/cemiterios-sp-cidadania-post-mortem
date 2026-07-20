@@ -6,7 +6,7 @@ on:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
-      - "scripts/inspect_ibge_district_data.py"
+      - "scripts/fetch_ibge_subdistricts.py"
       - "scripts/build_cemiterios_concessao.py"
       - "scripts/spatial_join_admin.py"
       - "scripts/analyze_center_periphery.py"
@@ -42,8 +42,8 @@ jobs:
       - name: Consultar distritos e subprefeituras
         run: python scripts/fetch_geosampa_contexto.py
 
-      - name: Inspecionar agregados distritais do Censo 2022
-        run: python scripts/inspect_ibge_district_data.py
+      - name: Coletar renda e cor ou raça nos 96 distritos paulistanos
+        run: python scripts/fetch_ibge_subdistricts.py
 
       - name: Filtrar equipamentos da concessão e calcular centroides
         run: python scripts/build_cemiterios_concessao.py
@@ -68,6 +68,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais."
           else
-            git commit -m "Atualiza dados do GeoSampa e inventário distrital do Censo 2022"
+            git commit -m "Atualiza GeoSampa e dados dos 96 distritos no Censo 2022"
             git push
           fi

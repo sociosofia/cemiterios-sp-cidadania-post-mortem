@@ -1,0 +1,7262 @@
+{
+  "type": "FeatureCollection",
+  "name": "cemiterios_concessao_31983",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::31983"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "cem_consolacao",
+      "properties": {
+        "id_equipamento": "cem_consolacao",
+        "nome_oficial": "Cemitério da Consolação",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Consolação",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Rua da Consolação, 1660",
+        "cep_publicado": "01302-001",
+        "cep_normalizado": "01302-001",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160034",
+        "nome_geosampa": "CONSOLAÇÃO",
+        "endereco_geosampa": "RUA DA CONSOLAÇÃO, 1660",
+        "cep_geosampa": "01302-001",
+        "notas_mapeamento": "",
+        "area_m2_31983": 69220.547,
+        "perimetro_m_31983": 1408.565,
+        "centroide_x_31983": 330830.535,
+        "centroide_y_31983": 7394543.138,
+        "centroide_longitude": -46.65737263,
+        "centroide_latitude": -23.55065328,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CONSOLACAO",
+        "distritos_intersectados": "CONSOLACAO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SE",
+        "subprefeituras_intersectadas": "SE:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              331012.61183795,
+              7394707.12689685
+            ],
+            [
+              330939.15362303,
+              7394663.09371957
+            ],
+            [
+              330985.78619387,
+              7394584.6085996
+            ],
+            [
+              331060.41091067,
+              7394626.91845334
+            ],
+            [
+              331080.27276505,
+              7394594.52188329
+            ],
+            [
+              331083.21583285,
+              7394589.7214603
+            ],
+            [
+              331083.29146034,
+              7394589.58793164
+            ],
+            [
+              331083.35765849,
+              7394589.4494859
+            ],
+            [
+              331083.41410939,
+              7394589.30678792
+            ],
+            [
+              331083.46054197,
+              7394589.16052298
+            ],
+            [
+              331083.49673323,
+              7394589.01139347
+            ],
+            [
+              331083.52250938,
+              7394588.86011555
+            ],
+            [
+              331083.53774664,
+              7394588.7074157
+            ],
+            [
+              331083.54237183,
+              7394588.55402722
+            ],
+            [
+              331083.53636274,
+              7394588.40068672
+            ],
+            [
+              331083.51974822,
+              7394588.24813058
+            ],
+            [
+              331083.49704917,
+              7394588.12168501
+            ],
+            [
+              331083.46568921,
+              7394587.99710458
+            ],
+            [
+              331083.42581748,
+              7394587.8749818
+            ],
+            [
+              331083.37762361,
+              7394587.75589745
+            ],
+            [
+              331083.3213368,
+              7394587.64041791
+            ],
+            [
+              331083.25722475,
+              7394587.52909238
+            ],
+            [
+              331083.18559237,
+              7394587.4224503
+            ],
+            [
+              331083.10678034,
+              7394587.32099887
+            ],
+            [
+              331083.02116348,
+              7394587.22522057
+            ],
+            [
+              331082.92914897,
+              7394587.13557092
+            ],
+            [
+              331082.83117443,
+              7394587.05247628
+            ],
+            [
+              331082.31712852,
+              7394586.66155431
+            ],
+            [
+              331081.78879458,
+              7394586.29016985
+            ],
+            [
+              331081.21295197,
+              7394585.91590907
+            ],
+            [
+              331080.62427923,
+              7394585.5621715
+            ],
+            [
+              331074.60965284,
+              7394582.09070498
+            ],
+            [
+              330900.39457601,
+              7394481.53885548
+            ],
+            [
+              330892.68276859,
+              7394484.37164947
+            ],
+            [
+              330807.44589502,
+              7394435.17541777
+            ],
+            [
+              330806.04108309,
+              7394427.08077759
+            ],
+            [
+              330705.32698877,
+              7394368.95154649
+            ],
+            [
+              330612.41371522,
+              7394498.68046227
+            ],
+            [
+              330611.94209469,
+              7394499.38982028
+            ],
+            [
+              330611.52091126,
+              7394500.13023856
+            ],
+            [
+              330611.15220151,
+              7394500.89813689
+            ],
+            [
+              330610.83774831,
+              7394501.68980216
+            ],
+            [
+              330610.57907217,
+              7394502.50140636
+            ],
+            [
+              330610.37742389,
+              7394503.32902504
+            ],
+            [
+              330610.23377851,
+              7394504.16865635
+            ],
+            [
+              330610.14883063,
+              7394505.01624031
+            ],
+            [
+              330610.122991,
+              7394505.86767852
+            ],
+            [
+              330610.15638456,
+              7394506.71885394
+            ],
+            [
+              330610.24884985,
+              7394507.56565078
+            ],
+            [
+              330610.39993975,
+              7394508.40397444
+            ],
+            [
+              330610.60892369,
+              7394509.22977129
+            ],
+            [
+              330610.87479115,
+              7394510.03904825
+            ],
+            [
+              330611.19625654,
+              7394510.82789217
+            ],
+            [
+              330611.57176546,
+              7394511.59248864
+            ],
+            [
+              330611.99950216,
+              7394512.32914055
+            ],
+            [
+              330612.47739836,
+              7394513.03428587
+            ],
+            [
+              330613.00314325,
+              7394513.70451496
+            ],
+            [
+              330613.57419464,
+              7394514.33658697
+            ],
+            [
+              330614.18779125,
+              7394514.92744559
+            ],
+            [
+              330614.84096611,
+              7394515.47423378
+            ],
+            [
+              330615.53056085,
+              7394515.97430758
+            ],
+            [
+              330616.25324099,
+              7394516.42524895
+            ],
+            [
+              330671.02001226,
+              7394548.00796257
+            ],
+            [
+              330689.20680986,
+              7394558.94349735
+            ],
+            [
+              330991.70793811,
+              7394741.03685917
+            ],
+            [
+              331012.61183795,
+              7394707.12689685
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_quarta_parada",
+      "properties": {
+        "id_equipamento": "cem_quarta_parada",
+        "nome_oficial": "Cemitério da Quarta Parada",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Quarta Parada",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Avenida Salim Farah Maluf, 3303",
+        "cep_publicado": "03303-010",
+        "cep_normalizado": "03303-010",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160026",
+        "nome_geosampa": "QUARTA PARADA",
+        "endereco_geosampa": "AV. SALIM FARAH MALUF, 3303",
+        "cep_geosampa": "02350-002",
+        "notas_mapeamento": "",
+        "area_m2_31983": 169440.942,
+        "perimetro_m_31983": 1819.932,
+        "centroide_x_31983": 338558.464,
+        "centroide_y_31983": 7395050.021,
+        "centroide_longitude": -46.58162939,
+        "centroide_latitude": -23.54686475,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "BELEM",
+        "distritos_intersectados": "BELEM:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "MOOCA",
+        "subprefeituras_intersectadas": "MOOCA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              338549.16900099,
+              7395408.6535342
+            ],
+            [
+              338549.24738852,
+              7395408.6942008
+            ],
+            [
+              338639.31716776,
+              7395205.50148372
+            ],
+            [
+              338662.78850826,
+              7395150.84618053
+            ],
+            [
+              338664.9028732,
+              7395146.02644779
+            ],
+            [
+              338718.16066145,
+              7395025.87207013
+            ],
+            [
+              338726.85204425,
+              7395006.94219383
+            ],
+            [
+              338745.66000448,
+              7394964.27050001
+            ],
+            [
+              338764.89747729,
+              7394920.62432363
+            ],
+            [
+              338774.9802982,
+              7394898.90761972
+            ],
+            [
+              338776.21828233,
+              7394895.61378002
+            ],
+            [
+              338785.22915537,
+              7394855.11126502
+            ],
+            [
+              338788.70952964,
+              7394839.77350037
+            ],
+            [
+              338792.17057396,
+              7394825.85078783
+            ],
+            [
+              338799.68673348,
+              7394795.4494202
+            ],
+            [
+              338800.78362291,
+              7394791.11640386
+            ],
+            [
+              338803.07739382,
+              7394782.82566703
+            ],
+            [
+              338807.49888548,
+              7394769.59972167
+            ],
+            [
+              338802.0421162,
+              7394767.32056742
+            ],
+            [
+              338802.65876941,
+              7394765.84417136
+            ],
+            [
+              338696.23326978,
+              7394722.50353726
+            ],
+            [
+              338668.23498491,
+              7394711.4283112
+            ],
+            [
+              338575.08833554,
+              7394825.69801779
+            ],
+            [
+              338572.23159133,
+              7394828.21197929
+            ],
+            [
+              338566.81113766,
+              7394834.65282301
+            ],
+            [
+              338536.37779756,
+              7394869.57894321
+            ],
+            [
+              338431.50079217,
+              7394973.48928992
+            ],
+            [
+              338383.423562,
+              7395014.64685341
+            ],
+            [
+              338380.85572391,
+              7395016.78258373
+            ],
+            [
+              338345.96516192,
+              7395047.00227041
+            ],
+            [
+              338344.09904723,
+              7395048.66181368
+            ],
+            [
+              338269.69055701,
+              7395113.45883572
+            ],
+            [
+              338302.18690939,
+              7395150.25354177
+            ],
+            [
+              338308.05875465,
+              7395155.76088471
+            ],
+            [
+              338402.24014949,
+              7395262.4399113
+            ],
+            [
+              338408.04623938,
+              7395269.04730403
+            ],
+            [
+              338516.26977652,
+              7395391.585772
+            ],
+            [
+              338549.16900099,
+              7395408.6535342
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_santana",
+      "properties": {
+        "id_equipamento": "cem_santana",
+        "nome_oficial": "Cemitério Santana (Chora Menino)",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Santana",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Rua Nova dos Portugueses, 141",
+        "cep_publicado": "02462-080",
+        "cep_normalizado": "02462-080",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160025",
+        "nome_geosampa": "SANTANA",
+        "endereco_geosampa": "R. NOVA DOS PORTUGUESES, 141",
+        "cep_geosampa": "02350-002",
+        "notas_mapeamento": "",
+        "area_m2_31983": 41425.204,
+        "perimetro_m_31983": 815.077,
+        "centroide_x_31983": 332625.852,
+        "centroide_y_31983": 7400521.444,
+        "centroide_longitude": -46.63912058,
+        "centroide_latitude": -23.4968608,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "SANTANA",
+        "distritos_intersectados": "SANTANA:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SANTANA-TUCURUVI",
+        "subprefeituras_intersectadas": "SANTANA-TUCURUVI:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              332776.42156702,
+              7400553.64414915
+            ],
+            [
+              332753.88001551,
+              7400525.888769
+            ],
+            [
+              332682.87309285,
+              7400438.05346692
+            ],
+            [
+              332672.36720577,
+              7400425.87939886
+            ],
+            [
+              332655.29879038,
+              7400417.86129301
+            ],
+            [
+              332648.69461867,
+              7400414.72531231
+            ],
+            [
+              332579.3194641,
+              7400381.87096963
+            ],
+            [
+              332489.38475211,
+              7400565.93751752
+            ],
+            [
+              332597.34933935,
+              7400619.93674101
+            ],
+            [
+              332619.81777576,
+              7400650.28640802
+            ],
+            [
+              332776.42156702,
+              7400553.64414915
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_tremembe",
+      "properties": {
+        "id_equipamento": "cem_tremembe",
+        "nome_oficial": "Cemitério do Tremembé",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Tremembé",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Avenida Maria Amália Lopes de Azevedo, 2930",
+        "cep_publicado": "02350-003",
+        "cep_normalizado": "02350-003",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160030",
+        "nome_geosampa": "TREMEMBÉ",
+        "endereco_geosampa": "R. MARIA AMALIA LOPES AZEVEDO, 2930",
+        "cep_geosampa": "02350-002",
+        "notas_mapeamento": "",
+        "area_m2_31983": 64912.726,
+        "perimetro_m_31983": 1294.437,
+        "centroide_x_31983": 336653.059,
+        "centroide_y_31983": 7404898.572,
+        "centroide_longitude": -46.59921695,
+        "centroide_latitude": -23.457748,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "TREMEMBE",
+        "distritos_intersectados": "TREMEMBE:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "JACANA-TREMEMBE",
+        "subprefeituras_intersectadas": "JACANA-TREMEMBE:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              336796.88229257,
+              7404749.9255353
+            ],
+            [
+              336764.69950077,
+              7404762.78967019
+            ],
+            [
+              336760.95776837,
+              7404766.23279489
+            ],
+            [
+              336757.54381826,
+              7404768.90054269
+            ],
+            [
+              336752.94572785,
+              7404771.34089307
+            ],
+            [
+              336733.52627791,
+              7404770.33619528
+            ],
+            [
+              336683.51547721,
+              7404789.5106951
+            ],
+            [
+              336681.36644892,
+              7404793.08003557
+            ],
+            [
+              336663.65042476,
+              7404801.02520891
+            ],
+            [
+              336624.76751779,
+              7404816.64208484
+            ],
+            [
+              336534.850179,
+              7404850.31590449
+            ],
+            [
+              336550.10294106,
+              7404882.37671997
+            ],
+            [
+              336385.37408942,
+              7404946.25761889
+            ],
+            [
+              336371.72525524,
+              7404951.72037032
+            ],
+            [
+              336363.4916391,
+              7404954.54040808
+            ],
+            [
+              336360.83016396,
+              7404959.53828872
+            ],
+            [
+              336365.35882425,
+              7404978.46184062
+            ],
+            [
+              336369.89909915,
+              7404988.70499426
+            ],
+            [
+              336375.24037356,
+              7404995.53909618
+            ],
+            [
+              336381.14919355,
+              7405001.87858031
+            ],
+            [
+              336387.9216051,
+              7405007.49050719
+            ],
+            [
+              336397.75940799,
+              7405011.47553333
+            ],
+            [
+              336410.07169676,
+              7405012.8519218
+            ],
+            [
+              336423.28589659,
+              7405010.48535399
+            ],
+            [
+              336426.43207518,
+              7405009.5326509
+            ],
+            [
+              336539.47082337,
+              7404973.860628
+            ],
+            [
+              336586.13349219,
+              7404957.60483288
+            ],
+            [
+              336624.40922861,
+              7404953.15877865
+            ],
+            [
+              336626.46364626,
+              7404943.97248581
+            ],
+            [
+              336682.29464152,
+              7404976.02221218
+            ],
+            [
+              336725.81631649,
+              7404994.09854023
+            ],
+            [
+              336748.21805335,
+              7404994.53822384
+            ],
+            [
+              336847.65004542,
+              7404956.69274396
+            ],
+            [
+              336836.1920542,
+              7404927.33671282
+            ],
+            [
+              336836.84501513,
+              7404916.12680485
+            ],
+            [
+              336836.69054777,
+              7404894.21092308
+            ],
+            [
+              336837.02265867,
+              7404871.87950894
+            ],
+            [
+              336836.63951787,
+              7404868.24305982
+            ],
+            [
+              336836.44985007,
+              7404850.05336185
+            ],
+            [
+              336822.51982605,
+              7404806.21063806
+            ],
+            [
+              336820.13774023,
+              7404800.813073
+            ],
+            [
+              336814.58156809,
+              7404788.64417331
+            ],
+            [
+              336796.88229257,
+              7404749.9255353
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_vila_formosa_i",
+      "properties": {
+        "id_equipamento": "cem_vila_formosa_i",
+        "nome_oficial": "Cemitério Vila Formosa I",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Vila Formosa I e II",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Avenida Flor de Vila Formosa, s/n",
+        "cep_publicado": "03366-010",
+        "cep_normalizado": "03366-010",
+        "categoria_tarifaria": 4,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "sepultamento",
+        "tarifa_sepultamento_avulso_2026": 592.95,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "Vila Formosa I e II compartilham um memorial contratual, mas são pontos operacionais distintos.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160038",
+        "nome_geosampa": "VILA FORMOSA 1",
+        "endereco_geosampa": "AV. FLOR DE VILA FORMOSA, S/N",
+        "cep_geosampa": "03366-010",
+        "notas_mapeamento": "",
+        "area_m2_31983": 373387.695,
+        "perimetro_m_31983": 2817.05,
+        "centroide_x_31983": 343945.963,
+        "centroide_y_31983": 7392979.234,
+        "centroide_longitude": -46.52907971,
+        "centroide_latitude": -23.56609073,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CARRAO",
+        "distritos_intersectados": "CARRAO:98.94%|VILA FORMOSA:1.06%",
+        "numero_distritos_intersectados": 2,
+        "subprefeitura_principal": "ARICANDUVA-FORMOSA-CARRAO",
+        "subprefeituras_intersectadas": "ARICANDUVA-FORMOSA-CARRAO:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              344046.95216163,
+              7393460.97114691
+            ],
+            [
+              344158.87195132,
+              7393459.38403983
+            ],
+            [
+              344153.06478426,
+              7393376.78823453
+            ],
+            [
+              344222.53609409,
+              7393379.24762459
+            ],
+            [
+              344282.00612763,
+              7393027.7471122
+            ],
+            [
+              344243.41311563,
+              7392997.10702777
+            ],
+            [
+              344232.94010454,
+              7392987.48901346
+            ],
+            [
+              344222.81409394,
+              7392977.64799895
+            ],
+            [
+              344214.4080852,
+              7392969.17598653
+            ],
+            [
+              344210.05908077,
+              7392964.36197955
+            ],
+            [
+              344203.96507456,
+              7392957.61696979
+            ],
+            [
+              344187.85505857,
+              7392937.8249415
+            ],
+            [
+              344176.8420479,
+              7392923.03492057
+            ],
+            [
+              344164.86103663,
+              7392905.33789579
+            ],
+            [
+              344155.57502809,
+              7392890.75487549
+            ],
+            [
+              344145.92801945,
+              7392874.46585297
+            ],
+            [
+              344135.65101077,
+              7392854.61682584
+            ],
+            [
+              344129.815006,
+              7392842.56380945
+            ],
+            [
+              344125.09800245,
+              7392831.42279444
+            ],
+            [
+              344121.28099968,
+              7392821.87778163
+            ],
+            [
+              344114.81499527,
+              7392804.41575831
+            ],
+            [
+              344108.8559915,
+              7392786.93173506
+            ],
+            [
+              344104.0809883,
+              7392773.76171749
+            ],
+            [
+              344098.71698448,
+              7392760.08469916
+            ],
+            [
+              344093.10898034,
+              7392747.40968252
+            ],
+            [
+              344092.84597993,
+              7392746.81568123
+            ],
+            [
+              344087.93097603,
+              7392736.11266674
+            ],
+            [
+              344081.786971,
+              7392723.54164963
+            ],
+            [
+              344076.87396686,
+              7392713.98263658
+            ],
+            [
+              344072.62696308,
+              7392706.71762654
+            ],
+            [
+              344067.64795858,
+              7392698.52461519
+            ],
+            [
+              344062.34795372,
+              7392690.1196035
+            ],
+            [
+              344055.4029473,
+              7392679.34558849
+            ],
+            [
+              344046.96293939,
+              7392666.75457088
+            ],
+            [
+              344040.79393352,
+              7392658.00055857
+            ],
+            [
+              344035.24692818,
+              7392650.41754786
+            ],
+            [
+              344028.69492176,
+              7392642.01053591
+            ],
+            [
+              344020.61091372,
+              7392632.15852182
+            ],
+            [
+              344012.47090556,
+              7392622.55850803
+            ],
+            [
+              344004.70089771,
+              7392613.6574952
+            ],
+            [
+              343998.06889101,
+              7392606.07048426
+            ],
+            [
+              343991.62788444,
+              7392599.01647403
+            ],
+            [
+              343983.54587614,
+              7392590.43246153
+            ],
+            [
+              343978.21087056,
+              7392585.24945389
+            ],
+            [
+              343977.95787025,
+              7392585.20345378
+            ],
+            [
+              343972.26986425,
+              7392579.91144593
+            ],
+            [
+              343966.9098586,
+              7392574.94043855
+            ],
+            [
+              343961.7618531,
+              7392570.4424318
+            ],
+            [
+              343961.29485252,
+              7392570.45243172
+            ],
+            [
+              343959.05985009,
+              7392568.68742903
+            ],
+            [
+              343951.36984176,
+              7392562.59941975
+            ],
+            [
+              343941.62483109,
+              7392555.35940859
+            ],
+            [
+              343934.85382367,
+              7392550.3784009
+            ],
+            [
+              343925.85381369,
+              7392544.30139136
+            ],
+            [
+              343908.67979451,
+              7392533.35537397
+            ],
+            [
+              343894.94377923,
+              7392524.34235974
+            ],
+            [
+              343883.51676639,
+              7392517.44034865
+            ],
+            [
+              343880.10376258,
+              7392515.27434521
+            ],
+            [
+              343860.05074012,
+              7392502.78132527
+            ],
+            [
+              343852.9766303,
+              7392498.75852004
+            ],
+            [
+              343843.65571657,
+              7392517.18733992
+            ],
+            [
+              343840.56171144,
+              7392523.11034671
+            ],
+            [
+              343832.74369848,
+              7392538.166364
+            ],
+            [
+              343821.99568058,
+              7392559.23738822
+            ],
+            [
+              343814.04066718,
+              7392575.55040705
+            ],
+            [
+              343802.17264766,
+              7392597.60743228
+            ],
+            [
+              343792.60863176,
+              7392616.22445367
+            ],
+            [
+              343775.04461169,
+              7392607.17743859
+            ],
+            [
+              343753.61958722,
+              7392596.10242014
+            ],
+            [
+              343734.40456526,
+              7392586.28340373
+            ],
+            [
+              343720.94854985,
+              7392579.52239239
+            ],
+            [
+              343711.9455396,
+              7392574.70538443
+            ],
+            [
+              343702.66052898,
+              7392569.97337652
+            ],
+            [
+              343701.15652678,
+              7392571.49037811
+            ],
+            [
+              343693.12085288,
+              7392575.83895288
+            ],
+            [
+              343696.73059392,
+              7392584.99736418
+            ],
+            [
+              343700.06645808,
+              7392596.87470623
+            ],
+            [
+              343701.39438402,
+              7392606.18492075
+            ],
+            [
+              343701.76581236,
+              7392616.69265843
+            ],
+            [
+              343702.45125248,
+              7392625.72903068
+            ],
+            [
+              343703.38469729,
+              7392635.70733602
+            ],
+            [
+              343704.58990363,
+              7392652.23903187
+            ],
+            [
+              343704.69927847,
+              7392663.92934124
+            ],
+            [
+              343703.61343408,
+              7392672.75037788
+            ],
+            [
+              343701.03078993,
+              7392681.55304203
+            ],
+            [
+              343694.16890227,
+              7392693.05282766
+            ],
+            [
+              343687.79160253,
+              7392705.82338353
+            ],
+            [
+              343678.05529377,
+              7392723.43372604
+            ],
+            [
+              343669.61200605,
+              7392745.84654615
+            ],
+            [
+              343663.9408143,
+              7392768.00308516
+            ],
+            [
+              343660.85133424,
+              7392779.65706632
+            ],
+            [
+              343658.03453683,
+              7392791.17210635
+            ],
+            [
+              343652.15319912,
+              7392811.67230923
+            ],
+            [
+              343646.6754037,
+              7392826.52564813
+            ],
+            [
+              343640.6029942,
+              7392838.6657878
+            ],
+            [
+              343632.24036495,
+              7392853.51994374
+            ],
+            [
+              343626.17326549,
+              7392864.56969444
+            ],
+            [
+              343619.74206382,
+              7392874.24053808
+            ],
+            [
+              343614.26560541,
+              7392881.66814148
+            ],
+            [
+              343609.48099143,
+              7392886.20738874
+            ],
+            [
+              343602.54896859,
+              7392894.7007192
+            ],
+            [
+              343599.71111258,
+              7392898.56545131
+            ],
+            [
+              343596.64323361,
+              7392903.10346958
+            ],
+            [
+              343593.838636,
+              7392908.30802216
+            ],
+            [
+              343590.90845042,
+              7392914.02607253
+            ],
+            [
+              343589.30493571,
+              7392917.84859119
+            ],
+            [
+              343585.90351653,
+              7392923.38643178
+            ],
+            [
+              343583.62456981,
+              7392927.41072699
+            ],
+            [
+              343582.02730089,
+              7392934.45880942
+            ],
+            [
+              343591.74230939,
+              7392951.79683328
+            ],
+            [
+              343618.20933104,
+              7393006.06990715
+            ],
+            [
+              343640.76135065,
+              7393046.80396316
+            ],
+            [
+              343669.60237545,
+              7393100.29103655
+            ],
+            [
+              343676.7683817,
+              7393113.13505422
+            ],
+            [
+              343678.23838299,
+              7393115.76905785
+            ],
+            [
+              343693.70039645,
+              7393143.66509621
+            ],
+            [
+              343732.68327124,
+              7393214.93690352
+            ],
+            [
+              343733.08143073,
+              7393214.72419394
+            ],
+            [
+              343733.16865887,
+              7393214.67661045
+            ],
+            [
+              343737.43930207,
+              7393212.34694801
+            ],
+            [
+              343741.7355225,
+              7393210.00333304
+            ],
+            [
+              343746.12835353,
+              7393207.60701638
+            ],
+            [
+              343750.49645642,
+              7393205.22418907
+            ],
+            [
+              343754.87359856,
+              7393202.8364308
+            ],
+            [
+              343759.02247302,
+              7393200.57319397
+            ],
+            [
+              343763.61722402,
+              7393198.06672872
+            ],
+            [
+              343772.42573762,
+              7393193.26162974
+            ],
+            [
+              343781.11044105,
+              7393188.52406999
+            ],
+            [
+              343783.83250013,
+              7393187.03916982
+            ],
+            [
+              343787.68462569,
+              7393184.92039037
+            ],
+            [
+              343794.4555326,
+              7393181.19619752
+            ],
+            [
+              343797.68962944,
+              7393179.41735159
+            ],
+            [
+              343793.35851524,
+              7393172.02115294
+            ],
+            [
+              343792.34566274,
+              7393170.29151527
+            ],
+            [
+              343799.34952392,
+              7393166.40514714
+            ],
+            [
+              343816.70254769,
+              7393156.77613868
+            ],
+            [
+              343854.941802,
+              7393135.55758289
+            ],
+            [
+              343860.26854243,
+              7393145.41701845
+            ],
+            [
+              343871.50461997,
+              7393139.41612841
+            ],
+            [
+              343899.57264414,
+              7393191.39419973
+            ],
+            [
+              343924.5256656,
+              7393237.73426331
+            ],
+            [
+              343954.97069198,
+              7393293.3443397
+            ],
+            [
+              343971.19553496,
+              7393322.92006842
+            ],
+            [
+              343975.5057098,
+              7393330.77739114
+            ],
+            [
+              344005.01873543,
+              7393384.46646493
+            ],
+            [
+              344046.95216163,
+              7393460.97114691
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_vila_formosa_ii",
+      "properties": {
+        "id_equipamento": "cem_vila_formosa_ii",
+        "nome_oficial": "Cemitério Vila Formosa II",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Vila Formosa I e II",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Avenida João XXIII, 2537",
+        "cep_publicado": null,
+        "cep_normalizado": null,
+        "categoria_tarifaria": 4,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "sepultamento",
+        "tarifa_sepultamento_avulso_2026": 592.95,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "Vila Formosa I e II compartilham um memorial contratual, mas são pontos operacionais distintos. CEP a confirmar no GeoSampa.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160037",
+        "nome_geosampa": "VILA FORMOSA 2",
+        "endereco_geosampa": "AV. JOÃO XXIII, 2537",
+        "cep_geosampa": "03361-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 300363.48,
+        "perimetro_m_31983": 2616.122,
+        "centroide_x_31983": 344375.85,
+        "centroide_y_31983": 7393505.968,
+        "centroide_longitude": -46.52481377,
+        "centroide_latitude": -23.56137592,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CARRAO",
+        "distritos_intersectados": "CARRAO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "ARICANDUVA-FORMOSA-CARRAO",
+        "subprefeituras_intersectadas": "ARICANDUVA-FORMOSA-CARRAO:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              344282.08115786,
+              7393026.4350728
+            ],
+            [
+              344282.00612763,
+              7393027.7471122
+            ],
+            [
+              344222.53609409,
+              7393379.24762459
+            ],
+            [
+              344153.06478426,
+              7393376.78823453
+            ],
+            [
+              344158.87195132,
+              7393459.38403983
+            ],
+            [
+              344046.95216163,
+              7393460.97114691
+            ],
+            [
+              344126.26884062,
+              7393605.77176904
+            ],
+            [
+              344148.69786009,
+              7393646.67982526
+            ],
+            [
+              344158.80586886,
+              7393665.12385061
+            ],
+            [
+              344182.50588944,
+              7393708.33591
+            ],
+            [
+              344196.84490166,
+              7393735.59794734
+            ],
+            [
+              344201.74989964,
+              7393744.56194818
+            ],
+            [
+              344211.96091478,
+              7393763.2209853
+            ],
+            [
+              344232.905933,
+              7393801.28003763
+            ],
+            [
+              344257.45695429,
+              7393846.25409942
+            ],
+            [
+              344282.36597596,
+              7393891.52516167
+            ],
+            [
+              344288.7329815,
+              7393903.1151776
+            ],
+            [
+              344291.49698396,
+              7393908.14518446
+            ],
+            [
+              344305.45222193,
+              7393934.32297481
+            ],
+            [
+              344326.5646704,
+              7393973.12361529
+            ],
+            [
+              344343.20795116,
+              7393963.35734349
+            ],
+            [
+              344369.96272752,
+              7393947.65764948
+            ],
+            [
+              344362.95902321,
+              7393936.29904488
+            ],
+            [
+              344359.60867092,
+              7393929.91224698
+            ],
+            [
+              344370.27643113,
+              7393924.01468725
+            ],
+            [
+              344379.21667567,
+              7393919.0721665
+            ],
+            [
+              344396.95411582,
+              7393909.26620812
+            ],
+            [
+              344397.92711716,
+              7393908.68220759
+            ],
+            [
+              344405.67225592,
+              7393904.35234304
+            ],
+            [
+              344418.95414599,
+              7393896.92719721
+            ],
+            [
+              344436.23316971,
+              7393887.06818843
+            ],
+            [
+              344436.56316999,
+              7393887.7091893
+            ],
+            [
+              344450.9611898,
+              7393879.30318175
+            ],
+            [
+              344451.83719268,
+              7393870.83117126
+            ],
+            [
+              344452.92549731,
+              7393863.57781737
+            ],
+            [
+              344466.40643278,
+              7393856.00133888
+            ],
+            [
+              344474.23353492,
+              7393851.60239556
+            ],
+            [
+              344529.2622404,
+              7393820.62140475
+            ],
+            [
+              344463.21213227,
+              7393712.63321937
+            ],
+            [
+              344552.18036956,
+              7393676.35131182
+            ],
+            [
+              344562.19874443,
+              7393692.67605106
+            ],
+            [
+              344566.81237465,
+              7393690.60496851
+            ],
+            [
+              344574.0540864,
+              7393686.19847401
+            ],
+            [
+              344577.31306292,
+              7393684.21542598
+            ],
+            [
+              344579.31117223,
+              7393682.99960049
+            ],
+            [
+              344589.39636198,
+              7393676.86288382
+            ],
+            [
+              344591.3404033,
+              7393675.67995806
+            ],
+            [
+              344591.15140834,
+              7393675.39195448
+            ],
+            [
+              344600.31642778,
+              7393669.81796028
+            ],
+            [
+              344614.33276891,
+              7393661.29348255
+            ],
+            [
+              344614.82041798,
+              7393660.99690346
+            ],
+            [
+              344624.41827976,
+              7393655.15966261
+            ],
+            [
+              344631.22344215,
+              7393651.02088954
+            ],
+            [
+              344635.10853021,
+              7393648.65805131
+            ],
+            [
+              344639.28369452,
+              7393646.11879411
+            ],
+            [
+              344629.04346588,
+              7393627.52490217
+            ],
+            [
+              344657.77934988,
+              7393609.8046338
+            ],
+            [
+              344665.78040862,
+              7393604.87070143
+            ],
+            [
+              344673.00452664,
+              7393600.41587728
+            ],
+            [
+              344667.07252211,
+              7393586.63385869
+            ],
+            [
+              344657.37751507,
+              7393562.34882608
+            ],
+            [
+              344652.74351188,
+              7393549.90380945
+            ],
+            [
+              344649.81851001,
+              7393541.34279805
+            ],
+            [
+              344647.1175084,
+              7393532.91278688
+            ],
+            [
+              344644.63750703,
+              7393524.64677595
+            ],
+            [
+              344640.72750498,
+              7393511.12075811
+            ],
+            [
+              344637.73450388,
+              7393498.53974164
+            ],
+            [
+              344634.27450329,
+              7393480.71371848
+            ],
+            [
+              344627.87450106,
+              7393453.16768246
+            ],
+            [
+              344624.95550019,
+              7393439.94466521
+            ],
+            [
+              344626.27650189,
+              7393439.70766519
+            ],
+            [
+              344624.36250104,
+              7393432.35065553
+            ],
+            [
+              344621.59349975,
+              7393421.99164191
+            ],
+            [
+              344619.37649878,
+              7393413.40763064
+            ],
+            [
+              344616.8964974,
+              7393405.2066198
+            ],
+            [
+              344612.97749522,
+              7393392.1946026
+            ],
+            [
+              344608.60449242,
+              7393379.46458566
+            ],
+            [
+              344604.26448967,
+              7393366.70256869
+            ],
+            [
+              344598.24848565,
+              7393349.9945464
+            ],
+            [
+              344593.52248241,
+              7393337.25952938
+            ],
+            [
+              344590.35038382,
+              7393329.51128387
+            ],
+            [
+              344588.29447854,
+              7393324.48851221
+            ],
+            [
+              344585.53747647,
+              7393317.90850335
+            ],
+            [
+              344582.95147436,
+              7393312.54749606
+            ],
+            [
+              344580.19747212,
+              7393306.80448825
+            ],
+            [
+              344577.07046947,
+              7393300.79448003
+            ],
+            [
+              344573.04146606,
+              7393293.02546941
+            ],
+            [
+              344566.55146042,
+              7393281.17645314
+            ],
+            [
+              344562.31145665,
+              7393273.86844305
+            ],
+            [
+              344556.74345169,
+              7393264.2724298
+            ],
+            [
+              344550.33844578,
+              7393254.28441589
+            ],
+            [
+              344542.30843822,
+              7393242.38039923
+            ],
+            [
+              344536.68143282,
+              7393234.58438823
+            ],
+            [
+              344530.36742668,
+              7393226.16737632
+            ],
+            [
+              344521.52141809,
+              7393214.36635961
+            ],
+            [
+              344515.62941231,
+              7393206.77034881
+            ],
+            [
+              344507.02040369,
+              7393196.48433406
+            ],
+            [
+              344501.62539819,
+              7393190.52432543
+            ],
+            [
+              344492.65538896,
+              7393180.98831154
+            ],
+            [
+              344485.99538206,
+              7393174.16430156
+            ],
+            [
+              344480.21937605,
+              7393168.34329302
+            ],
+            [
+              344472.32136776,
+              7393160.77228183
+            ],
+            [
+              344463.07435799,
+              7393152.16126905
+            ],
+            [
+              344454.21334844,
+              7393144.83625797
+            ],
+            [
+              344438.53133158,
+              7393131.64323808
+            ],
+            [
+              344413.80530447,
+              7393113.36020988
+            ],
+            [
+              344393.50628189,
+              7393099.85918862
+            ],
+            [
+              344370.41425616,
+              7393084.77116478
+            ],
+            [
+              344346.7742298,
+              7393069.38414045
+            ],
+            [
+              344328.22820916,
+              7393057.16212117
+            ],
+            [
+              344314.48319386,
+              7393048.07010684
+            ],
+            [
+              344282.08115786,
+              7393026.4350728
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_vila_mariana",
+      "properties": {
+        "id_equipamento": "cem_vila_mariana",
+        "nome_oficial": "Cemitério Vila Mariana",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Vila Mariana",
+        "bloco_concessao": 1,
+        "concessionaria": "Consolare",
+        "endereco_oficial": "Avenida Lacerda Franco, 2012",
+        "cep_publicado": "01536-001",
+        "cep_normalizado": "01536-001",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160021",
+        "nome_geosampa": "VILA MARIANA",
+        "endereco_geosampa": "AV. LACERDA FRANCO, 2012",
+        "cep_geosampa": "01536-001",
+        "notas_mapeamento": "",
+        "area_m2_31983": 63421.017,
+        "perimetro_m_31983": 1169.57,
+        "centroide_x_31983": 333959.37,
+        "centroide_y_31983": 7391375.611,
+        "centroide_longitude": -46.62708106,
+        "centroide_latitude": -23.57957692,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "VILA MARIANA",
+        "distritos_intersectados": "VILA MARIANA:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "VILA MARIANA",
+        "subprefeituras_intersectadas": "VILA MARIANA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              333869.12815422,
+              7391505.97081219
+            ],
+            [
+              333870.95841838,
+              7391507.48875773
+            ],
+            [
+              333900.39810439,
+              7391508.34343062
+            ],
+            [
+              333929.83779039,
+              7391509.19810351
+            ],
+            [
+              333962.99830437,
+              7391510.21163196
+            ],
+            [
+              333996.15881836,
+              7391511.22516042
+            ],
+            [
+              333999.44567229,
+              7391511.04405637
+            ],
+            [
+              334078.76496318,
+              7391512.70765874
+            ],
+            [
+              334106.77401479,
+              7391513.58950702
+            ],
+            [
+              334108.50556979,
+              7391511.64065156
+            ],
+            [
+              334081.81196245,
+              7391367.65907985
+            ],
+            [
+              334081.23441558,
+              7391364.61578623
+            ],
+            [
+              334079.99717396,
+              7391357.77188431
+            ],
+            [
+              334067.72995721,
+              7391289.91478452
+            ],
+            [
+              334067.23366546,
+              7391287.23227369
+            ],
+            [
+              334060.10203039,
+              7391249.54420412
+            ],
+            [
+              334046.49133174,
+              7391251.3462787
+            ],
+            [
+              334017.31827166,
+              7391255.2088306
+            ],
+            [
+              334006.7932294,
+              7391256.60236017
+            ],
+            [
+              334001.26494337,
+              7391257.41394697
+            ],
+            [
+              333980.09525581,
+              7391260.52178886
+            ],
+            [
+              333945.99246442,
+              7391265.50679672
+            ],
+            [
+              333922.65715968,
+              7391268.86482863
+            ],
+            [
+              333908.94436864,
+              7391270.83814719
+            ],
+            [
+              333908.82209025,
+              7391270.04754639
+            ],
+            [
+              333875.70476222,
+              7391275.16964248
+            ],
+            [
+              333863.931443,
+              7391216.34003677
+            ],
+            [
+              333863.29894965,
+              7391216.32782288
+            ],
+            [
+              333855.27044988,
+              7391195.21393294
+            ],
+            [
+              333848.06394203,
+              7391180.17150267
+            ],
+            [
+              333839.0320839,
+              7391175.64683976
+            ],
+            [
+              333808.04694365,
+              7391179.40605134
+            ],
+            [
+              333808.78219955,
+              7391185.46636667
+            ],
+            [
+              333807.42548096,
+              7391185.34955759
+            ],
+            [
+              333818.54005373,
+              7391242.01890522
+            ],
+            [
+              333819.17518382,
+              7391245.25721303
+            ],
+            [
+              333825.6293294,
+              7391278.05459772
+            ],
+            [
+              333841.82115068,
+              7391361.20880266
+            ],
+            [
+              333851.86664129,
+              7391414.08929438
+            ],
+            [
+              333862.6756338,
+              7391471.37892366
+            ],
+            [
+              333863.54007324,
+              7391475.99875058
+            ],
+            [
+              333869.12815422,
+              7391505.97081219
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_araca",
+      "properties": {
+        "id_equipamento": "cem_araca",
+        "nome_oficial": "Cemitério do Araçá",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Araçá",
+        "bloco_concessao": 2,
+        "concessionaria": "Cortel SP",
+        "endereco_oficial": "Avenida Doutor Arnaldo, 300",
+        "cep_publicado": "01246-000",
+        "cep_normalizado": "01246-000",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160022",
+        "nome_geosampa": "ARAÇÁ",
+        "endereco_geosampa": "AV. DR. ARNALDO, 666",
+        "cep_geosampa": "01255-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 221429.873,
+        "perimetro_m_31983": 2345.094,
+        "centroide_x_31983": 329422.572,
+        "centroide_y_31983": 7394330.309,
+        "centroide_longitude": -46.67118636,
+        "centroide_latitude": -23.55242733,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CONSOLACAO",
+        "distritos_intersectados": "CONSOLACAO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SE",
+        "subprefeituras_intersectadas": "SE:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              329871.200411,
+              7394266.69994872
+            ],
+            [
+              329874.74725094,
+              7394263.23001002
+            ],
+            [
+              329875.38623983,
+              7394255.23274471
+            ],
+            [
+              329865.81821931,
+              7394232.49062498
+            ],
+            [
+              329832.73352413,
+              7394154.81315392
+            ],
+            [
+              329807.19330149,
+              7394094.88673204
+            ],
+            [
+              329794.38830639,
+              7394064.84167138
+            ],
+            [
+              329782.47550795,
+              7394036.89002056
+            ],
+            [
+              329772.11493647,
+              7394041.28500629
+            ],
+            [
+              329770.68688843,
+              7394037.85362004
+            ],
+            [
+              329702.15329213,
+              7394066.99341084
+            ],
+            [
+              329666.24268408,
+              7394082.26223715
+            ],
+            [
+              329654.49760893,
+              7394087.25612396
+            ],
+            [
+              329636.93577255,
+              7394094.72323866
+            ],
+            [
+              329617.73782745,
+              7394102.88601018
+            ],
+            [
+              329571.7307283,
+              7394122.44776209
+            ],
+            [
+              329538.75362469,
+              7394136.46929204
+            ],
+            [
+              329509.16991483,
+              7394149.04798539
+            ],
+            [
+              329479.85541499,
+              7394161.51221338
+            ],
+            [
+              329429.06028232,
+              7394183.10978855
+            ],
+            [
+              329421.06946438,
+              7394186.50962952
+            ],
+            [
+              329171.67048071,
+              7394292.64694569
+            ],
+            [
+              329068.85477763,
+              7394336.59645154
+            ],
+            [
+              329063.61353571,
+              7394338.83686798
+            ],
+            [
+              329058.37229379,
+              7394341.07728443
+            ],
+            [
+              329057.86861704,
+              7394343.79724733
+            ],
+            [
+              329073.44524032,
+              7394380.87117004
+            ],
+            [
+              329085.89669676,
+              7394410.50688282
+            ],
+            [
+              329046.10155726,
+              7394426.50884101
+            ],
+            [
+              329011.5460161,
+              7394440.40391292
+            ],
+            [
+              328992.39504487,
+              7394448.1046785
+            ],
+            [
+              329007.02826669,
+              7394482.55113746
+            ],
+            [
+              329023.21718141,
+              7394520.65968205
+            ],
+            [
+              329034.52323367,
+              7394547.27401688
+            ],
+            [
+              329048.52811406,
+              7394580.24136633
+            ],
+            [
+              329056.62079536,
+              7394599.29145781
+            ],
+            [
+              329073.64625924,
+              7394639.3692308
+            ],
+            [
+              329125.38389892,
+              7394617.33496022
+            ],
+            [
+              329147.11845898,
+              7394608.07854303
+            ],
+            [
+              329168.79403545,
+              7394598.84724605
+            ],
+            [
+              329177.12153859,
+              7394595.30068964
+            ],
+            [
+              329230.12445108,
+              7394572.81928932
+            ],
+            [
+              329232.81723463,
+              7394571.71717711
+            ],
+            [
+              329257.22353268,
+              7394561.5071705
+            ],
+            [
+              329269.71653042,
+              7394556.28091336
+            ],
+            [
+              329307.21820846,
+              7394540.59265207
+            ],
+            [
+              329315.25569082,
+              7394537.18043663
+            ],
+            [
+              329345.98327777,
+              7394524.09349657
+            ],
+            [
+              329369.17636672,
+              7394514.21551411
+            ],
+            [
+              329376.89228526,
+              7394510.92928915
+            ],
+            [
+              329383.95727893,
+              7394507.89366358
+            ],
+            [
+              329388.63100547,
+              7394505.88549705
+            ],
+            [
+              329399.90600882,
+              7394501.04095082
+            ],
+            [
+              329400.36972568,
+              7394500.84170496
+            ],
+            [
+              329397.36699764,
+              7394493.67638556
+            ],
+            [
+              329393.97224993,
+              7394485.57560143
+            ],
+            [
+              329389.9087015,
+              7394475.87887832
+            ],
+            [
+              329388.39480093,
+              7394472.26630301
+            ],
+            [
+              329394.16101064,
+              7394469.82950035
+            ],
+            [
+              329396.81246178,
+              7394468.70899598
+            ],
+            [
+              329401.02515056,
+              7394466.92871192
+            ],
+            [
+              329423.44226592,
+              7394457.45522949
+            ],
+            [
+              329427.76971338,
+              7394455.62644836
+            ],
+            [
+              329432.44818718,
+              7394453.64932336
+            ],
+            [
+              329433.9514375,
+              7394452.9670921
+            ],
+            [
+              329448.34738121,
+              7394446.4336741
+            ],
+            [
+              329475.14834372,
+              7394428.19099694
+            ],
+            [
+              329520.6300422,
+              7394397.23285721
+            ],
+            [
+              329537.43569321,
+              7394385.79371335
+            ],
+            [
+              329572.80766592,
+              7394361.71698555
+            ],
+            [
+              329590.14472828,
+              7394349.91612461
+            ],
+            [
+              329594.30494755,
+              7394348.29403412
+            ],
+            [
+              329631.44687253,
+              7394350.83369784
+            ],
+            [
+              329668.58879751,
+              7394353.37336156
+            ],
+            [
+              329860.09375213,
+              7394271.43477121
+            ],
+            [
+              329863.80071745,
+              7394269.86603108
+            ],
+            [
+              329871.200411,
+              7394266.69994872
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_dom_bosco",
+      "properties": {
+        "id_equipamento": "cem_dom_bosco",
+        "nome_oficial": "Cemitério Dom Bosco",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Dom Bosco",
+        "bloco_concessao": 2,
+        "concessionaria": "Cortel SP",
+        "endereco_oficial": "Estrada do Pinheirinho, 860",
+        "cep_publicado": "05215-000",
+        "cep_normalizado": "05215-000",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "sepultamento",
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160031",
+        "nome_geosampa": "DOM BOSCO",
+        "endereco_geosampa": "ESTRADA DO PINHEIRINHO, 860",
+        "cep_geosampa": "05215-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 224577.305,
+        "perimetro_m_31983": 1933.046,
+        "centroide_x_31983": 321816.361,
+        "centroide_y_31983": 7411984.598,
+        "centroide_longitude": -46.74358357,
+        "centroide_latitude": -23.39221361,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "PERUS",
+        "distritos_intersectados": "PERUS:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "PERUS-ANHANGUERA",
+        "subprefeituras_intersectadas": "PERUS-ANHANGUERA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              321976.23681897,
+              7411752.55405525
+            ],
+            [
+              321978.30166927,
+              7411746.05551909
+            ],
+            [
+              321934.86435475,
+              7411706.87963161
+            ],
+            [
+              321934.92658289,
+              7411662.66139083
+            ],
+            [
+              321825.22265761,
+              7411684.87526698
+            ],
+            [
+              321791.85000111,
+              7411691.54024481
+            ],
+            [
+              321736.25278205,
+              7411715.09354613
+            ],
+            [
+              321713.53759868,
+              7411709.95628632
+            ],
+            [
+              321692.87577134,
+              7411723.98636713
+            ],
+            [
+              321682.5993564,
+              7411736.63324781
+            ],
+            [
+              321664.11382212,
+              7411774.19678172
+            ],
+            [
+              321649.19285216,
+              7411815.89808973
+            ],
+            [
+              321641.80537613,
+              7411831.81673852
+            ],
+            [
+              321638.04838846,
+              7411835.40602295
+            ],
+            [
+              321629.14883133,
+              7411851.12303149
+            ],
+            [
+              321630.85371383,
+              7411897.38277636
+            ],
+            [
+              321606.46136917,
+              7411945.23049994
+            ],
+            [
+              321585.77656829,
+              7411988.44369359
+            ],
+            [
+              321527.8892733,
+              7412178.80205291
+            ],
+            [
+              321526.73791044,
+              7412216.74973226
+            ],
+            [
+              321570.27580637,
+              7412214.16015428
+            ],
+            [
+              321715.94769631,
+              7412216.30274234
+            ],
+            [
+              321788.40848961,
+              7412232.8396538
+            ],
+            [
+              321803.70794934,
+              7412235.12774523
+            ],
+            [
+              321834.31732515,
+              7412238.28141168
+            ],
+            [
+              321857.9015607,
+              7412236.8178096
+            ],
+            [
+              321885.96985115,
+              7412230.96125816
+            ],
+            [
+              321920.94267383,
+              7412218.95963474
+            ],
+            [
+              321934.33980371,
+              7412211.21077793
+            ],
+            [
+              321993.34985592,
+              7412172.0017364
+            ],
+            [
+              322017.34246454,
+              7412168.40995935
+            ],
+            [
+              322062.7956124,
+              7412164.03579377
+            ],
+            [
+              322082.50275676,
+              7412147.79630387
+            ],
+            [
+              322082.8826015,
+              7412141.02117266
+            ],
+            [
+              322082.06505459,
+              7412119.3873648
+            ],
+            [
+              322080.18979725,
+              7412111.75422502
+            ],
+            [
+              322067.62313025,
+              7412056.6076985
+            ],
+            [
+              322066.84781289,
+              7412040.1773961
+            ],
+            [
+              322067.0204893,
+              7412031.03151372
+            ],
+            [
+              322075.70328498,
+              7411905.52132237
+            ],
+            [
+              322074.63896127,
+              7411900.73060861
+            ],
+            [
+              322067.62910336,
+              7411890.4153181
+            ],
+            [
+              322000.43141414,
+              7411860.82555759
+            ],
+            [
+              321988.56352814,
+              7411852.49211015
+            ],
+            [
+              321981.01235817,
+              7411844.90684206
+            ],
+            [
+              321976.84737205,
+              7411839.62723476
+            ],
+            [
+              321972.5709709,
+              7411833.73407169
+            ],
+            [
+              321967.54951387,
+              7411823.95764437
+            ],
+            [
+              321965.21115446,
+              7411818.02564822
+            ],
+            [
+              321961.68988987,
+              7411801.35517963
+            ],
+            [
+              321962.18874205,
+              7411792.91701628
+            ],
+            [
+              321972.59263968,
+              7411761.94917012
+            ],
+            [
+              321974.64020601,
+              7411756.27670481
+            ],
+            [
+              321976.23681897,
+              7411752.55405525
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_santo_amaro",
+      "properties": {
+        "id_equipamento": "cem_santo_amaro",
+        "nome_oficial": "Cemitério Santo Amaro",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Santo Amaro",
+        "bloco_concessao": 2,
+        "concessionaria": "Cortel SP",
+        "endereco_oficial": "Rua Ministro Roberto Cardoso Alves, 186",
+        "cep_publicado": "04737-000",
+        "cep_normalizado": "04737-000",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160020",
+        "nome_geosampa": "SANTO AMARO",
+        "endereco_geosampa": "R. MIN. ROBERTO CARDOSO ALVES, 186",
+        "cep_geosampa": "04737-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 29896.431,
+        "perimetro_m_31983": 802.785,
+        "centroide_x_31983": 326552.974,
+        "centroide_y_31983": 7383212.265,
+        "centroide_longitude": -46.70058535,
+        "centroide_latitude": -23.65250487,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "SANTO AMARO",
+        "distritos_intersectados": "SANTO AMARO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SANTO AMARO",
+        "subprefeituras_intersectadas": "SANTO AMARO:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              326648.98722228,
+              7383337.72855934
+            ],
+            [
+              326650.32111403,
+              7383334.57048834
+            ],
+            [
+              326649.18887258,
+              7383330.01549921
+            ],
+            [
+              326646.64797365,
+              7383318.3861529
+            ],
+            [
+              326642.92480793,
+              7383300.71560482
+            ],
+            [
+              326638.07461509,
+              7383278.65023901
+            ],
+            [
+              326635.4294318,
+              7383266.18901137
+            ],
+            [
+              326627.44860558,
+              7383229.29389511
+            ],
+            [
+              326627.11777104,
+              7383226.63601105
+            ],
+            [
+              326626.7709843,
+              7383225.18037456
+            ],
+            [
+              326626.21302305,
+              7383225.62507055
+            ],
+            [
+              326622.10270738,
+              7383206.39445126
+            ],
+            [
+              326617.99239171,
+              7383187.16383198
+            ],
+            [
+              326611.42795598,
+              7383155.20335037
+            ],
+            [
+              326604.86352025,
+              7383123.24286877
+            ],
+            [
+              326599.43474807,
+              7383095.25409512
+            ],
+            [
+              326597.49137053,
+              7383087.7275912
+            ],
+            [
+              326559.41858677,
+              7383112.02015023
+            ],
+            [
+              326558.98753864,
+              7383111.34620727
+            ],
+            [
+              326518.78525129,
+              7383135.9103366
+            ],
+            [
+              326487.61350115,
+              7383127.37154887
+            ],
+            [
+              326485.64805384,
+              7383126.83847169
+            ],
+            [
+              326465.60072178,
+              7383121.24350398
+            ],
+            [
+              326451.46753327,
+              7383117.49426178
+            ],
+            [
+              326448.82880225,
+              7383117.46968321
+            ],
+            [
+              326446.67881274,
+              7383119.07066454
+            ],
+            [
+              326442.35783793,
+              7383172.6398826
+            ],
+            [
+              326438.89615053,
+              7383215.55609837
+            ],
+            [
+              326478.56487717,
+              7383236.02048623
+            ],
+            [
+              326509.53876595,
+              7383251.99936246
+            ],
+            [
+              326530.95158963,
+              7383263.04585591
+            ],
+            [
+              326552.60537915,
+              7383274.21665933
+            ],
+            [
+              326553.38080465,
+              7383275.43131196
+            ],
+            [
+              326554.39813087,
+              7383277.01659829
+            ],
+            [
+              326555.53506063,
+              7383278.86904629
+            ],
+            [
+              326580.73918225,
+              7383319.8504066
+            ],
+            [
+              326607.00527979,
+              7383362.55851695
+            ],
+            [
+              326610.09221497,
+              7383362.44430581
+            ],
+            [
+              326628.92000493,
+              7383350.7846701
+            ],
+            [
+              326632.17879475,
+              7383348.42666868
+            ],
+            [
+              326648.98722228,
+              7383337.72855934
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_sao_paulo",
+      "properties": {
+        "id_equipamento": "cem_sao_paulo",
+        "nome_oficial": "Cemitério São Paulo",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "São Paulo",
+        "bloco_concessao": 2,
+        "concessionaria": "Cortel SP",
+        "endereco_oficial": "Rua Cardeal Arcoverde, 1250",
+        "cep_publicado": "05408-001",
+        "cep_normalizado": "05408-001",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160023",
+        "nome_geosampa": "SÃO PAULO",
+        "endereco_geosampa": "R. CARDEAL ARCOVERDE, 1250",
+        "cep_geosampa": "05408-001",
+        "notas_mapeamento": "",
+        "area_m2_31983": 102400.574,
+        "perimetro_m_31983": 1434.527,
+        "centroide_x_31983": 328039.919,
+        "centroide_y_31983": 7393677.495,
+        "centroide_longitude": -46.68480316,
+        "centroide_latitude": -23.55817537,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "PINHEIROS",
+        "distritos_intersectados": "PINHEIROS:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "PINHEIROS",
+        "subprefeituras_intersectadas": "PINHEIROS:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              328239.61479421,
+              7393786.90464937
+            ],
+            [
+              328264.18016535,
+              7393748.63098461
+            ],
+            [
+              328290.60769118,
+              7393707.73333266
+            ],
+            [
+              328134.55558908,
+              7393603.27634061
+            ],
+            [
+              328132.80505267,
+              7393602.08678873
+            ],
+            [
+              328129.37498226,
+              7393607.18677393
+            ],
+            [
+              328126.04716133,
+              7393612.13472995
+            ],
+            [
+              328125.98518258,
+              7393612.22098484
+            ],
+            [
+              328125.91797938,
+              7393612.30323446
+            ],
+            [
+              328125.84580988,
+              7393612.38116286
+            ],
+            [
+              328125.76895133,
+              7393612.45447067
+            ],
+            [
+              328125.68769898,
+              7393612.52287628
+            ],
+            [
+              328125.60236496,
+              7393612.5861169
+            ],
+            [
+              328125.51327708,
+              7393612.64394959
+            ],
+            [
+              328125.42077757,
+              7393612.69615221
+            ],
+            [
+              328125.11327728,
+              7393612.84448475
+            ],
+            [
+              328124.79657456,
+              7393612.97199302
+            ],
+            [
+              328124.47207778,
+              7393613.07810997
+            ],
+            [
+              328124.14122997,
+              7393613.16236371
+            ],
+            [
+              328124.05026463,
+              7393613.18146082
+            ],
+            [
+              328123.71659795,
+              7393613.23696322
+            ],
+            [
+              328123.37999565,
+              7393613.27032281
+            ],
+            [
+              328123.04192555,
+              7393613.28139412
+            ],
+            [
+              328122.70386185,
+              7393613.27012887
+            ],
+            [
+              328122.61691249,
+              7393613.26150711
+            ],
+            [
+              328122.5307068,
+              7393613.24725564
+            ],
+            [
+              328122.4456089,
+              7393613.22743465
+            ],
+            [
+              328122.36197821,
+              7393613.20212787
+            ],
+            [
+              328122.28016798,
+              7393613.17144218
+            ],
+            [
+              328122.20052377,
+              7393613.13550719
+            ],
+            [
+              328122.12338195,
+              7393613.09447469
+            ],
+            [
+              328122.04906839,
+              7393613.04851798
+            ],
+            [
+              328116.229046,
+              7393609.18236504
+            ],
+            [
+              328111.25905681,
+              7393605.8808763
+            ],
+            [
+              328114.12167624,
+              7393601.57155135
+            ],
+            [
+              328100.10892598,
+              7393592.26251692
+            ],
+            [
+              328097.15367666,
+              7393596.5838951
+            ],
+            [
+              328090.07053245,
+              7393591.81515226
+            ],
+            [
+              328086.07238025,
+              7393589.12338726
+            ],
+            [
+              328085.97598409,
+              7393589.05393265
+            ],
+            [
+              328085.88419901,
+              7393588.97848954
+            ],
+            [
+              328085.79739645,
+              7393588.89736323
+            ],
+            [
+              328085.71592767,
+              7393588.81088201
+            ],
+            [
+              328085.64012235,
+              7393588.71939585
+            ],
+            [
+              328085.57028726,
+              7393588.62327497
+            ],
+            [
+              328085.506705,
+              7393588.52290834
+            ],
+            [
+              328085.44963286,
+              7393588.41870213
+            ],
+            [
+              328085.37690514,
+              7393588.26467925
+            ],
+            [
+              328085.31294382,
+              7393588.10681439
+            ],
+            [
+              328085.25795086,
+              7393587.94560601
+            ],
+            [
+              328085.21209991,
+              7393587.78156316
+            ],
+            [
+              328085.17469562,
+              7393587.61077586
+            ],
+            [
+              328085.14720031,
+              7393587.4381161
+            ],
+            [
+              328085.12970547,
+              7393587.26415831
+            ],
+            [
+              328085.11922582,
+              7393586.99207044
+            ],
+            [
+              328085.1266551,
+              7393586.71988222
+            ],
+            [
+              328085.15196117,
+              7393586.44877112
+            ],
+            [
+              328085.19503454,
+              7393586.17990998
+            ],
+            [
+              328085.22256836,
+              7393586.05910699
+            ],
+            [
+              328085.25785415,
+              7393585.94033667
+            ],
+            [
+              328085.30074428,
+              7393585.82409593
+            ],
+            [
+              328085.35105931,
+              7393585.71087105
+            ],
+            [
+              328085.40858875,
+              7393585.60113574
+            ],
+            [
+              328085.47309191,
+              7393585.49534909
+            ],
+            [
+              328088.60863959,
+              7393580.70846251
+            ],
+            [
+              328092.21098166,
+              7393575.20894387
+            ],
+            [
+              328090.24151482,
+              7393573.85755979
+            ],
+            [
+              327940.18955044,
+              7393473.41689512
+            ],
+            [
+              327937.18154419,
+              7393471.46997472
+            ],
+            [
+              327914.84074211,
+              7393456.4083266
+            ],
+            [
+              327883.6283987,
+              7393501.45851477
+            ],
+            [
+              327788.59861368,
+              7393645.41709563
+            ],
+            [
+              327808.46989833,
+              7393658.38408792
+            ],
+            [
+              327812.26658717,
+              7393660.86161445
+            ],
+            [
+              327866.35214949,
+              7393697.17862889
+            ],
+            [
+              327891.79056156,
+              7393714.36477031
+            ],
+            [
+              327907.60705339,
+              7393724.99811601
+            ],
+            [
+              327917.87743861,
+              7393731.9028429
+            ],
+            [
+              327953.94504391,
+              7393756.25786148
+            ],
+            [
+              327976.24407585,
+              7393772.59453067
+            ],
+            [
+              327977.32775928,
+              7393770.67994387
+            ],
+            [
+              327984.1647124,
+              7393758.60082571
+            ],
+            [
+              327996.12424533,
+              7393766.76987552
+            ],
+            [
+              328004.1020972,
+              7393772.21920783
+            ],
+            [
+              327994.90369465,
+              7393785.75250143
+            ],
+            [
+              328008.56539027,
+              7393794.20087178
+            ],
+            [
+              328018.67293151,
+              7393799.82782191
+            ],
+            [
+              328028.01147846,
+              7393805.93388568
+            ],
+            [
+              328061.22295929,
+              7393828.18779745
+            ],
+            [
+              328077.15876003,
+              7393838.86584898
+            ],
+            [
+              328130.28135418,
+              7393874.50898156
+            ],
+            [
+              328167.15312291,
+              7393899.296144
+            ],
+            [
+              328190.98295947,
+              7393862.33493542
+            ],
+            [
+              328215.20062699,
+              7393824.77218257
+            ],
+            [
+              328239.61479421,
+              7393786.90464937
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_vila_nova_cachoeirinha",
+      "properties": {
+        "id_equipamento": "cem_vila_nova_cachoeirinha",
+        "nome_oficial": "Cemitério Vila Nova Cachoeirinha",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Vila Nova Cachoeirinha",
+        "bloco_concessao": 2,
+        "concessionaria": "Cortel SP",
+        "endereco_oficial": "Avenida João Marcelino Branco, s/n",
+        "cep_publicado": "02610-000",
+        "cep_normalizado": "02610-000",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160032",
+        "nome_geosampa": "VILA NOVA CACHOEIRINHA",
+        "endereco_geosampa": "AV. JOÃO MARCELINO BRANCO, S/N",
+        "cep_geosampa": "02610-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 231460.667,
+        "perimetro_m_31983": 2247.003,
+        "centroide_x_31983": 329715.927,
+        "centroide_y_31983": 7402522.758,
+        "centroide_longitude": -46.66738132,
+        "centroide_latitude": -23.47848848,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CACHOEIRINHA",
+        "distritos_intersectados": "CACHOEIRINHA:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "CASA VERDE-LIMAO-CACHOEIRINHA",
+        "subprefeituras_intersectadas": "CASA VERDE-LIMAO-CACHOEIRINHA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              329741.77744116,
+              7402390.12918268
+            ],
+            [
+              329527.17661914,
+              7402433.72832968
+            ],
+            [
+              329527.12616042,
+              7402433.74451101
+            ],
+            [
+              329524.15328816,
+              7402434.66415873
+            ],
+            [
+              329521.09563147,
+              7402435.45337267
+            ],
+            [
+              329519.77742401,
+              7402435.72628598
+            ],
+            [
+              329518.44733072,
+              7402435.93366103
+            ],
+            [
+              329517.10860794,
+              7402436.07499012
+            ],
+            [
+              329507.7038084,
+              7402436.6095171
+            ],
+            [
+              329507.3837424,
+              7402436.61114173
+            ],
+            [
+              329507.06408834,
+              7402436.59482721
+            ],
+            [
+              329506.74585088,
+              7402436.56062483
+            ],
+            [
+              329506.43003024,
+              7402436.50864207
+            ],
+            [
+              329506.11761903,
+              7402436.43904233
+            ],
+            [
+              329502.1677947,
+              7402435.38972391
+            ],
+            [
+              329484.26495067,
+              7402430.34191912
+            ],
+            [
+              329467.0815614,
+              7402425.36008484
+            ],
+            [
+              329458.80947353,
+              7402423.00665247
+            ],
+            [
+              329456.70352334,
+              7402422.50193169
+            ],
+            [
+              329454.56937444,
+              7402422.13426631
+            ],
+            [
+              329387.65939042,
+              7402413.10408217
+            ],
+            [
+              329320.81079087,
+              7402405.13246626
+            ],
+            [
+              329313.78271531,
+              7402404.56673796
+            ],
+            [
+              329306.7343329,
+              7402404.38180558
+            ],
+            [
+              329305.62991599,
+              7402404.4159836
+            ],
+            [
+              329304.52956059,
+              7402404.51659598
+            ],
+            [
+              329303.43725931,
+              7402404.68327767
+            ],
+            [
+              329302.35697555,
+              7402404.91542385
+            ],
+            [
+              329297.62589974,
+              7402406.21879871
+            ],
+            [
+              329292.97215009,
+              7402407.77587243
+            ],
+            [
+              329290.45816083,
+              7402408.77829887
+            ],
+            [
+              329288.00769248,
+              7402409.92730091
+            ],
+            [
+              329285.62928214,
+              7402411.21887556
+            ],
+            [
+              329283.33121588,
+              7402412.64852316
+            ],
+            [
+              329281.12149985,
+              7402414.21126302
+            ],
+            [
+              329278.17218696,
+              7402416.5864163
+            ],
+            [
+              329275.38549094,
+              7402419.15042194
+            ],
+            [
+              329272.7734817,
+              7402421.89217455
+            ],
+            [
+              329270.34747255,
+              7402424.79979888
+            ],
+            [
+              329268.91698348,
+              7402426.73987311
+            ],
+            [
+              329267.59363482,
+              7402428.75455306
+            ],
+            [
+              329266.38130879,
+              7402430.83792835
+            ],
+            [
+              329265.28356197,
+              7402432.98388709
+            ],
+            [
+              329264.39339333,
+              7402434.99835587
+            ],
+            [
+              329263.6242434,
+              7402437.06206444
+            ],
+            [
+              329262.97881903,
+              7402439.16775009
+            ],
+            [
+              329262.45939163,
+              7402441.30800237
+            ],
+            [
+              329261.8705067,
+              7402444.55141406
+            ],
+            [
+              329261.46943514,
+              7402447.82336248
+            ],
+            [
+              329261.25750892,
+              7402451.11298131
+            ],
+            [
+              329261.23543186,
+              7402454.40934559
+            ],
+            [
+              329261.40327727,
+              7402457.70150792
+            ],
+            [
+              329261.64814441,
+              7402459.93433891
+            ],
+            [
+              329262.02412508,
+              7402462.14886655
+            ],
+            [
+              329262.52991328,
+              7402464.33739858
+            ],
+            [
+              329263.16375215,
+              7402466.49233302
+            ],
+            [
+              329263.92344001,
+              7402468.6061846
+            ],
+            [
+              329264.80633805,
+              7402470.67161076
+            ],
+            [
+              329265.91480808,
+              7402473.06567317
+            ],
+            [
+              329266.53252089,
+              7402474.39795618
+            ],
+            [
+              329284.52025072,
+              7402512.99515719
+            ],
+            [
+              329284.65159405,
+              7402513.25763977
+            ],
+            [
+              329284.79651754,
+              7402513.51287565
+            ],
+            [
+              329284.95462261,
+              7402513.76016285
+            ],
+            [
+              329293.73753245,
+              7402526.73455747
+            ],
+            [
+              329331.79840776,
+              7402582.95929677
+            ],
+            [
+              329331.74501784,
+              7402583.00010011
+            ],
+            [
+              329334.22726304,
+              7402586.615666
+            ],
+            [
+              329334.56366226,
+              7402587.12613332
+            ],
+            [
+              329334.57275153,
+              7402587.11889446
+            ],
+            [
+              329353.22053765,
+              7402614.28071527
+            ],
+            [
+              329376.87531688,
+              7402648.67132363
+            ],
+            [
+              329405.79684138,
+              7402680.04211209
+            ],
+            [
+              329430.02161631,
+              7402693.98463588
+            ],
+            [
+              329458.66075407,
+              7402702.53508369
+            ],
+            [
+              329503.11531938,
+              7402709.64320117
+            ],
+            [
+              329522.70981154,
+              7402711.70699885
+            ],
+            [
+              329608.52586269,
+              7402718.20847453
+            ],
+            [
+              329649.51627768,
+              7402721.0660841
+            ],
+            [
+              329686.82552757,
+              7402721.8618773
+            ],
+            [
+              329717.70325447,
+              7402720.35878536
+            ],
+            [
+              329739.59159114,
+              7402716.46022044
+            ],
+            [
+              329748.15760432,
+              7402712.48107236
+            ],
+            [
+              329796.17245166,
+              7402691.93101554
+            ],
+            [
+              329802.81791501,
+              7402702.74531617
+            ],
+            [
+              329867.73169126,
+              7402671.69021397
+            ],
+            [
+              329938.73857158,
+              7402630.15427305
+            ],
+            [
+              330118.44881604,
+              7402478.27488074
+            ],
+            [
+              330200.77867887,
+              7402369.36832418
+            ],
+            [
+              330203.73298112,
+              7402363.98253423
+            ],
+            [
+              330200.47576841,
+              7402359.30249491
+            ],
+            [
+              330190.57040002,
+              7402351.86081151
+            ],
+            [
+              330117.92776613,
+              7402302.42313122
+            ],
+            [
+              330086.92038484,
+              7402346.62466424
+            ],
+            [
+              330021.52178791,
+              7402332.28256743
+            ],
+            [
+              329741.77744116,
+              7402390.12918268
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_campo_grande",
+      "properties": {
+        "id_equipamento": "cem_campo_grande",
+        "nome_oficial": "Cemitério Campo Grande",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Campo Grande",
+        "bloco_concessao": 3,
+        "concessionaria": "Grupo Maya",
+        "endereco_oficial": "Avenida Nossa Senhora do Sabará, 1371",
+        "cep_publicado": "04685-003",
+        "cep_normalizado": "04685-003",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160019",
+        "nome_geosampa": "CAMPO GRANDE",
+        "endereco_geosampa": "AV. NOSSA SENHORA DO SABARA, 1371",
+        "cep_geosampa": "04685-003",
+        "notas_mapeamento": "",
+        "area_m2_31983": 110607.455,
+        "perimetro_m_31983": 1427.644,
+        "centroide_x_31983": 327899.503,
+        "centroide_y_31983": 7381601.892,
+        "centroide_longitude": -46.6875742,
+        "centroide_latitude": -23.66718877,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "CAMPO GRANDE",
+        "distritos_intersectados": "CAMPO GRANDE:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SANTO AMARO",
+        "subprefeituras_intersectadas": "SANTO AMARO:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              328039.4054362,
+              7381780.14041506
+            ],
+            [
+              328051.71265347,
+              7381718.43930717
+            ],
+            [
+              328081.98050267,
+              7381568.33371086
+            ],
+            [
+              328083.95554295,
+              7381558.51013377
+            ],
+            [
+              328099.82556342,
+              7381555.0001331
+            ],
+            [
+              328101.67556643,
+              7381551.89012966
+            ],
+            [
+              328122.76911425,
+              7381554.11144222
+            ],
+            [
+              328124.62090602,
+              7381553.81504865
+            ],
+            [
+              328127.4140792,
+              7381552.89757883
+            ],
+            [
+              328128.77290516,
+              7381551.80283068
+            ],
+            [
+              328130.38882247,
+              7381550.09102748
+            ],
+            [
+              328131.0356036,
+              7381548.32013204
+            ],
+            [
+              328144.61922512,
+              7381491.86883563
+            ],
+            [
+              328144.77565456,
+              7381489.26276807
+            ],
+            [
+              328143.97953802,
+              7381486.39336624
+            ],
+            [
+              328141.92734389,
+              7381483.88892777
+            ],
+            [
+              328138.90875694,
+              7381482.75153177
+            ],
+            [
+              328035.17883156,
+              7381471.83720049
+            ],
+            [
+              327893.4796387,
+              7381457.36828431
+            ],
+            [
+              327773.49487545,
+              7381444.99516409
+            ],
+            [
+              327735.14513872,
+              7381440.59990591
+            ],
+            [
+              327706.93487955,
+              7381514.80844084
+            ],
+            [
+              327700.25507413,
+              7381532.38001192
+            ],
+            [
+              327698.59507007,
+              7381540.94002218
+            ],
+            [
+              327700.38589777,
+              7381543.30831796
+            ],
+            [
+              327701.12770134,
+              7381544.23676377
+            ],
+            [
+              327703.13349415,
+              7381546.11186115
+            ],
+            [
+              327705.10854055,
+              7381548.01931672
+            ],
+            [
+              327706.23880131,
+              7381549.16007204
+            ],
+            [
+              327707.33691627,
+              7381550.33180393
+            ],
+            [
+              327709.72350123,
+              7381552.96985251
+            ],
+            [
+              327714.04303919,
+              7381557.91119983
+            ],
+            [
+              327717.11884028,
+              7381562.03623279
+            ],
+            [
+              327719.77832401,
+              7381566.44118405
+            ],
+            [
+              327721.49307413,
+              7381569.88958882
+            ],
+            [
+              327723.70313882,
+              7381576.38076643
+            ],
+            [
+              327724.33619724,
+              7381578.48436858
+            ],
+            [
+              327725.35509365,
+              7381581.87007931
+            ],
+            [
+              327727.23933384,
+              7381590.79855529
+            ],
+            [
+              327728.57509362,
+              7381599.05010143
+            ],
+            [
+              327728.69829275,
+              7381603.44705092
+            ],
+            [
+              327728.735092,
+              7381606.84012716
+            ],
+            [
+              327727.70508917,
+              7381613.54013525
+            ],
+            [
+              327725.71508626,
+              7381615.42013713
+            ],
+            [
+              327721.16507667,
+              7381632.40015718
+            ],
+            [
+              327722.6550784,
+              7381632.90015815
+            ],
+            [
+              327721.08507547,
+              7381637.12016304
+            ],
+            [
+              327718.99787157,
+              7381641.33642207
+            ],
+            [
+              327716.18160652,
+              7381646.21049583
+            ],
+            [
+              327713.52048573,
+              7381650.26957248
+            ],
+            [
+              327709.91688332,
+              7381654.85233362
+            ],
+            [
+              327705.97505162,
+              7381659.18018695
+            ],
+            [
+              327701.85839339,
+              7381663.05288281
+            ],
+            [
+              327696.41503784,
+              7381667.51019508
+            ],
+            [
+              327692.45951628,
+              7381670.27842571
+            ],
+            [
+              327688.72584304,
+              7381672.77183916
+            ],
+            [
+              327685.95044574,
+              7381674.35792518
+            ],
+            [
+              327683.5736223,
+              7381675.589178
+            ],
+            [
+              327681.13992321,
+              7381676.83463187
+            ],
+            [
+              327678.49683237,
+              7381677.78433198
+            ],
+            [
+              327676.72055717,
+              7381678.37631256
+            ],
+            [
+              327675.30614849,
+              7381681.65037365
+            ],
+            [
+              327672.8950041,
+              7381687.31021422
+            ],
+            [
+              327676.64365616,
+              7381691.02860514
+            ],
+            [
+              327703.81228395,
+              7381718.34290109
+            ],
+            [
+              327705.81999353,
+              7381720.04957221
+            ],
+            [
+              327710.230838,
+              7381723.28320332
+            ],
+            [
+              327712.18122379,
+              7381724.5659666
+            ],
+            [
+              327718.67541957,
+              7381727.90248619
+            ],
+            [
+              327723.22471159,
+              7381729.69422835
+            ],
+            [
+              327725.12154694,
+              7381730.38559675
+            ],
+            [
+              327730.14157807,
+              7381731.66399589
+            ],
+            [
+              327983.19331896,
+              7381771.21082418
+            ],
+            [
+              328039.4054362,
+              7381780.14041506
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_lageado",
+      "properties": {
+        "id_equipamento": "cem_lageado",
+        "nome_oficial": "Cemitério do Lageado",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Lageado",
+        "bloco_concessao": 3,
+        "concessionaria": "Grupo Maya",
+        "endereco_oficial": "Estrada do Lageado Velho, 1490",
+        "cep_publicado": "08451-000",
+        "cep_normalizado": "08451-000",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "Grafia contratual: Lageado; também aparece como Lajeado.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160039|equipamento_cemiterio.160040",
+        "nome_geosampa": "DO LAGEADO",
+        "endereco_geosampa": "ESTRADA DO LAGEADO VELHO, 1490",
+        "cep_geosampa": "08451-000",
+        "notas_mapeamento": "Primeira feição do equipamento; será dissolvida com a segunda.|Segunda feição do equipamento; será dissolvida com a primeira.",
+        "area_m2_31983": 54982.115,
+        "perimetro_m_31983": 1142.28,
+        "centroide_x_31983": 357518.882,
+        "centroide_y_31983": 7396625.13,
+        "centroide_longitude": -46.39577123,
+        "centroide_latitude": -23.53441902,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "LAJEADO",
+        "distritos_intersectados": "LAJEADO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "GUAIANASES",
+        "subprefeituras_intersectadas": "GUAIANASES:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                357711.08459517,
+                7396611.69885856
+              ],
+              [
+                357700.1628364,
+                7396575.38844986
+              ],
+              [
+                357694.33391884,
+                7396560.91421813
+              ],
+              [
+                357688.39153994,
+                7396551.54281643
+              ],
+              [
+                357683.06123126,
+                7396546.01561279
+              ],
+              [
+                357676.10073169,
+                7396543.87465249
+              ],
+              [
+                357671.12938272,
+                7396543.00348986
+              ],
+              [
+                357653.66713016,
+                7396542.37265665
+              ],
+              [
+                357653.68643676,
+                7396540.82277491
+              ],
+              [
+                357542.72802143,
+                7396535.42730835
+              ],
+              [
+                357507.36816546,
+                7396534.02764494
+              ],
+              [
+                357472.01898526,
+                7396535.03765845
+              ],
+              [
+                357455.20635023,
+                7396536.6560698
+              ],
+              [
+                357377.96851021,
+                7396550.23070309
+              ],
+              [
+                357372.53080935,
+                7396555.05689086
+              ],
+              [
+                357368.81742172,
+                7396561.92295219
+              ],
+              [
+                357364.91095429,
+                7396572.31525346
+              ],
+              [
+                357357.35569083,
+                7396596.07475336
+              ],
+              [
+                357347.55412836,
+                7396670.48080552
+              ],
+              [
+                357398.16294068,
+                7396696.03445037
+              ],
+              [
+                357395.82380489,
+                7396703.45630891
+              ],
+              [
+                357407.82648787,
+                7396706.78291834
+              ],
+              [
+                357425.22510267,
+                7396711.31799326
+              ],
+              [
+                357426.6167293,
+                7396711.63572353
+              ],
+              [
+                357432.30828081,
+                7396712.92325147
+              ],
+              [
+                357449.88902505,
+                7396716.50066151
+              ],
+              [
+                357478.41651316,
+                7396720.26542394
+              ],
+              [
+                357489.12812571,
+                7396719.03895211
+              ],
+              [
+                357539.73306631,
+                7396706.33305854
+              ],
+              [
+                357572.52202695,
+                7396693.44463309
+              ],
+              [
+                357591.24343913,
+                7396687.02090169
+              ],
+              [
+                357610.70517437,
+                7396681.21807073
+              ],
+              [
+                357649.35488626,
+                7396670.10883511
+              ],
+              [
+                357658.94630787,
+                7396665.58909688
+              ],
+              [
+                357666.53481679,
+                7396658.68385642
+              ],
+              [
+                357671.31117732,
+                7396654.23661515
+              ],
+              [
+                357699.59835015,
+                7396623.84218237
+              ],
+              [
+                357699.4035686,
+                7396617.88453048
+              ],
+              [
+                357703.22420686,
+                7396613.70790047
+              ],
+              [
+                357708.99977841,
+                7396613.62031441
+              ],
+              [
+                357711.08459517,
+                7396611.69885856
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                357543.24204628,
+                7396719.059399
+              ],
+              [
+                357475.64595791,
+                7396736.83340843
+              ],
+              [
+                357486.23696385,
+                7396775.07745877
+              ],
+              [
+                357553.50905181,
+                7396757.33944932
+              ],
+              [
+                357543.24204628,
+                7396719.059399
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_lapa",
+      "properties": {
+        "id_equipamento": "cem_lapa",
+        "nome_oficial": "Cemitério da Lapa",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Lapa",
+        "bloco_concessao": 3,
+        "concessionaria": "Grupo Maya",
+        "endereco_oficial": "Rua Bergson, 347",
+        "cep_publicado": "05301-060",
+        "cep_normalizado": "05301-060",
+        "categoria_tarifaria": 1,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 1088.41,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160033",
+        "nome_geosampa": "LAPA",
+        "endereco_geosampa": "R. BERGSON, 347",
+        "cep_geosampa": "05301-060",
+        "notas_mapeamento": "",
+        "area_m2_31983": 110241.855,
+        "perimetro_m_31983": 1643.595,
+        "centroide_x_31983": 324273.748,
+        "centroide_y_31983": 7396106.303,
+        "centroide_longitude": -46.72140436,
+        "centroide_latitude": -23.53584221,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "VILA LEOPOLDINA",
+        "distritos_intersectados": "VILA LEOPOLDINA:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "LAPA",
+        "subprefeituras_intersectadas": "LAPA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              324404.16602618,
+              7396387.16402547
+            ],
+            [
+              324397.5212343,
+              7396363.10012639
+            ],
+            [
+              324396.59249544,
+              7396357.16978724
+            ],
+            [
+              324396.44570779,
+              7396350.91538404
+            ],
+            [
+              324397.89190603,
+              7396345.384083
+            ],
+            [
+              324403.39209186,
+              7396336.49072778
+            ],
+            [
+              324406.10395251,
+              7396329.90274112
+            ],
+            [
+              324406.68537827,
+              7396309.87688284
+            ],
+            [
+              324407.1107256,
+              7396292.13718171
+            ],
+            [
+              324407.862873,
+              7396272.0504438
+            ],
+            [
+              324408.84334012,
+              7396266.23409827
+            ],
+            [
+              324411.68876063,
+              7396258.7233786
+            ],
+            [
+              324414.95750152,
+              7396247.60005041
+            ],
+            [
+              324415.51954873,
+              7396242.76227628
+            ],
+            [
+              324418.75119991,
+              7396231.0997483
+            ],
+            [
+              324419.55030725,
+              7396225.70603091
+            ],
+            [
+              324419.91042317,
+              7396219.44657411
+            ],
+            [
+              324420.86124685,
+              7396213.61769636
+            ],
+            [
+              324421.89424433,
+              7396213.45653591
+            ],
+            [
+              324422.16969492,
+              7396207.01046151
+            ],
+            [
+              324421.70349818,
+              7396206.99163106
+            ],
+            [
+              324423.47888962,
+              7396193.71637416
+            ],
+            [
+              324424.18836785,
+              7396187.26912752
+            ],
+            [
+              324422.04273361,
+              7396187.10109962
+            ],
+            [
+              324424.46215235,
+              7396165.06366323
+            ],
+            [
+              324426.16869188,
+              7396149.51953438
+            ],
+            [
+              324487.88153275,
+              7396154.16480172
+            ],
+            [
+              324490.51050239,
+              7396117.0453198
+            ],
+            [
+              324490.77966854,
+              7396114.16847848
+            ],
+            [
+              324492.36372987,
+              7396098.65302213
+            ],
+            [
+              324493.68594643,
+              7396080.02569299
+            ],
+            [
+              324493.22794855,
+              7396076.56928313
+            ],
+            [
+              324492.72208104,
+              7396074.64381202
+            ],
+            [
+              324484.19440544,
+              7396056.97925033
+            ],
+            [
+              324475.22240394,
+              7396039.15578679
+            ],
+            [
+              324470.96914984,
+              7396031.06485814
+            ],
+            [
+              324467.44865862,
+              7396024.52613647
+            ],
+            [
+              324457.81586663,
+              7396011.08632537
+            ],
+            [
+              324449.46117452,
+              7396002.59572107
+            ],
+            [
+              324442.50918173,
+              7395997.28947737
+            ],
+            [
+              324428.07641298,
+              7395987.28447446
+            ],
+            [
+              324414.01945685,
+              7395978.03808965
+            ],
+            [
+              324402.0308613,
+              7395971.75308019
+            ],
+            [
+              324390.72467979,
+              7395966.81231447
+            ],
+            [
+              324384.66506261,
+              7395964.9559092
+            ],
+            [
+              324368.4808638,
+              7395961.14804868
+            ],
+            [
+              324358.41953045,
+              7395959.02809568
+            ],
+            [
+              324347.88777967,
+              7395957.4564086
+            ],
+            [
+              324327.76099602,
+              7395955.97709506
+            ],
+            [
+              324311.12862362,
+              7395956.85686767
+            ],
+            [
+              324307.01597651,
+              7395957.33373836
+            ],
+            [
+              324250.21826638,
+              7395965.3362495
+            ],
+            [
+              324199.07437449,
+              7395972.47963904
+            ],
+            [
+              324190.8780545,
+              7395973.57040109
+            ],
+            [
+              324181.48831565,
+              7395974.87713049
+            ],
+            [
+              324146.83012643,
+              7395979.66513861
+            ],
+            [
+              324123.76526498,
+              7395982.99110377
+            ],
+            [
+              324103.84927548,
+              7395985.89236393
+            ],
+            [
+              324059.67519895,
+              7395991.88557343
+            ],
+            [
+              324044.53664856,
+              7395993.64864497
+            ],
+            [
+              324037.47411466,
+              7395994.18511955
+            ],
+            [
+              324030.41158076,
+              7395994.72159413
+            ],
+            [
+              324021.8991572,
+              7395994.51055763
+            ],
+            [
+              324013.5430135,
+              7395994.31061656
+            ],
+            [
+              324007.9260564,
+              7395994.11712768
+            ],
+            [
+              324002.3090993,
+              7395993.92363881
+            ],
+            [
+              324001.48860218,
+              7395994.65701291
+            ],
+            [
+              323999.7290262,
+              7395996.22975147
+            ],
+            [
+              323996.91739991,
+              7396008.73354352
+            ],
+            [
+              323995.12699191,
+              7396017.55491332
+            ],
+            [
+              323993.21088759,
+              7396023.5736795
+            ],
+            [
+              323990.65341652,
+              7396029.25349487
+            ],
+            [
+              323986.8349549,
+              7396037.95390381
+            ],
+            [
+              323983.49799466,
+              7396043.87758137
+            ],
+            [
+              323981.33605148,
+              7396047.27769838
+            ],
+            [
+              323979.1741083,
+              7396050.67781539
+            ],
+            [
+              323976.99870074,
+              7396053.89718592
+            ],
+            [
+              323975.62703516,
+              7396055.78000227
+            ],
+            [
+              323974.08446566,
+              7396057.49534252
+            ],
+            [
+              323972.54189615,
+              7396059.21068276
+            ],
+            [
+              324009.0636089,
+              7396068.77454947
+            ],
+            [
+              324012.02293029,
+              7396069.22080919
+            ],
+            [
+              324034.47573245,
+              7396071.29481192
+            ],
+            [
+              324071.63016538,
+              7396074.09245259
+            ],
+            [
+              324060.92073472,
+              7396128.09968033
+            ],
+            [
+              324059.13814012,
+              7396137.25471456
+            ],
+            [
+              324056.38294788,
+              7396147.54178077
+            ],
+            [
+              324071.41879998,
+              7396154.45410693
+            ],
+            [
+              324084.55400469,
+              7396155.99764588
+            ],
+            [
+              324094.33846365,
+              7396156.82976229
+            ],
+            [
+              324105.40540253,
+              7396158.67484129
+            ],
+            [
+              324105.77305693,
+              7396156.63896708
+            ],
+            [
+              324113.49590322,
+              7396159.64447543
+            ],
+            [
+              324140.48005146,
+              7396172.88555991
+            ],
+            [
+              324160.85764676,
+              7396182.59450578
+            ],
+            [
+              324187.98062291,
+              7396195.02545434
+            ],
+            [
+              324212.26080652,
+              7396206.89468787
+            ],
+            [
+              324261.59444272,
+              7396231.15522416
+            ],
+            [
+              324277.53327674,
+              7396238.98352365
+            ],
+            [
+              324286.38082235,
+              7396243.81412509
+            ],
+            [
+              324291.05379863,
+              7396246.19174731
+            ],
+            [
+              324297.80667061,
+              7396250.72922958
+            ],
+            [
+              324305.59072152,
+              7396257.15525437
+            ],
+            [
+              324310.85362711,
+              7396262.6211483
+            ],
+            [
+              324315.42650306,
+              7396267.4539547
+            ],
+            [
+              324319.60878533,
+              7396272.04465888
+            ],
+            [
+              324326.67293601,
+              7396281.58484035
+            ],
+            [
+              324329.02972352,
+              7396285.13896213
+            ],
+            [
+              324339.34576695,
+              7396300.649618
+            ],
+            [
+              324346.97001598,
+              7396313.73835515
+            ],
+            [
+              324352.11301009,
+              7396322.88234804
+            ],
+            [
+              324354.82729791,
+              7396330.70727474
+            ],
+            [
+              324356.18854581,
+              7396336.19741795
+            ],
+            [
+              324368.83310731,
+              7396388.09129226
+            ],
+            [
+              324371.87591662,
+              7396390.0696262
+            ],
+            [
+              324404.16602618,
+              7396387.16402547
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_parelheiros",
+      "properties": {
+        "id_equipamento": "cem_parelheiros",
+        "nome_oficial": "Cemitério de Parelheiros",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Parelheiros",
+        "bloco_concessao": 3,
+        "concessionaria": "Grupo Maya",
+        "endereco_oficial": "Rua Amaro de Pontes, 237",
+        "cep_publicado": "04890-36",
+        "cep_normalizado": "04890-360",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "CEP publicado de forma incompleta na página oficial; normalização provisória a conferir no GeoSampa.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160018",
+        "nome_geosampa": "PARELHEIROS",
+        "endereco_geosampa": "RUA AMARO DE PONTES, 237",
+        "cep_geosampa": "04890-360",
+        "notas_mapeamento": "",
+        "area_m2_31983": 5428.486,
+        "perimetro_m_31983": 384.626,
+        "centroide_x_31983": 323857.946,
+        "centroide_y_31983": 7363596.027,
+        "centroide_longitude": -46.72933684,
+        "centroide_latitude": -23.8293173,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "PARELHEIROS",
+        "distritos_intersectados": "PARELHEIROS:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "PARELHEIROS",
+        "subprefeituras_intersectadas": "PARELHEIROS:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              323866.35970061,
+              7363541.40512949
+            ],
+            [
+              323853.33437403,
+              7363534.42874992
+            ],
+            [
+              323845.71742571,
+              7363549.57100395
+            ],
+            [
+              323844.6036703,
+              7363551.36962685
+            ],
+            [
+              323843.17787063,
+              7363553.85403568
+            ],
+            [
+              323843.10423268,
+              7363554.40518749
+            ],
+            [
+              323843.31112981,
+              7363555.44034075
+            ],
+            [
+              323843.95818308,
+              7363556.23440483
+            ],
+            [
+              323842.51235799,
+              7363558.67617739
+            ],
+            [
+              323842.16183992,
+              7363558.65196728
+            ],
+            [
+              323841.29952228,
+              7363558.65127808
+            ],
+            [
+              323840.62776118,
+              7363558.92184495
+            ],
+            [
+              323839.67591873,
+              7363559.69355725
+            ],
+            [
+              323823.12661512,
+              7363578.2888246
+            ],
+            [
+              323816.75953727,
+              7363585.51317432
+            ],
+            [
+              323804.10856287,
+              7363599.88954745
+            ],
+            [
+              323809.72898269,
+              7363603.5725487
+            ],
+            [
+              323832.70856925,
+              7363615.90149157
+            ],
+            [
+              323849.25218608,
+              7363624.76873492
+            ],
+            [
+              323863.33284646,
+              7363632.34166344
+            ],
+            [
+              323872.16310239,
+              7363636.80319268
+            ],
+            [
+              323856.71259202,
+              7363648.63710947
+            ],
+            [
+              323880.77661816,
+              7363661.46913086
+            ],
+            [
+              323885.82359416,
+              7363643.70522177
+            ],
+            [
+              323902.40201264,
+              7363608.02087427
+            ],
+            [
+              323867.6061682,
+              7363589.33096154
+            ],
+            [
+              323886.05879586,
+              7363551.75332291
+            ],
+            [
+              323866.35970061,
+              7363541.40512949
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_saudade",
+      "properties": {
+        "id_equipamento": "cem_saudade",
+        "nome_oficial": "Cemitério da Saudade",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Saudade",
+        "bloco_concessao": 3,
+        "concessionaria": "Grupo Maya",
+        "endereco_oficial": "Rua Samuel de Carvalho, 60",
+        "cep_publicado": "08041-00",
+        "cep_normalizado": "08041-000",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "sepultamento",
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "CEP publicado de forma incompleta na página oficial; normalização provisória a conferir no GeoSampa.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160028",
+        "nome_geosampa": "SAUDADE",
+        "endereco_geosampa": "AV. PIRES DO RIO, 1441",
+        "cep_geosampa": "08041-000",
+        "notas_mapeamento": "O endereço cadastrado no GeoSampa difere do endereço de atendimento publicado pela SP Regula.",
+        "area_m2_31983": 131382.446,
+        "perimetro_m_31983": 1607.984,
+        "centroide_x_31983": 352858.787,
+        "centroide_y_31983": 7399301.954,
+        "centroide_longitude": -46.44114811,
+        "centroide_latitude": -23.50983125,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "SAO MIGUEL",
+        "distritos_intersectados": "SAO MIGUEL:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "SAO MIGUEL",
+        "subprefeituras_intersectadas": "SAO MIGUEL:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              353141.50400299,
+              7399295.86079734
+            ],
+            [
+              353136.4540002,
+              7399277.87077356
+            ],
+            [
+              353101.72813128,
+              7399255.55661919
+            ],
+            [
+              352986.81615852,
+              7399181.65139363
+            ],
+            [
+              352882.06071227,
+              7399113.72151519
+            ],
+            [
+              352823.54457363,
+              7399208.58069334
+            ],
+            [
+              352803.20373361,
+              7399201.13740118
+            ],
+            [
+              352785.80257594,
+              7399189.32859178
+            ],
+            [
+              352735.09204043,
+              7399156.71222585
+            ],
+            [
+              352713.29663135,
+              7399142.77938295
+            ],
+            [
+              352628.65846656,
+              7399089.41277876
+            ],
+            [
+              352625.9703948,
+              7399087.62743121
+            ],
+            [
+              352624.60448909,
+              7399088.58227081
+            ],
+            [
+              352620.13138659,
+              7399091.91143547
+            ],
+            [
+              352637.30161171,
+              7399327.19137153
+            ],
+            [
+              352639.01435859,
+              7399351.8607684
+            ],
+            [
+              352641.53835573,
+              7399382.15280727
+            ],
+            [
+              352644.47986328,
+              7399427.85081868
+            ],
+            [
+              352693.21144996,
+              7399432.60986027
+            ],
+            [
+              352744.22376671,
+              7399437.82991618
+            ],
+            [
+              352815.90251472,
+              7399445.5763423
+            ],
+            [
+              352925.51529811,
+              7399456.99131591
+            ],
+            [
+              353036.32683557,
+              7399471.34299872
+            ],
+            [
+              353049.80645844,
+              7399448.94102822
+            ],
+            [
+              353063.5324548,
+              7399426.1180592
+            ],
+            [
+              353082.99032929,
+              7399392.61708417
+            ],
+            [
+              353102.44820377,
+              7399359.11610914
+            ],
+            [
+              353141.50400299,
+              7399295.86079734
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_freguesia_do_o",
+      "properties": {
+        "id_equipamento": "cem_freguesia_do_o",
+        "nome_oficial": "Cemitério da Freguesia do Ó",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Freguesia do Ó",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Avenida Itaberaba, 250",
+        "cep_publicado": "02734-000",
+        "cep_normalizado": "02734-000",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160024",
+        "nome_geosampa": "FREGUESIA DO Ó",
+        "endereco_geosampa": "AV. ITABERABA, 250",
+        "cep_geosampa": "02350-002",
+        "notas_mapeamento": "O bairro e o CEP da feição devem ser tratados com cautela; o polígono foi associado pelo nome e endereço do equipamento.",
+        "area_m2_31983": 14420.431,
+        "perimetro_m_31983": 563.557,
+        "centroide_x_31983": 326677.547,
+        "centroide_y_31983": 7400244.471,
+        "centroide_longitude": -46.69738578,
+        "centroide_latitude": -23.49873792,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "FREGUESIA DO O",
+        "distritos_intersectados": "FREGUESIA DO O:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "FREGUESIA-BRASILANDIA",
+        "subprefeituras_intersectadas": "FREGUESIA-BRASILANDIA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              326775.60655431,
+              7400215.00426275
+            ],
+            [
+              326730.39250965,
+              7400161.88218475
+            ],
+            [
+              326680.94040893,
+              7400203.84525059
+            ],
+            [
+              326648.33021831,
+              7400210.46483552
+            ],
+            [
+              326643.28967062,
+              7400211.57219417
+            ],
+            [
+              326616.82419385,
+              7400216.93185156
+            ],
+            [
+              326608.10534673,
+              7400198.04220201
+            ],
+            [
+              326604.96034139,
+              7400203.87020866
+            ],
+            [
+              326604.45234082,
+              7400203.55520815
+            ],
+            [
+              326600.81033485,
+              7400209.42221474
+            ],
+            [
+              326600.40533333,
+              7400213.7252201
+            ],
+            [
+              326601.68949056,
+              7400220.41960641
+            ],
+            [
+              326623.1338857,
+              7400337.35848686
+            ],
+            [
+              326628.95633991,
+              7400339.46738638
+            ],
+            [
+              326648.09696876,
+              7400323.19976557
+            ],
+            [
+              326652.80932859,
+              7400319.17207698
+            ],
+            [
+              326660.99605703,
+              7400312.10885787
+            ],
+            [
+              326725.14434525,
+              7400257.50625354
+            ],
+            [
+              326727.81039748,
+              7400255.02654196
+            ],
+            [
+              326775.60655431,
+              7400215.00426275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_itaquera",
+      "properties": {
+        "id_equipamento": "cem_itaquera",
+        "nome_oficial": "Cemitério de Itaquera",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Itaquera",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Rua Serra de São Domingos, 1597",
+        "cep_publicado": "08290-370",
+        "cep_normalizado": "08290-370",
+        "categoria_tarifaria": 3,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160027",
+        "nome_geosampa": "DE ITAQUERA",
+        "endereco_geosampa": "R. SERRA DE SÃO DOMINGOS, 1597",
+        "cep_geosampa": "02350-002",
+        "notas_mapeamento": "",
+        "area_m2_31983": 111866.265,
+        "perimetro_m_31983": 1319.833,
+        "centroide_x_31983": 351598.351,
+        "centroide_y_31983": 7393848.933,
+        "centroide_longitude": -46.45403135,
+        "centroide_latitude": -23.55895683,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "PARQUE DO CARMO",
+        "distritos_intersectados": "PARQUE DO CARMO:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "ITAQUERA",
+        "subprefeituras_intersectadas": "ITAQUERA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              351780.81449333,
+              7393942.4287198
+            ],
+            [
+              351784.33159825,
+              7393912.59215781
+            ],
+            [
+              351787.84870318,
+              7393882.75559583
+            ],
+            [
+              351790.25443485,
+              7393859.72564982
+            ],
+            [
+              351792.66016652,
+              7393836.6957038
+            ],
+            [
+              351794.50383795,
+              7393819.62004294
+            ],
+            [
+              351790.05840558,
+              7393732.88168709
+            ],
+            [
+              351748.01301412,
+              7393724.36113928
+            ],
+            [
+              351670.83486539,
+              7393708.72089708
+            ],
+            [
+              351474.41087967,
+              7393668.6616577
+            ],
+            [
+              351430.4368217,
+              7393659.78196278
+            ],
+            [
+              351428.80551378,
+              7393662.20277738
+            ],
+            [
+              351429.2395998,
+              7393674.39506795
+            ],
+            [
+              351430.0196034,
+              7393696.30323824
+            ],
+            [
+              351429.43667064,
+              7393708.00580197
+            ],
+            [
+              351424.99296015,
+              7393726.18050524
+            ],
+            [
+              351416.26330122,
+              7393743.97508481
+            ],
+            [
+              351415.61872431,
+              7393745.13130714
+            ],
+            [
+              351413.81945395,
+              7393748.59323219
+            ],
+            [
+              351396.35956238,
+              7393783.78693455
+            ],
+            [
+              351394.22759206,
+              7393790.94737902
+            ],
+            [
+              351393.17700696,
+              7393799.51974774
+            ],
+            [
+              351393.46843372,
+              7393805.54788272
+            ],
+            [
+              351394.99744341,
+              7393813.03026626
+            ],
+            [
+              351397.1191039,
+              7393818.8814914
+            ],
+            [
+              351406.0815034,
+              7393834.44803649
+            ],
+            [
+              351415.49240679,
+              7393849.08421609
+            ],
+            [
+              351422.28381498,
+              7393850.80779896
+            ],
+            [
+              351424.622907,
+              7393855.00235404
+            ],
+            [
+              351423.02676579,
+              7393862.07166719
+            ],
+            [
+              351436.29167823,
+              7393882.67119444
+            ],
+            [
+              351487.10787004,
+              7393964.76026443
+            ],
+            [
+              351558.83705024,
+              7394081.08813222
+            ],
+            [
+              351561.49240818,
+              7394081.65748183
+            ],
+            [
+              351601.64637701,
+              7394056.06969093
+            ],
+            [
+              351648.4833265,
+              7394026.28173609
+            ],
+            [
+              351651.98955336,
+              7394024.12677059
+            ],
+            [
+              351780.81449333,
+              7393942.4287198
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_penha",
+      "properties": {
+        "id_equipamento": "cem_penha",
+        "nome_oficial": "Cemitério da Penha",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "Penha",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Avenida Amador Bueno da Veiga, 333",
+        "cep_publicado": "03635-000",
+        "cep_normalizado": "03635-000",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160029",
+        "nome_geosampa": "PENHA",
+        "endereco_geosampa": "AV. AMADOR BUENO DA VEIGA, 333",
+        "cep_geosampa": "03635-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 16261.302,
+        "perimetro_m_31983": 503.338,
+        "centroide_x_31983": 342638.734,
+        "centroide_y_31983": 7397826.483,
+        "centroide_longitude": -46.54137451,
+        "centroide_latitude": -23.52219582,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "PENHA",
+        "distritos_intersectados": "PENHA:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "PENHA",
+        "subprefeituras_intersectadas": "PENHA:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              342704.99314602,
+              7397893.48777861
+            ],
+            [
+              342715.51974699,
+              7397823.7428528
+            ],
+            [
+              342718.09115175,
+              7397807.10984886
+            ],
+            [
+              342696.11025604,
+              7397791.04237445
+            ],
+            [
+              342677.14427723,
+              7397777.17872744
+            ],
+            [
+              342659.31257215,
+              7397768.97468752
+            ],
+            [
+              342642.49304192,
+              7397763.27510214
+            ],
+            [
+              342638.37224689,
+              7397762.65630441
+            ],
+            [
+              342627.86925779,
+              7397761.07912676
+            ],
+            [
+              342620.73319866,
+              7397760.00754296
+            ],
+            [
+              342617.20403991,
+              7397759.82696772
+            ],
+            [
+              342610.26163248,
+              7397758.80739525
+            ],
+            [
+              342578.82582704,
+              7397754.19068525
+            ],
+            [
+              342576.6213364,
+              7397771.73391246
+            ],
+            [
+              342576.20551177,
+              7397774.7219068
+            ],
+            [
+              342574.58936485,
+              7397786.33506638
+            ],
+            [
+              342574.02764493,
+              7397790.37142165
+            ],
+            [
+              342571.71975555,
+              7397806.9552405
+            ],
+            [
+              342569.75395152,
+              7397820.57452793
+            ],
+            [
+              342569.57999253,
+              7397821.8473691
+            ],
+            [
+              342569.55532214,
+              7397822.02394548
+            ],
+            [
+              342562.60639819,
+              7397872.73090528
+            ],
+            [
+              342704.99314602,
+              7397893.48777861
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_sao_luiz",
+      "properties": {
+        "id_equipamento": "cem_sao_luiz",
+        "nome_oficial": "Cemitério São Luiz",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "São Luiz",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Rua Antônio de Sena, 82",
+        "cep_publicado": "05846-080",
+        "cep_normalizado": "05846-080",
+        "categoria_tarifaria": 4,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "sepultamento",
+        "tarifa_sepultamento_avulso_2026": 592.95,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160035",
+        "nome_geosampa": "SÃO LUIZ",
+        "endereco_geosampa": "R. ANTÔNIO DE SENA, 82",
+        "cep_geosampa": "05846-080",
+        "notas_mapeamento": "",
+        "area_m2_31983": 235332.92,
+        "perimetro_m_31983": 2319.126,
+        "centroide_x_31983": 322075.408,
+        "centroide_y_31983": 7381992.728,
+        "centroide_longitude": -46.74461673,
+        "centroide_latitude": -23.6630277,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "JARDIM SAO LUIS",
+        "distritos_intersectados": "JARDIM SAO LUIS:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "M BOI MIRIM",
+        "subprefeituras_intersectadas": "M BOI MIRIM:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              321890.16119825,
+              7382288.47407948
+            ],
+            [
+              321895.06325371,
+              7382290.22939895
+            ],
+            [
+              321934.80167786,
+              7382303.69557728
+            ],
+            [
+              321998.91842264,
+              7382323.03438775
+            ],
+            [
+              322004.02917935,
+              7382323.10569295
+            ],
+            [
+              322008.34166811,
+              7382320.60753058
+            ],
+            [
+              322077.27803806,
+              7382231.95899284
+            ],
+            [
+              322127.16865825,
+              7382180.86505887
+            ],
+            [
+              322134.67355278,
+              7382178.56913664
+            ],
+            [
+              322139.74682127,
+              7382177.97603853
+            ],
+            [
+              322152.19951226,
+              7382177.06044761
+            ],
+            [
+              322164.29570499,
+              7382177.34982432
+            ],
+            [
+              322167.81721006,
+              7382177.1577558
+            ],
+            [
+              322178.60769005,
+              7382173.82498112
+            ],
+            [
+              322189.16443788,
+              7382170.39025333
+            ],
+            [
+              322203.87807238,
+              7382162.39296912
+            ],
+            [
+              322214.74289304,
+              7382153.37471637
+            ],
+            [
+              322222.41814603,
+              7382143.24229856
+            ],
+            [
+              322228.43105408,
+              7382134.12709109
+            ],
+            [
+              322234.20165568,
+              7382121.05279581
+            ],
+            [
+              322236.64460796,
+              7382107.5710743
+            ],
+            [
+              322242.48796819,
+              7382095.57805334
+            ],
+            [
+              322250.00082998,
+              7382087.48369457
+            ],
+            [
+              322253.44358216,
+              7382080.31636364
+            ],
+            [
+              322253.85974097,
+              7382071.41862954
+            ],
+            [
+              322269.80361149,
+              7382055.48668439
+            ],
+            [
+              322269.76318151,
+              7382055.4479958
+            ],
+            [
+              322290.90426923,
+              7382034.10291756
+            ],
+            [
+              322290.62010937,
+              7382033.78370276
+            ],
+            [
+              322325.65963787,
+              7381997.9077956
+            ],
+            [
+              322328.97197967,
+              7381994.20638107
+            ],
+            [
+              322341.6164647,
+              7381976.58137522
+            ],
+            [
+              322347.13848877,
+              7381964.93997132
+            ],
+            [
+              322354.19313187,
+              7381943.69453665
+            ],
+            [
+              322357.38771341,
+              7381921.19630025
+            ],
+            [
+              322358.88028997,
+              7381902.92513805
+            ],
+            [
+              322361.02372956,
+              7381882.65660923
+            ],
+            [
+              322364.60836095,
+              7381870.14419388
+            ],
+            [
+              322369.49484249,
+              7381859.97468981
+            ],
+            [
+              322377.64520419,
+              7381847.40494062
+            ],
+            [
+              322387.34295207,
+              7381836.60769671
+            ],
+            [
+              322396.55677899,
+              7381827.67771386
+            ],
+            [
+              322401.28771503,
+              7381823.07971497
+            ],
+            [
+              322402.87976832,
+              7381819.20725741
+            ],
+            [
+              322401.49013871,
+              7381812.41843693
+            ],
+            [
+              322367.53925117,
+              7381733.61250313
+            ],
+            [
+              322344.18681628,
+              7381718.44477256
+            ],
+            [
+              322341.87440695,
+              7381717.06298772
+            ],
+            [
+              322330.16777139,
+              7381710.56557721
+            ],
+            [
+              322324.08921845,
+              7381709.92920246
+            ],
+            [
+              322308.56875014,
+              7381711.55989283
+            ],
+            [
+              322266.24342238,
+              7381715.81225658
+            ],
+            [
+              322261.41233343,
+              7381714.59956914
+            ],
+            [
+              322260.04136951,
+              7381716.59703696
+            ],
+            [
+              322247.01597094,
+              7381715.94925684
+            ],
+            [
+              322216.42084313,
+              7381708.68170712
+            ],
+            [
+              322193.35532102,
+              7381711.91002144
+            ],
+            [
+              322181.41335606,
+              7381709.31274
+            ],
+            [
+              322149.07313623,
+              7381680.28241426
+            ],
+            [
+              322124.99290574,
+              7381658.50436228
+            ],
+            [
+              322016.09864119,
+              7381717.08362323
+            ],
+            [
+              322011.59316878,
+              7381723.54083458
+            ],
+            [
+              322001.24133104,
+              7381742.07048972
+            ],
+            [
+              321997.21796499,
+              7381745.3690013
+            ],
+            [
+              321943.22230726,
+              7381782.09377018
+            ],
+            [
+              321940.39621899,
+              7381785.57632149
+            ],
+            [
+              321936.20839335,
+              7381795.40470764
+            ],
+            [
+              321934.83112052,
+              7381801.83868251
+            ],
+            [
+              321934.87837057,
+              7381809.11877407
+            ],
+            [
+              321939.20419064,
+              7381819.42598105
+            ],
+            [
+              321943.50754411,
+              7381824.84991317
+            ],
+            [
+              321992.68138315,
+              7381870.07214544
+            ],
+            [
+              321995.51466172,
+              7381873.52382224
+            ],
+            [
+              321995.0110341,
+              7381980.1496538
+            ],
+            [
+              321989.41213866,
+              7382010.15581166
+            ],
+            [
+              321962.99310702,
+              7382005.88267957
+            ],
+            [
+              321948.9731262,
+              7382005.09890795
+            ],
+            [
+              321919.1663362,
+              7381999.22803855
+            ],
+            [
+              321835.26868279,
+              7382082.7169251
+            ],
+            [
+              321770.54991913,
+              7382076.88387407
+            ],
+            [
+              321731.4498514,
+              7382074.99776251
+            ],
+            [
+              321687.11487716,
+              7382069.60432566
+            ],
+            [
+              321681.67490211,
+              7382100.0254311
+            ],
+            [
+              321694.48312381,
+              7382181.02300168
+            ],
+            [
+              321724.88800834,
+              7382187.79626285
+            ],
+            [
+              321727.11751797,
+              7382188.98041988
+            ],
+            [
+              321838.07065598,
+              7382267.05393178
+            ],
+            [
+              321843.22727113,
+              7382269.83890711
+            ],
+            [
+              321890.16119825,
+              7382288.47407948
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cem_sao_pedro",
+      "properties": {
+        "id_equipamento": "cem_sao_pedro",
+        "nome_oficial": "Cemitério São Pedro",
+        "tipo": "cemiterio",
+        "unidade_memorial_contratual": "São Pedro",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Avenida Francisco Falconi, 837",
+        "cep_publicado": "03227-000",
+        "cep_normalizado": "03227-000",
+        "categoria_tarifaria": 2,
+        "destino_gratuidade_hipossuficiencia": false,
+        "modalidade_gratuita": null,
+        "tarifa_sepultamento_avulso_2026": 785.69,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": null,
+        "feature_ids_geosampa": "equipamento_cemiterio.160041",
+        "nome_geosampa": "SÃO PEDRO (VILA ALPINA)",
+        "endereco_geosampa": "AV. FRANCISCO FALCONI, 837",
+        "cep_geosampa": "03227-000",
+        "notas_mapeamento": "",
+        "area_m2_31983": 223941.397,
+        "perimetro_m_31983": 1911.636,
+        "centroide_x_31983": 340371.85,
+        "centroide_y_31983": 7390208.978,
+        "centroide_longitude": -46.56438672,
+        "centroide_latitude": -23.59075611,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "VILA PRUDENTE",
+        "distritos_intersectados": "VILA PRUDENTE:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "VILA PRUDENTE",
+        "subprefeituras_intersectadas": "VILA PRUDENTE:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              340489.09494143,
+              7390363.44087267
+            ],
+            [
+              340503.81785961,
+              7390347.3567761
+            ],
+            [
+              340505.34000799,
+              7390345.69390049
+            ],
+            [
+              340512.05001794,
+              7390338.41689281
+            ],
+            [
+              340516.84202521,
+              7390332.42688633
+            ],
+            [
+              340520.01803004,
+              7390328.45588203
+            ],
+            [
+              340520.04193269,
+              7390328.42486251
+            ],
+            [
+              340536.33405498,
+              7390307.28185899
+            ],
+            [
+              340554.36608252,
+              7390283.92883359
+            ],
+            [
+              340554.54208281,
+              7390283.62083324
+            ],
+            [
+              340569.99810647,
+              7390263.38581119
+            ],
+            [
+              340589.69113657,
+              7390237.82678338
+            ],
+            [
+              340608.41516512,
+              7390213.80775728
+            ],
+            [
+              340621.79718558,
+              7390196.38973832
+            ],
+            [
+              340640.43521395,
+              7390172.70171263
+            ],
+            [
+              340657.66724024,
+              7390150.53868854
+            ],
+            [
+              340673.02626372,
+              7390130.54666678
+            ],
+            [
+              340679.07827287,
+              7390123.1406588
+            ],
+            [
+              340687.21228513,
+              7390113.36964829
+            ],
+            [
+              340694.00329574,
+              7390103.46463733
+            ],
+            [
+              340700.14330576,
+              7390092.53462495
+            ],
+            [
+              340703.74731211,
+              7390083.95361497
+            ],
+            [
+              340706.01931792,
+              7390070.14559814
+            ],
+            [
+              340706.93532262,
+              7390053.64157764
+            ],
+            [
+              340706.66132446,
+              7390043.54356492
+            ],
+            [
+              340706.21232528,
+              7390037.14455679
+            ],
+            [
+              340705.40032547,
+              7390031.53254958
+            ],
+            [
+              340704.35632565,
+              7390024.64754072
+            ],
+            [
+              340702.33332468,
+              7390017.43653125
+            ],
+            [
+              340700.33632337,
+              7390011.95152394
+            ],
+            [
+              340695.64232001,
+              7390000.35750839
+            ],
+            [
+              340693.84531859,
+              7389996.58050327
+            ],
+            [
+              340688.99131436,
+              7389988.1094916
+            ],
+            [
+              340685.42131123,
+              7389981.93448309
+            ],
+            [
+              340682.48930842,
+              7389978.02447755
+            ],
+            [
+              340679.22530524,
+              7389973.85347162
+            ],
+            [
+              340676.38430239,
+              7389970.62246696
+            ],
+            [
+              340671.28529702,
+              7389966.02646009
+            ],
+            [
+              340664.20428956,
+              7389959.64545057
+            ],
+            [
+              340658.36528322,
+              7389955.28644384
+            ],
+            [
+              340645.29126869,
+              7389946.9724306
+            ],
+            [
+              340639.68426235,
+              7389943.95742561
+            ],
+            [
+              340634.8622568,
+              7389941.79042186
+            ],
+            [
+              340627.63424832,
+              7389939.26341713
+            ],
+            [
+              340619.68323892,
+              7389936.83441237
+            ],
+            [
+              340612.5692304,
+              7389935.22040881
+            ],
+            [
+              340604.47122054,
+              7389934.08140564
+            ],
+            [
+              340597.81621237,
+              7389933.43440339
+            ],
+            [
+              340589.57520216,
+              7389933.12040122
+            ],
+            [
+              340580.55319077,
+              7389933.6964
+            ],
+            [
+              340573.11418135,
+              7389934.35139922
+            ],
+            [
+              340564.89417072,
+              7389936.08539962
+            ],
+            [
+              340552.49615447,
+              7389939.66740144
+            ],
+            [
+              340521.02211308,
+              7389949.49840698
+            ],
+            [
+              340518.47010972,
+              7389950.29540743
+            ],
+            [
+              340516.81411999,
+              7389950.81532233
+            ],
+            [
+              340475.07605263,
+              7389963.91941516
+            ],
+            [
+              340406.03596166,
+              7389986.21542822
+            ],
+            [
+              340367.73591126,
+              7389998.26443506
+            ],
+            [
+              340330.83086269,
+              7390009.89144168
+            ],
+            [
+              340268.86278019,
+              7390033.81145829
+            ],
+            [
+              340259.61876773,
+              7390038.07446164
+            ],
+            [
+              340251.86975711,
+              7390042.47946549
+            ],
+            [
+              340238.48373838,
+              7390051.86847437
+            ],
+            [
+              340228.92672478,
+              7390059.593482
+            ],
+            [
+              340218.45070976,
+              7390068.60549104
+            ],
+            [
+              340207.38569346,
+              7390080.09350305
+            ],
+            [
+              340199.88768225,
+              7390088.65351216
+            ],
+            [
+              340190.16366732,
+              7390101.5955263
+            ],
+            [
+              340184.88965919,
+              7390108.74453412
+            ],
+            [
+              340177.64564798,
+              7390118.76954513
+            ],
+            [
+              340169.86463599,
+              7390129.31655667
+            ],
+            [
+              340160.1586211,
+              7390142.11057062
+            ],
+            [
+              340147.9006022,
+              7390158.7955889
+            ],
+            [
+              340143.87459599,
+              7390164.24459486
+            ],
+            [
+              340142.92759456,
+              7390165.40359611
+            ],
+            [
+              340131.27957506,
+              7390188.32562234
+            ],
+            [
+              340118.21656013,
+              7390181.98061156
+            ],
+            [
+              340111.88221213,
+              7390195.00632547
+            ],
+            [
+              340115.43849952,
+              7390196.73573257
+            ],
+            [
+              340104.98341349,
+              7390216.7149756
+            ],
+            [
+              340094.78452971,
+              7390211.65503284
+            ],
+            [
+              340067.23847775,
+              7390268.59870918
+            ],
+            [
+              340096.17851064,
+              7390283.53573418
+            ],
+            [
+              340094.8225077,
+              7390289.31874114
+            ],
+            [
+              340090.10116094,
+              7390300.25448235
+            ],
+            [
+              340050.87613824,
+              7390377.21500465
+            ],
+            [
+              340050.10616995,
+              7390396.17865599
+            ],
+            [
+              340053.45543017,
+              7390408.94888226
+            ],
+            [
+              340055.42943105,
+              7390416.23889183
+            ],
+            [
+              340059.51043357,
+              7390428.13790765
+            ],
+            [
+              340059.79043384,
+              7390428.54090821
+            ],
+            [
+              340060.52843443,
+              7390430.04891026
+            ],
+            [
+              340061.97443566,
+              7390432.69291389
+            ],
+            [
+              340063.42943697,
+              7390435.04891716
+            ],
+            [
+              340067.98144157,
+              7390440.05792443
+            ],
+            [
+              340072.07544587,
+              7390443.81493003
+            ],
+            [
+              340076.6324508,
+              7390447.29693538
+            ],
+            [
+              340081.4084561,
+              7390450.37394028
+            ],
+            [
+              340088.47346411,
+              7390454.13894653
+            ],
+            [
+              340097.11347412,
+              7390457.70495287
+            ],
+            [
+              340105.48248393,
+              7390460.68495842
+            ],
+            [
+              340117.54949824,
+              7390464.19096542
+            ],
+            [
+              340130.3755136,
+              7390467.18297195
+            ],
+            [
+              340142.5825282,
+              7390470.15697832
+            ],
+            [
+              340150.90953824,
+              7390471.8149822
+            ],
+            [
+              340159.24954838,
+              7390473.06098557
+            ],
+            [
+              340172.48356452,
+              7390474.82799064
+            ],
+            [
+              340185.07557998,
+              7390476.03799488
+            ],
+            [
+              340199.52959781,
+              7390477.05899929
+            ],
+            [
+              340216.10961844,
+              7390477.4010033
+            ],
+            [
+              340232.02163841,
+              7390476.91500613
+            ],
+            [
+              340239.28864751,
+              7390476.80700756
+            ],
+            [
+              340246.07165601,
+              7390476.66400884
+            ],
+            [
+              340259.43267297,
+              7390475.39001013
+            ],
+            [
+              340268.73868484,
+              7390474.21301067
+            ],
+            [
+              340279.37669851,
+              7390472.43201073
+            ],
+            [
+              340291.33571389,
+              7390470.35701071
+            ],
+            [
+              340302.86272881,
+              7390467.91701013
+            ],
+            [
+              340313.64074289,
+              7390465.02500883
+            ],
+            [
+              340323.57275585,
+              7390462.41900771
+            ],
+            [
+              340332.54676765,
+              7390459.68700622
+            ],
+            [
+              340342.49378075,
+              7390456.50800438
+            ],
+            [
+              340350.8827919,
+              7390453.38400227
+            ],
+            [
+              340359.41980327,
+              7390450.08799998
+            ],
+            [
+              340368.42581535,
+              7390446.23099708
+            ],
+            [
+              340378.20382848,
+              7390441.98599386
+            ],
+            [
+              340386.23383931,
+              7390438.24599091
+            ],
+            [
+              340394.43985052,
+              7390433.78098708
+            ],
+            [
+              340406.45786695,
+              7390427.16998138
+            ],
+            [
+              340414.61687817,
+              7390422.39497715
+            ],
+            [
+              340422.46188904,
+              7390417.40197257
+            ],
+            [
+              340428.51289746,
+              7390413.39596885
+            ],
+            [
+              340434.26090547,
+              7390409.55896528
+            ],
+            [
+              340446.08392685,
+              7390400.78995332
+            ],
+            [
+              340446.35592251,
+              7390400.58795664
+            ],
+            [
+              340451.28792941,
+              7390397.11395334
+            ],
+            [
+              340454.92393459,
+              7390394.16795043
+            ],
+            [
+              340466.02495037,
+              7390385.26094165
+            ],
+            [
+              340471.98395887,
+              7390380.32693675
+            ],
+            [
+              340472.72218586,
+              7390379.61912596
+            ],
+            [
+              340482.23654382,
+              7390370.49677554
+            ],
+            [
+              340485.50297855,
+              7390367.3649234
+            ],
+            [
+              340489.09494143,
+              7390363.44087267
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "crem_vila_alpina",
+      "properties": {
+        "id_equipamento": "crem_vila_alpina",
+        "nome_oficial": "Crematório Vila Alpina",
+        "tipo": "crematorio",
+        "unidade_memorial_contratual": "Vila Alpina (Crematório)",
+        "bloco_concessao": 4,
+        "concessionaria": "Velar SP",
+        "endereco_oficial": "Avenida Francisco Falconi, 437",
+        "cep_publicado": "03227-000",
+        "cep_normalizado": "03227-000",
+        "categoria_tarifaria": null,
+        "destino_gratuidade_hipossuficiencia": true,
+        "modalidade_gratuita": "cremacao",
+        "tarifa_sepultamento_avulso_2026": null,
+        "referencia_tarifaria": "2026-01",
+        "fonte_endereco": "https://prefeitura.sp.gov.br/web/spregula/w/concessionarias-e-agencias-funerarias",
+        "fonte_bloco": "https://prefeitura.sp.gov.br/web/desestatizacao_projetos/w/cemiterios/edital_cemiterios/330749",
+        "fonte_categoria": "Anexo VI - Política Tarifária",
+        "fonte_gratuidade": "https://prefeitura.sp.gov.br/web/spregula/w/servicos_funerarios_e_cemiteriais/343471",
+        "observacoes": "Equipamento de cremação; não recebe categoria de cemitério nem tarifa de sepultamento.",
+        "feature_ids_geosampa": "equipamento_cemiterio.160042",
+        "nome_geosampa": "VILA ALPINA",
+        "endereco_geosampa": "AV. FRANCISCO FALCONI, 437",
+        "cep_geosampa": "03227-000",
+        "notas_mapeamento": "A camada denomina a feição Vila Alpina e a classifica genericamente como cemitério; no contrato é o crematório.",
+        "area_m2_31983": 53515.717,
+        "perimetro_m_31983": 1234.618,
+        "centroide_x_31983": 340102.023,
+        "centroide_y_31983": 7390548.586,
+        "centroide_longitude": -46.56699389,
+        "centroide_latitude": -23.58766301,
+        "metodo_geometria": "poligono_wfs_geosampa_dissolvido",
+        "metodo_ponto": "centroide_geometrico_derivado; nao representa entrada",
+        "distrito_principal": "VILA PRUDENTE",
+        "distritos_intersectados": "VILA PRUDENTE:100.00%",
+        "numero_distritos_intersectados": 1,
+        "subprefeitura_principal": "VILA PRUDENTE",
+        "subprefeituras_intersectadas": "VILA PRUDENTE:100.00%",
+        "numero_subprefeituras_intersectadas": 1,
+        "metodo_contexto_administrativo": "maior_area_de_intersecao_em_EPSG_31983"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              340246.07165601,
+              7390476.66400884
+            ],
+            [
+              340239.28864751,
+              7390476.80700756
+            ],
+            [
+              340232.02163841,
+              7390476.91500613
+            ],
+            [
+              340216.10961844,
+              7390477.4010033
+            ],
+            [
+              340199.52959781,
+              7390477.05899929
+            ],
+            [
+              340185.07557998,
+              7390476.03799488
+            ],
+            [
+              340172.48356452,
+              7390474.82799064
+            ],
+            [
+              340159.24954838,
+              7390473.06098557
+            ],
+            [
+              340150.90953824,
+              7390471.8149822
+            ],
+            [
+              340142.5825282,
+              7390470.15697832
+            ],
+            [
+              340130.3755136,
+              7390467.18297195
+            ],
+            [
+              340117.54949824,
+              7390464.19096542
+            ],
+            [
+              340105.48248393,
+              7390460.68495842
+            ],
+            [
+              340097.11347412,
+              7390457.70495287
+            ],
+            [
+              340088.47346411,
+              7390454.13894653
+            ],
+            [
+              340081.4084561,
+              7390450.37394028
+            ],
+            [
+              340076.6324508,
+              7390447.29693538
+            ],
+            [
+              340072.07544587,
+              7390443.81493003
+            ],
+            [
+              340067.98144157,
+              7390440.05792443
+            ],
+            [
+              340063.42943697,
+              7390435.04891716
+            ],
+            [
+              340061.97443566,
+              7390432.69291389
+            ],
+            [
+              340060.52843443,
+              7390430.04891026
+            ],
+            [
+              340059.79043384,
+              7390428.54090821
+            ],
+            [
+              340059.51043357,
+              7390428.13790765
+            ],
+            [
+              340055.42943105,
+              7390416.23889183
+            ],
+            [
+              340053.45543017,
+              7390408.94888226
+            ],
+            [
+              340050.10616995,
+              7390396.17865599
+            ],
+            [
+              340050.87613824,
+              7390377.21500465
+            ],
+            [
+              340090.10116094,
+              7390300.25448235
+            ],
+            [
+              340094.8225077,
+              7390289.31874114
+            ],
+            [
+              340096.17851064,
+              7390283.53573418
+            ],
+            [
+              340067.23847775,
+              7390268.59870918
+            ],
+            [
+              340050.17644742,
+              7390310.34575786
+            ],
+            [
+              340064.32246395,
+              7390315.56276746
+            ],
+            [
+              340061.80245949,
+              7390321.6107745
+            ],
+            [
+              340035.24341218,
+              7390387.01385081
+            ],
+            [
+              340032.17140634,
+              7390396.26386175
+            ],
+            [
+              340029.52440131,
+              7390404.23287117
+            ],
+            [
+              340018.68438098,
+              7390435.63590822
+            ],
+            [
+              340015.50137472,
+              7390446.2069208
+            ],
+            [
+              340002.11834857,
+              7390489.8029726
+            ],
+            [
+              339995.62733568,
+              7390511.8859989
+            ],
+            [
+              339990.18632509,
+              7390529.42201972
+            ],
+            [
+              339982.84831041,
+              7390554.89205009
+            ],
+            [
+              339982.78739002,
+              7390555.08280076
+            ],
+            [
+              339976.40129799,
+              7390575.07307402
+            ],
+            [
+              339971.67828867,
+              7390590.90209286
+            ],
+            [
+              339971.2742877,
+              7390593.03009544
+            ],
+            [
+              339970.98128708,
+              7390594.18809683
+            ],
+            [
+              339970.87428664,
+              7390595.60109858
+            ],
+            [
+              339970.78528626,
+              7390596.88210017
+            ],
+            [
+              339970.84628607,
+              7390598.07810168
+            ],
+            [
+              339971.00528597,
+              7390599.46810346
+            ],
+            [
+              339971.48428623,
+              7390601.0121055
+            ],
+            [
+              339972.2662868,
+              7390602.90410805
+            ],
+            [
+              339973.20728755,
+              7390604.88711074
+            ],
+            [
+              339974.12128828,
+              7390606.76611329
+            ],
+            [
+              339976.15829016,
+              7390609.82211757
+            ],
+            [
+              339977.98329187,
+              7390612.44612126
+            ],
+            [
+              339979.96529373,
+              7390615.3231253
+            ],
+            [
+              339982.10329592,
+              7390617.51412851
+            ],
+            [
+              339982.55729639,
+              7390617.97912919
+            ],
+            [
+              339995.36531003,
+              7390628.83914559
+            ],
+            [
+              339990.70936245,
+              7390657.95577752
+            ],
+            [
+              339992.28129992,
+              7390657.75518121
+            ],
+            [
+              340020.46033552,
+              7390655.8381849
+            ],
+            [
+              340055.76637845,
+              7390661.21119927
+            ],
+            [
+              340078.44340419,
+              7390673.15721917
+            ],
+            [
+              340100.02243038,
+              7390676.64422821
+            ],
+            [
+              340116.82045078,
+              7390679.3232352
+            ],
+            [
+              340147.88848847,
+              7390684.46924838
+            ],
+            [
+              340165.65551145,
+              7390680.79924761
+            ],
+            [
+              340185.30553727,
+              7390674.88624444
+            ],
+            [
+              340200.51955833,
+              7390665.32723573
+            ],
+            [
+              340204.84756649,
+              7390652.58522067
+            ],
+            [
+              340210.37757692,
+              7390636.31120145
+            ],
+            [
+              340218.35359166,
+              7390614.20917544
+            ],
+            [
+              340225.19160453,
+              7390594.18315179
+            ],
+            [
+              340219.35259871,
+              7390587.37514198
+            ],
+            [
+              340224.47860936,
+              7390567.73311844
+            ],
+            [
+              340230.81162222,
+              7390544.80109104
+            ],
+            [
+              340236.31563336,
+              7390525.08206749
+            ],
+            [
+              340242.32764564,
+              7390502.99104107
+            ],
+            [
+              340246.4596522,
+              7390496.51503383
+            ],
+            [
+              340246.07165601,
+              7390476.66400884
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

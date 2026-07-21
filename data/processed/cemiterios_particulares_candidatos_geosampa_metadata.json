@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-07-21T00:00:00+00:00",
+  "source_layer": "geoportal:equipamento_cemiterio",
+  "source_capture_file": "data/processed/geosampa_cemiterios.csv",
+  "source_capture_at_utc": "2026-07-20T20:21:41.855235+00:00",
+  "public_mapping_file": "data/reference/geosampa_mapping.csv",
+  "geosampa_feature_count": 46,
+  "public_concession_feature_count": 24,
+  "public_concession_operational_unit_count": 23,
+  "unmatched_feature_count": 22,
+  "candidate_operational_unit_count": 21,
+  "deduplication": {
+    "method": "normalized name plus normalized address",
+    "duplicate_group_detected": "Cemitério do Morumby",
+    "feature_ids": [
+      "equipamento_cemiterio.160045",
+      "equipamento_cemiterio.160046"
+    ]
+  },
+  "method": "Set difference between all GeoSampa cemetery features and feature IDs already validated as part of the municipal concession network; unmatched features were grouped by normalized name and address.",
+  "interpretive_status": "preliminary inventory; external validation required",
+  "critical_finding": "The current GeoSampa capture labels every feature as MUNICIPAL in the administrative-sphere field, including cemeteries that appear to be private, associative or religious. This attribute cannot be used to separate ownership regimes.",
+  "limitations": [
+    "An unmatched feature may be private, associative, religious, inactive, duplicated or otherwise outside the concession inventory.",
+    "The count must be checked against SP Regula, SVMA, sanitary and fiscal records before publication.",
+    "The GeoSampa layer is useful for spatial inventory but not sufficient to establish legal ownership or operational status."
+  ]
+}

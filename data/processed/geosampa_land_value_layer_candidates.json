@@ -1,0 +1,402 @@
+{
+  "captured_at_utc": "2026-07-22T22:50:00.899546+00:00",
+  "source": "GeoSampa — WFS GetCapabilities",
+  "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetCapabilities",
+  "raw_file": "data/raw/geosampa/wfs_capabilities.xml",
+  "search_terms": [
+    "valor",
+    "terreno",
+    "outorga",
+    "quadra",
+    "face",
+    "lote",
+    "iptu",
+    "fiscal",
+    "codlog",
+    "logradouro"
+  ],
+  "candidate_count": 46,
+  "candidates": [
+    {
+      "name": "geoportal:lote_cidadao",
+      "title": "lote_cidadao",
+      "abstract": "Lotes fiscais com informações de zoneamento. A Lei de Zoneamento estabelece normas complementares ao Plano Diretor Estratégico, institui os Planos Regionais Estratégicos das Subprefeituras, dispõe sobre o parcelamento, disciplina e ordena o Uso e Ocupação do Solo do Município de São Paulo. Os valores de zoneamento, estabelecido na Lei nº 13.885/2004, foram agregados as feições de lotes através dos números de setor, quadra e lote , tendo como base cartográfica o Mapa Digital da Cidade e as informações fiscais da Secretaria de Finanças.",
+      "matched_terms": [
+        "lote",
+        "quadra",
+        "valor"
+      ]
+    },
+    {
+      "name": "geoportal:pde2014_v_parq_pde_map",
+      "title": "Áreas Verdes (5)",
+      "abstract": "Rede Hídrica Ambiental e Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres:\r\nO Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres é constituído pelo conjunto de áreas enquadradas nas diversas categorias protegidas pela legislação ambiental, de terras indígenas, de áreas prestadoras de serviços ambientais, das diversas tipologias de parques de logradouros públicos, de espaços vegetados e de espaços não ocupados por edificação coberta, de propriedade pública ou particular.",
+      "matched_terms": [
+        "logradouro",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:quadra_fiscal",
+      "title": "Quadra",
+      "abstract": "Quadras do Mapa Digital da Secretaria de Finanças (MDSF) compreendendo quadras fiscais, municipais, rurais e divergentes. Elaborado a partir do Mapeamento Digital da Cidade de São Paulo nas escalas 1:1.000 para área urbanizada e 1:5.000 nas áreas com baixa ou nenhuma ocupação.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2014_60",
+      "title": "Uso predominante do solo maior ou igual a 60% por quadra fiscal 2014",
+      "abstract": "Considera a tipologia de uso H de área construída maior ou igual a 60% para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2014_simples",
+      "title": "Uso predominante do solo simples por quadra fiscal 2014",
+      "abstract": "Considera a tipologia de uso H de maior área construída para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2018_60",
+      "title": "Uso predominante do solo maior ou igual a 60% por quadra fiscal 2018",
+      "abstract": "Considera a tipologia de uso H de área construída maior ou igual a 60% para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2018_simples",
+      "title": "Uso predominante do solo simples por quadra fiscal 2018",
+      "abstract": "Considera a tipologia de uso H de maior área construída para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2021_60",
+      "title": "Uso predominante do solo maior ou igual a 60% por quadra fiscal 2021",
+      "abstract": "Considera a tipologia de uso H de área construída maior ou igual a 60% para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:uso_predominante_solo_2021_simples",
+      "title": "Uso predominante do solo simples por quadra fiscal 2021",
+      "abstract": "Considera a tipologia de uso H de maior área construída para determinar predominância na quadra fiscal em janeiro do ano indicado.",
+      "matched_terms": [
+        "fiscal",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:zona_azul",
+      "title": "Zona Azul",
+      "abstract": "Vagas de Zona Azul por faces de quadra.",
+      "matched_terms": [
+        "face",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:zoneamento_corredor_uso",
+      "title": "Zona de Centralidade Linear - Revogado - Lei 13.885/04",
+      "abstract": "Os Corredores de uso são trechos de logradouros públicos enquadrados como zonas de centralidades, complementam o zoneamento do território da cidade de São Paulo. A Lei de Zoneamento estabelece normas complementares ao Plano Diretor Estratégico, institui os Planos Regionais Estratégicos das Subprefeituras, dispõe sobre o parcelamento, disciplina e ordena o Uso e Ocupação do Solo do Município de São Paulo. Os corredores de uso foram vetorizados de acordo com o estabelecido na Lei nº 13.885/2004, tendo como base cartográfica o Mapa Digital da Cidade (MDC).",
+      "matched_terms": [
+        "logradouro",
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:aiu_compartimento_ambiental_jurubatuba",
+      "title": "Compartimento Ambiental - Arco Jurubatuba",
+      "abstract": "Quadras do perímetro de adesão classificadas pelas características físicas de várzea.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:aiu_compartimento_ambiental_pinheiros",
+      "title": "Compartimento ambiental - Arco Pinheiros",
+      "abstract": "Quadras classificadas pelas características físicas de encosta ou várzea no âmbito da AIU Arco Pinheiros.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:aiu_eixo_estrategico_pinheiros",
+      "title": "Eixos estratégicos - Arco Pinheiros",
+      "abstract": "Eixos Estratégicos -  trechos de logradouros, com atribuição de parâmetros urbanísticos no âmbito da AIU Arco Pinheiros.",
+      "matched_terms": [
+        "logradouro"
+      ]
+    },
+    {
+      "name": "geoportal:aiu_intervencao_praca_pinheiros",
+      "title": "Intervenções Praças - Arco Pinheiros",
+      "abstract": "Quadras classificadas pelas características físicas de encosta ou várzea no âmbito da AIU Arco Pinheiros.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:aiu_modalidade_habitacional_jurubatuba",
+      "title": "Modalidades Habitacionais Contempladas - Arco Jurubatuba",
+      "abstract": "Favelas, Loteamentos Irregulares e Núcleos Habitacionais contemplados pela Lei do Arco Jurubatuba.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:arruamento_aprovado",
+      "title": "Arruamento Aprovado - ARR",
+      "abstract": "Polígonos que delimitam a área abrangente do processo de parcelamento do solo referente ao Arruamento e loteamento aprovados. Neste caso o projeto de parcelamento gera novas vias ou prolonga vias existentes. A delimitação vetorial do presente arquivo foi executada tendo como base cartográfica o Geolog. O Geolog é resultado do Mapeamento Planimétrico Digital da Cidade de São Paulo nas escalas 1:10.000 e 1:5.000.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:arruamento_regularizado",
+      "title": "Arruamento Regularizado - AU",
+      "abstract": "Perímetro de arruamento e loteamento aprovado c/ auto ou despacho de aceitação técnica ou em processo de aprovação. A delimitação vetorial do presente arquivo foi executada tendo como base cartográfica o Geolog. O Geolog é resultado do Mapeamento Planimétrico Digital da Cidade de São Paulo nas escalas 1:10.000 e 1:5.000.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:central_triagem_cooperativa",
+      "title": "Cooperativas Habilitadas",
+      "abstract": "Atualmente 93 distritos são contemplados pela Coleta de Materiais Recicláveis realizada pelas Centrais e pelas Concessionárias, ficando a sua coordenação sob a responsabilidade da Secretaria Municipal de Serviços, por intermédio da Autoridade Municipal de Limpeza Urbana – AMLURB, estabelecendo normas e procedimentos para sua implementação, gerenciamento, fiscalização e controle. Das 22 organizações que mantêm uma relação formal com a Prefeitura de São Paulo, 21 cooperativas ou associações que desenvolvem atividades de coleta, triagem e comercialização de RSD Secos, e uma desenvolve atividades de recuperação de resíduos eletroeletrônicos (REE).",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:compartimento_ambiental_aiu",
+      "title": "Compartimentos ambientais (4)",
+      "abstract": "Quadras da AIU SCE classificadas pelas características físicas de várzea ou encosta.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:declividade",
+      "title": "Declividade",
+      "abstract": "Inclinação da superfície do terreno em relação à horizontal obtida com base no processamento das informações de altimetria.",
+      "matched_terms": [
+        "terreno"
+      ]
+    },
+    {
+      "name": "geoportal:enquadramento_vila",
+      "title": "Enquadramento como Vila",
+      "abstract": "Enquadramento ou não como vila, de acordo com PDE e LPUOS.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:equipamento_saude_vigilancia_saude",
+      "title": "Vigilância em saúde",
+      "abstract": "Unidades de Vigilância em saúde do Cadastro de estabelecimentos de saúde municipais, estaduais e privados. Fiscaliza a comercialização de alimentos, medicamentos e serviços de saúde.",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:habita2geosampa_habi_loteamento2geosampa",
+      "title": "Loteamento Irregular - Habitasampa",
+      "abstract": "",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:lote_incidencia_quadro_2",
+      "title": "Lotes de incidência Quadro 2",
+      "abstract": "Lotes de incidência Eixos e Boulevares (Mapa único Dec. 63.368/2024).",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:oucbt_compartimento_ambiental",
+      "title": "OUCBT - Compartimento Ambiental",
+      "abstract": "Quadras do perímetro de adesão classificadas pelas características físicas de várzea no perímetro da OUC Bairros do Tamanduateí.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:oucbt_parametro_urbanistico_quadra",
+      "title": "OUCBT - Parâmetros Urbanísticos - quadras",
+      "abstract": "Áreas de qualificação e transformação no âmbito da OUC Bairros do Tamanduateí.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:outorga_onerosa",
+      "title": "Outorga Onerosa",
+      "abstract": "Processos de aprovação de edificação nova/reforma com Outorga Onerosa do Direito de Construir.",
+      "matched_terms": [
+        "outorga"
+      ]
+    },
+    {
+      "name": "geoportal:patrimonio_cultural_selo_valor_cultural",
+      "title": "Selo de Valor Cultural",
+      "abstract": "Referências culturais em virtude das atividades neles desenvolvidas.",
+      "matched_terms": [
+        "valor"
+      ]
+    },
+    {
+      "name": "geoportal:pde2014_v_zeis_04_map",
+      "title": "ZEIS 1 (4)",
+      "abstract": "ZEIS 1 são áreas caracterizadas pela presença de favelas, loteamentos irregulares e empreendimentos habitacionais de interesse social, e assentamentos habitacionais populares, habitados predominantemente por população de baixa renda, onde haja interesse público em manter a população moradora e promover a regularização fundiária e urbanística, recuperação ambiental e produção de Habitação de Interesse Social.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:pde2014_v_zeis_04a_map",
+      "title": "ZEIS 2-3-4-5 (4A)",
+      "abstract": "ZEIS 2 são áreas caracterizadas por glebas ou lotes não edificados ou subutilizados, adequados à urbanização e onde haja interesse público ou privado em produzir Empreendimentos de Habitação de Interesse Social; ZEIS 3 são áreas com ocorrência de imóveis ociosos, subutilizados, não utilizados, encortiçados ou deteriorados localizados em regiões dotadas de serviços, equipamentos e infraestruturas urbanas, boa oferta de empregos, onde haja interesse público ou privado em promover Empreendimentos de Habitação de Interesse Social; ZEIS 4 são áreas caracterizadas por glebas ou lotes não edificados e adequados à urbanização e edificação situadas na Área de Proteção aos Mananciais das bacias hidrográficas dos reservatórios de Guarapiranga e Billings, exclusivamente nas Macroáreas de Redução da Vulnerabilidade e Recuperação Ambiental e de Controle e Recuperação Urbana e Ambiental, destinadas à promoção de Habitação de Interesse Social para o atendimento de famílias residentes em assentamentos localizados na referida Área de Proteção aos Mananciais, preferencialmente em função de reassentamento resultante de plano de urbanização ou da desocupação de áreas de risco e de preservação permanente, com atendimento à legislação estadual; ZEIS 5 são lotes ou conjunto de lotes, preferencialmente vazios ou subutilizados, situados em áreas dotadas de serviços, equipamentos e infraestruturas urbanas, onde haja interesse privado em produzir empreendimentos habitacionais de mercado popular e de interesse social.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:ponto_cotado",
+      "title": "Ponto Cotado",
+      "abstract": "Identificação dos Pontos Cotados, com altitudes referidas ao nível do mar, do Município de São Paulo. O Ponto cotado é a projeção ortogonal de um ponto do terreno plano sobre a superfície de referência com a indicação da sua altitude. A geocodificação é resultado do processo de restituição fotogramétrica por recobrimentos aéreo nas escalas 1:5.000 e 1:20.000. A Base Cartográfica geocodificada é armazenada no Oracle Spatial no padrão da OGC. Além das bases existem as ortofotos recortadas pelo Sistema Cartográfico Metropolitano - SCM em escalas 1:1.000 (área densamente povoada) e 1:5.000 (área com baixa densidade populacional).",
+      "matched_terms": [
+        "terreno"
+      ]
+    },
+    {
+      "name": "geoportal:quadra_perimetro_aiu",
+      "title": "Quadras do perímetro de adesão e perímetro expandido (2)",
+      "abstract": "Quadras viárias afetadas pela AIU do Setor Central, classificadas por setores de adesão ou expandido.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:quadra_viaria_editada",
+      "title": "Quadra Viária",
+      "abstract": "As quadras viárias são polígonos fechados, normalmente gerados a partir da restituição dos meios-fios e das linhas de delimitação do leito carroçável. Nas escalas 1:1.000 para área urbanizada e 1:5.000 nas áreas com baixa ou nenhuma ocupação. Processo feito por restituição fotogramétrica por recobrimentos aéreos nas escalas 1:5.000 e 1:20.000.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:sac_capinacao_guia_sarjeta",
+      "title": "Capinação em guias e sarjetas",
+      "abstract": "Serviços de capinação de vias e logradouros públicos.",
+      "matched_terms": [
+        "logradouro"
+      ]
+    },
+    {
+      "name": "geoportal:sac_comunicacao_erro_cobranca_integracao",
+      "title": "Comunicação de erro em cobrança de integração (ônibus e metrô ou trem)",
+      "abstract": "Reclamações de erro na cobrança de valor na integração.",
+      "matched_terms": [
+        "valor"
+      ]
+    },
+    {
+      "name": "geoportal:sac_denuncia_conduta_motorista_cobrador_fiscal_onibus",
+      "title": "Ônibus - Denúncia de conduta do motorista, cobrador ou fiscal",
+      "abstract": "Denúncia referente a conduta dos motoristas, cobradores e fiscais.",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:sac_elogio_motorista_cobrador_fiscal_onibus",
+      "title": "Ônibus - Elogio ao motorista, cobrador ou fiscal",
+      "abstract": "Elogio referente a conduta profissional do motorista, cobrador ou fiscal",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:sac_quadra_arvore_urgencia",
+      "title": "Queda de árvore",
+      "abstract": "É o registro de ocorrências emergenciais para a Defesa Civil.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:sac_quadra_galho_urgencia",
+      "title": "Queda de galho",
+      "abstract": "É o registro de ocorrências emergenciais para a Defesa Civil.",
+      "matched_terms": [
+        "quadra"
+      ]
+    },
+    {
+      "name": "geoportal:sac_veiculo_local_proibido",
+      "title": "Fiscalização de veículo estacionado em local proibido",
+      "abstract": "Pedido de fiscalização de veículos estacionados em lugares proibidos.",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:segmento_logradouro",
+      "title": "Logradouro",
+      "abstract": "Composta pelos logradouros das bases MDC, Sabesp, SpTrans e SF - eixo e denominação.",
+      "matched_terms": [
+        "logradouro"
+      ]
+    },
+    {
+      "name": "geoportal:servico_medida_socioeducativa",
+      "title": "Serviço de Medida Socioeducativa em Meio Aberto",
+      "abstract": "Serviço referenciado ao Centro de Referência Especializado da Assistência Social – CREAS e tem por finalidade prover atenção socioassistencial e o acompanhamento aos adolescentes e jovens de ambos os sexos em cumprimento de medidas socioeducativas em meio aberto, de Liberdade Assistida e/ou Prestação de Serviços à Comunidade, determinadas judicialmente. O serviço deve contribuir para o acesso a direitos e a resignificação de valores na vida pessoal e social dos adolescentes e jovens. Esse serviço está vinculado ao CREAS e mantém relação direta com a equipe técnica deste Centro, que deverá operar a referência e a contrareferência com a rede de serviços socioassistenciais da proteção social básica e especial e com o Poder Judiciário, Ministério Público, Defensoria Pública, Conselhos Tutelares, outras Organizações de Defesa de Direitos e demais políticas públicas, no intuito de estruturar uma rede efetiva de proteção social.",
+      "matched_terms": [
+        "valor"
+      ]
+    },
+    {
+      "name": "geoportal:servico_varricao_lote_amlurb",
+      "title": "Serviços de Varrição e Limpeza Pública",
+      "abstract": "Lotes dos serviços de varrição de rua e limpeza pública.",
+      "matched_terms": [
+        "lote"
+      ]
+    },
+    {
+      "name": "geoportal:setor_fiscal",
+      "title": "Setor",
+      "abstract": "Setores Fiscais do Mapa Digital da Secretaria de Finanças (MDSF). Elaborado a partir do Mapeamento Digital da Cidade de São Paulo nas escalas 1:1.000 para área urbanizada e 1:5.000 nas áreas com baixa ou nenhuma ocupação.",
+      "matched_terms": [
+        "fiscal"
+      ]
+    },
+    {
+      "name": "geoportal:zona_fiscal",
+      "title": "Zona Fiscal",
+      "abstract": "Zonas fiscais do Município e São Paulo.",
+      "matched_terms": [
+        "fiscal"
+      ]
+    }
+  ],
+  "interpretive_status": "inventário técnico; a camada adequada deve ser validada por schema, geometria, data de atualização e documentação oficial"
+}

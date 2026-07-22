@@ -16,6 +16,7 @@ on:
       - "scripts/extract_ibge_income_dictionary.py"
       - "scripts/fetch_ipvs_2022.py"
       - "scripts/fetch_seade_mortalidade.py"
+      - "scripts/run_seade_mortalidade.py"
       - "scripts/build_ipvs_context.py"
       - "scripts/inspect_sim_mortality.py"
       - "scripts/fetch_ossuary_annex.py"
@@ -55,7 +56,7 @@ jobs:
       - name: Coletar, integrar e validar a mortalidade do Seade
         run: |
           set -o pipefail
-          python scripts/fetch_seade_mortalidade.py 2>&1 | tee seade-mortalidade-run.log
+          python scripts/run_seade_mortalidade.py 2>&1 | tee seade-mortalidade-run.log
 
       - name: Publicar auditoria autônoma da mortalidade do Seade
         if: always()

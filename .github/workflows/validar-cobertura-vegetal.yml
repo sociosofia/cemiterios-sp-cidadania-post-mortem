@@ -1,0 +1,97 @@
+name: Validar cobertura vegetal dos cemitérios
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/build_cemiterios_concessao.py"
+      - "scripts/validate_cemetery_environmental_footprint.py"
+      - "scripts/fetch_geosampa_vegetation.py"
+      - "scripts/analyze_cemetery_vegetation.py"
+      - "data/reference/cemiterios_crematorio.csv"
+      - "data/reference/geosampa_mapping.csv"
+      - ".github/workflows/validar-cobertura-vegetal.yml"
+  push:
+    paths:
+      - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/build_cemiterios_concessao.py"
+      - "scripts/validate_cemetery_environmental_footprint.py"
+      - "scripts/fetch_geosampa_vegetation.py"
+      - "scripts/analyze_cemetery_vegetation.py"
+      - "data/reference/cemiterios_crematorio.csv"
+      - "data/reference/geosampa_mapping.csv"
+      - ".github/workflows/validar-cobertura-vegetal.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  cobertura-vegetal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências espaciais
+        run: python -m pip install --upgrade pip pyproj shapely
+
+      - name: Consultar cemitérios no WFS do GeoSampa
+        run: python scripts/fetch_geosampa_cemiterios.py
+
+      - name: Filtrar equipamentos e recalcular polígonos
+        run: python scripts/build_cemiterios_concessao.py
+
+      - name: Validar extensão territorial
+        run: python scripts/validate_cemetery_environmental_footprint.py
+
+      - name: Consultar cobertura vegetal de 2017
+        run: python scripts/fetch_geosampa_vegetation.py
+
+      - name: Cruzar vegetação e perímetros cemiteriais
+        run: python scripts/analyze_cemetery_vegetation.py
+
+      - name: Publicar resultados da validação
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura-vegetal-cemiterios
+          if-no-files-found: error
+          path: |
+            data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_metadata.json
+            data/processed/resumo_area_territorial_cemiterios.json
+            data/processed/cemiterios_cobertura_vegetal_2017.csv
+            data/processed/resumo_cobertura_vegetal_cemiterios_2017.json
+            docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md
+            docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md
+
+      - name: Registrar produtos reproduzíveis
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/raw/geosampa/equipamento_cemiterio_31983.geojson \
+            data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_31983.geojson \
+            data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_metadata.json \
+            data/processed/cemiterios_concessao_31983.geojson \
+            data/processed/cemiterios_concessao_4326.geojson \
+            data/processed/cemiterios_concessao_centroides.csv \
+            data/processed/cemiterios_concessao_metadata.json \
+            data/processed/resumo_area_territorial_cemiterios.json \
+            data/processed/cemiterios_cobertura_vegetal_2017.csv \
+            data/processed/resumo_cobertura_vegetal_cemiterios_2017.json \
+            docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md \
+            docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração nos resultados ambientais."
+          else
+            git commit -m "Atualiza validação da cobertura vegetal cemiterial"
+            git push
+          fi

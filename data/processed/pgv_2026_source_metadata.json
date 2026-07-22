@@ -1,5 +1,5 @@
 {
-  "captured_at_utc": "2026-07-22T22:49:53.535697+00:00",
+  "captured_at_utc": "2026-07-22T22:51:11.567232+00:00",
   "law": "Lei municipal 18.330/2025",
   "document_id": "145975345",
   "law_url": "https://legislacao.prefeitura.sp.gov.br/lei-18330-de-11-de-novembro-de-2025",
@@ -20,8 +20,8 @@
       "requested_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=edicao_consultar&dta=12%2F11%2F2025&formato=O",
       "final_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=edicao_consultar&dta=12%2F11%2F2025&formato=O",
       "error": null,
-      "bytes": 10843526,
-      "sha256": "f54a0fbd390f52b6364bce7cae16161bbd33623b675eed472e1a0f5401a1d5cd",
+      "bytes": 10843528,
+      "sha256": "825be6a5c3f7d672b1c4c0a5e664632560b800602b979d44878f89311d4d1624",
       "content_type": "text/html; charset=ISO-8859-1",
       "saved_as": "data/raw/pgv_2026/pagina_diario_oficial.html"
     }

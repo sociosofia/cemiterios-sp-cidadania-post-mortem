@@ -12,6 +12,7 @@ on:
       - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "scripts/analyze_cemetery_land_values_2026.py"
       - "scripts/run_cemetery_land_values_2026.py"
+      - "scripts/analyze_private_cemetery_land_values_2026.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
   pull_request:
@@ -22,6 +23,7 @@ on:
       - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "scripts/analyze_cemetery_land_values_2026.py"
       - "scripts/run_cemetery_land_values_2026.py"
+      - "scripts/analyze_private_cemetery_land_values_2026.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
 
@@ -31,7 +33,7 @@ permissions:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
 
     steps:
       - name: Baixar repositório
@@ -61,10 +63,15 @@ jobs:
       - name: Inspecionar a camada de quadras fiscais
         run: python scripts/inspect_geosampa_quadra_fiscal.py
 
-      - name: Calcular valor territorial no entorno dos cemitérios
+      - name: Calcular valor territorial no entorno da rede municipal
         run: |
           set -o pipefail
           python scripts/run_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-analysis.log
+
+      - name: Calcular valor territorial no entorno dos cemitérios particulares candidatos
+        run: |
+          set -o pipefail
+          python scripts/analyze_private_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-particulares-analysis.log
 
       - name: Registrar produtos da coleta
         if: github.event_name != 'pull_request' && success()
@@ -74,6 +81,7 @@ jobs:
           git add data/raw/pgv_2026 \
             data/raw/geosampa/wfs_capabilities.xml \
             data/raw/geosampa/quadra_fiscal_entorno_cemiterios_31983.geojson \
+            data/raw/geosampa/quadra_fiscal_entorno_cemiterios_particulares_31983.geojson \
             data/processed/pgv_2026_source_metadata.json \
             data/processed/pgv_2026_faces.csv \
             data/processed/pgv_2026_faces_metadata.json \
@@ -83,11 +91,15 @@ jobs:
             data/processed/categorias_valor_territorial_2026.csv \
             data/processed/complexos_valor_territorial_2026.csv \
             data/processed/cemiterios_valor_territorial_2026_metadata.json \
-            docs/RESULTADOS_VALOR_TERRITORIAL_2026.md
+            data/processed/cemiterios_particulares_valor_territorial_2026.csv \
+            data/processed/cemiterios_particulares_valor_territorial_2026_resumo.csv \
+            data/processed/cemiterios_particulares_valor_territorial_2026_metadata.json \
+            docs/RESULTADOS_VALOR_TERRITORIAL_2026.md \
+            docs/RESULTADOS_VALOR_TERRITORIAL_PARTICULARES_2026.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos produtos da coleta."
           else
-            git commit -m "Calcula PGV 2026 no entorno dos cemitérios"
+            git commit -m "Calcula PGV 2026 no entorno dos cemitérios públicos e particulares candidatos"
             git push
           fi
 
@@ -99,6 +111,7 @@ jobs:
           if-no-files-found: warn
           path: |
             valor-territorial-analysis.log
+            valor-territorial-particulares-analysis.log
             data/raw/pgv_2026/anexo_lei_18330_2025_145975345.pdf
             data/processed/pgv_2026_source_metadata.json
             data/processed/pgv_2026_faces.csv
@@ -109,4 +122,8 @@ jobs:
             data/processed/categorias_valor_territorial_2026.csv
             data/processed/complexos_valor_territorial_2026.csv
             data/processed/cemiterios_valor_territorial_2026_metadata.json
+            data/processed/cemiterios_particulares_valor_territorial_2026.csv
+            data/processed/cemiterios_particulares_valor_territorial_2026_resumo.csv
+            data/processed/cemiterios_particulares_valor_territorial_2026_metadata.json
             docs/RESULTADOS_VALOR_TERRITORIAL_2026.md
+            docs/RESULTADOS_VALOR_TERRITORIAL_PARTICULARES_2026.md

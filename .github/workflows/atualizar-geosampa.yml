@@ -52,6 +52,24 @@ jobs:
       - name: Instalar dependências
         run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl pyshp dbfread
 
+      - name: Coletar, integrar e validar a mortalidade do Seade
+        run: python scripts/fetch_seade_mortalidade.py
+
+      - name: Publicar auditoria autônoma da mortalidade do Seade
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-seade-mortalidade
+          if-no-files-found: error
+          path: |
+            data/processed/seade_mortalidade_municipio_ano.csv
+            data/processed/seade_mortalidade_estado_ano.csv
+            data/processed/seade_mortalidade_distrito_sp_ano.csv
+            data/processed/seade_mortalidade_corrente_mes.csv
+            data/raw/seade/mortalidade/manifest.json
+            data/raw/seade/mortalidade/quality_report.json
+            docs/RESULTADOS_SEADE_MORTALIDADE.md
+            docs/FONTE_SEADE_MORTALIDADE.md
+
       - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
 
@@ -66,9 +84,6 @@ jobs:
 
       - name: Coletar e filtrar o IPVS 2022 para o Município de São Paulo
         run: python scripts/fetch_ipvs_2022.py
-
-      - name: Coletar, integrar e validar a mortalidade do Seade
-        run: python scripts/fetch_seade_mortalidade.py
 
       - name: Inspecionar estrutura do SIM sem persistir microdados
         run: python scripts/inspect_sim_mortality.py

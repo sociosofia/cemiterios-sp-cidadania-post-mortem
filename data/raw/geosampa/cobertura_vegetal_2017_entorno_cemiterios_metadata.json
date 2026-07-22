@@ -1,0 +1,281 @@
+{
+  "captured_at_utc": "2026-07-22T22:19:16.881547+00:00",
+  "source": "GeoSampa — Prefeitura do Município de São Paulo",
+  "dataset": "Mapeamento Digital da Cobertura Vegetal 2017",
+  "publication_year": 2020,
+  "imagery_reference": "ortofotos 2017/2018 com apoio LiDAR",
+  "metadata_record": "https://metadados.geosampa.prefeitura.sp.gov.br/geonetwork/srv/api/records/367916b7-3af4-44be-ab72-cd07a4996b66",
+  "methodology_report": "https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/meio_ambiente/RelCobVeg2020_vFINAL_compressed%281%29.pdf",
+  "endpoint": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs",
+  "layer": "geoportal:cobertura_vegetal",
+  "source_crs": "EPSG:31983",
+  "equipment_count_queried": 23,
+  "unique_feature_count": 1577,
+  "discovery_attempts": [
+    {
+      "endpoint": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs",
+      "layer": "geoportal:cobertura_vegetal",
+      "success": true
+    }
+  ],
+  "requests": [
+    {
+      "id_equipamento": "cem_consolacao",
+      "bbox_31983": [
+        330610.123,
+        7394368.952,
+        331083.542,
+        7394741.037
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=330610.122991%2C7394368.95154649%2C331083.54237183%2C7394741.03685917%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 72
+    },
+    {
+      "id_equipamento": "cem_quarta_parada",
+      "bbox_31983": [
+        338269.691,
+        7394711.428,
+        338807.499,
+        7395408.694
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=338269.69055701%2C7394711.4283112%2C338807.49888548%2C7395408.6942008%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 159
+    },
+    {
+      "id_equipamento": "cem_santana",
+      "bbox_31983": [
+        332489.385,
+        7400381.871,
+        332776.422,
+        7400650.286
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=332489.38475211%2C7400381.87096963%2C332776.42156702%2C7400650.28640802%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 27
+    },
+    {
+      "id_equipamento": "cem_tremembe",
+      "bbox_31983": [
+        336360.83,
+        7404749.926,
+        336847.65,
+        7405012.852
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=336360.83016396%2C7404749.9255353%2C336847.65004542%2C7405012.8519218%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 49
+    },
+    {
+      "id_equipamento": "cem_vila_formosa_i",
+      "bbox_31983": [
+        343582.027,
+        7392498.759,
+        344282.006,
+        7393460.971
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=343582.02730089%2C7392498.75852004%2C344282.00612763%2C7393460.97114691%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 84
+    },
+    {
+      "id_equipamento": "cem_vila_formosa_ii",
+      "bbox_31983": [
+        344046.952,
+        7393026.435,
+        344673.005,
+        7393973.124
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=344046.95216163%2C7393026.4350728%2C344673.00452664%2C7393973.12361529%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 105
+    },
+    {
+      "id_equipamento": "cem_vila_mariana",
+      "bbox_31983": [
+        333807.425,
+        7391175.647,
+        334108.506,
+        7391513.59
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=333807.42548096%2C7391175.64683976%2C334108.50556979%2C7391513.58950702%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 38
+    },
+    {
+      "id_equipamento": "cem_araca",
+      "bbox_31983": [
+        328992.395,
+        7394036.89,
+        329875.386,
+        7394639.369
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=328992.39504487%2C7394036.89002056%2C329875.38623983%2C7394639.3692308%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 318
+    },
+    {
+      "id_equipamento": "cem_dom_bosco",
+      "bbox_31983": [
+        321526.738,
+        7411662.661,
+        322082.883,
+        7412238.281
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=321526.73791044%2C7411662.66139083%2C322082.8826015%2C7412238.28141168%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 40
+    },
+    {
+      "id_equipamento": "cem_santo_amaro",
+      "bbox_31983": [
+        326438.896,
+        7383087.728,
+        326650.321,
+        7383362.559
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=326438.89615053%2C7383087.7275912%2C326650.32111403%2C7383362.55851695%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 47
+    },
+    {
+      "id_equipamento": "cem_sao_paulo",
+      "bbox_31983": [
+        327788.599,
+        7393456.408,
+        328290.608,
+        7393899.296
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=327788.59861368%2C7393456.4083266%2C328290.60769118%2C7393899.296144%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 179
+    },
+    {
+      "id_equipamento": "cem_vila_nova_cachoeirinha",
+      "bbox_31983": [
+        329261.235,
+        7402302.423,
+        330203.733,
+        7402721.862
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=329261.23543186%2C7402302.42313122%2C330203.73298112%2C7402721.8618773%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 76
+    },
+    {
+      "id_equipamento": "cem_campo_grande",
+      "bbox_31983": [
+        327672.895,
+        7381440.6,
+        328144.776,
+        7381780.14
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=327672.8950041%2C7381440.59990591%2C328144.77565456%2C7381780.14041506%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 56
+    },
+    {
+      "id_equipamento": "cem_lageado",
+      "bbox_31983": [
+        357347.554,
+        7396534.028,
+        357711.085,
+        7396775.077
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=357347.55412836%2C7396534.02764494%2C357711.08459517%2C7396775.07745877%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 13
+    },
+    {
+      "id_equipamento": "cem_lapa",
+      "bbox_31983": [
+        323972.542,
+        7395955.977,
+        324493.686,
+        7396390.07
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=323972.54189615%2C7395955.97709506%2C324493.68594643%2C7396390.0696262%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 137
+    },
+    {
+      "id_equipamento": "cem_parelheiros",
+      "bbox_31983": [
+        323804.109,
+        7363534.429,
+        323902.402,
+        7363661.469
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=323804.10856287%2C7363534.42874992%2C323902.40201264%2C7363661.46913086%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 4
+    },
+    {
+      "id_equipamento": "cem_saudade",
+      "bbox_31983": [
+        352620.131,
+        7399087.627,
+        353141.504,
+        7399471.343
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=352620.13138659%2C7399087.62743121%2C353141.50400299%2C7399471.34299872%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 30
+    },
+    {
+      "id_equipamento": "cem_freguesia_do_o",
+      "bbox_31983": [
+        326600.405,
+        7400161.882,
+        326775.607,
+        7400339.467
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=326600.40533333%2C7400161.88218475%2C326775.60655431%2C7400339.46738638%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 11
+    },
+    {
+      "id_equipamento": "cem_itaquera",
+      "bbox_31983": [
+        351393.177,
+        7393659.782,
+        351794.504,
+        7394081.657
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=351393.17700696%2C7393659.78196278%2C351794.50383795%2C7394081.65748183%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 31
+    },
+    {
+      "id_equipamento": "cem_penha",
+      "bbox_31983": [
+        342562.606,
+        7397754.191,
+        342718.091,
+        7397893.488
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=342562.60639819%2C7397754.19068525%2C342718.09115175%2C7397893.48777861%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 11
+    },
+    {
+      "id_equipamento": "cem_sao_luiz",
+      "bbox_31983": [
+        321681.675,
+        7381658.504,
+        322402.88,
+        7382323.106
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=321681.67490211%2C7381658.50436228%2C322402.87976832%2C7382323.10569295%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 52
+    },
+    {
+      "id_equipamento": "cem_sao_pedro",
+      "bbox_31983": [
+        340050.106,
+        7389933.12,
+        340706.935,
+        7390477.401
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=340050.10616995%2C7389933.12040122%2C340706.93532262%2C7390477.4010033%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 63
+    },
+    {
+      "id_equipamento": "crem_vila_alpina",
+      "bbox_31983": [
+        339970.785,
+        7390268.599,
+        340246.46,
+        7390684.469
+      ],
+      "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Acobertura_vegetal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=339970.78528626%2C7390268.59870918%2C340246.4596522%2C7390684.46924838%2CEPSG%3A31983&count=50000",
+      "feature_count_returned": 17
+    }
+  ],
+  "notes": [
+    "A coleta usa uma caixa envolvente por equipamento para reduzir o volume transferido.",
+    "As feições são preservadas integralmente; o recorte exato ocorre na etapa de análise.",
+    "O produto mede cobertura vegetal classificada em 15 categorias, não cobertura estrita de copas."
+  ]
+}

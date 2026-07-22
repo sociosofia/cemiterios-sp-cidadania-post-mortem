@@ -1,0 +1,119 @@
+{
+  "generated_at_utc": "2026-07-22T22:19:20.172616+00:00",
+  "dataset": "Mapeamento Digital da Cobertura Vegetal 2017",
+  "layer": "geoportal:cobertura_vegetal",
+  "imagery_reference": "ortofotos 2017/2018 com apoio LiDAR",
+  "source_crs": "EPSG:31983",
+  "geral_23_equipamentos": {
+    "equipment_count": 23,
+    "area_territorial_m2": 2959916.85,
+    "cobertura_vegetal_m2": 1789599.753,
+    "cobertura_vegetal_percentual": 60.4611,
+    "componente_arboreo_explicito_m2": 1660245.505,
+    "componente_arboreo_percentual_do_territorio": 56.091,
+    "componente_arboreo_percentual_da_vegetacao": 92.7719
+  },
+  "somente_22_cemiterios": {
+    "equipment_count": 22,
+    "area_territorial_m2": 2906401.133,
+    "cobertura_vegetal_m2": 1748647.399,
+    "cobertura_vegetal_percentual": 60.1654,
+    "componente_arboreo_explicito_m2": 1619293.151,
+    "componente_arboreo_percentual_do_territorio": 55.7147,
+    "componente_arboreo_percentual_da_vegetacao": 92.6026
+  },
+  "crematorio_vila_alpina": {
+    "equipment_count": 1,
+    "area_territorial_m2": 53515.717,
+    "cobertura_vegetal_m2": 40952.354,
+    "cobertura_vegetal_percentual": 76.524,
+    "componente_arboreo_explicito_m2": 40952.354,
+    "componente_arboreo_percentual_do_territorio": 76.524,
+    "componente_arboreo_percentual_da_vegetacao": 100.0
+  },
+  "por_bloco": [
+    {
+      "equipment_count": 7,
+      "area_territorial_m2": 1082171.611,
+      "cobertura_vegetal_m2": 566065.017,
+      "cobertura_vegetal_percentual": 52.3082,
+      "componente_arboreo_explicito_m2": 549597.863,
+      "componente_arboreo_percentual_do_territorio": 50.7866,
+      "componente_arboreo_percentual_da_vegetacao": 97.0909,
+      "bloco_concessao": 1,
+      "concessionaria": "Consolare"
+    },
+    {
+      "equipment_count": 5,
+      "area_territorial_m2": 809764.85,
+      "cobertura_vegetal_m2": 476826.233,
+      "cobertura_vegetal_percentual": 58.8845,
+      "componente_arboreo_explicito_m2": 393352.994,
+      "componente_arboreo_percentual_do_territorio": 48.5762,
+      "componente_arboreo_percentual_da_vegetacao": 82.494,
+      "bloco_concessao": 2,
+      "concessionaria": "Cortel SP"
+    },
+    {
+      "equipment_count": 5,
+      "area_territorial_m2": 412642.357,
+      "cobertura_vegetal_m2": 243788.338,
+      "cobertura_vegetal_percentual": 59.0798,
+      "componente_arboreo_explicito_m2": 228704.737,
+      "componente_arboreo_percentual_do_territorio": 55.4244,
+      "componente_arboreo_percentual_da_vegetacao": 93.8128,
+      "bloco_concessao": 3,
+      "concessionaria": "Grupo Maya"
+    },
+    {
+      "equipment_count": 6,
+      "area_territorial_m2": 655338.032,
+      "cobertura_vegetal_m2": 502920.165,
+      "cobertura_vegetal_percentual": 76.7421,
+      "componente_arboreo_explicito_m2": 488589.911,
+      "componente_arboreo_percentual_do_territorio": 74.5554,
+      "componente_arboreo_percentual_da_vegetacao": 97.1506,
+      "bloco_concessao": 4,
+      "concessionaria": "Velar SP"
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": 11,
+      "descricao": "Baixa cobertura arbórea, arbóreo-arbustiva e/ou arborescente",
+      "area_m2": 543806.701,
+      "participacao_na_cobertura_percentual": 30.3871,
+      "componente_arboreo_explicito": true
+    },
+    {
+      "categoria": 13,
+      "descricao": "Média a alta cobertura arbórea, arbóreo-arbustiva e/ou arborescente",
+      "area_m2": 1116438.803,
+      "participacao_na_cobertura_percentual": 62.3848,
+      "componente_arboreo_explicito": true
+    },
+    {
+      "categoria": 14,
+      "descricao": "Vegetação Herbáceo-Arbustiva",
+      "area_m2": 129354.247,
+      "participacao_na_cobertura_percentual": 7.2281,
+      "componente_arboreo_explicito": false
+    }
+  ],
+  "tree_component_categories": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11,
+    13
+  ],
+  "interpretation_notes": [
+    "Cobertura vegetal não equivale a cobertura estrita de copas nem a área permeável.",
+    "O componente arbóreo explícito agrega categorias cuja definição oficial menciona floresta, bosque, maciço ou cobertura arbórea.",
+    "A referência de 2017/2018 é anterior à concessão e funciona como linha de base."
+  ]
+}

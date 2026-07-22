@@ -1,0 +1,255 @@
+{
+  "feature_count": 1577,
+  "property_keys": [
+    "cd_categoria_vegetacao",
+    "cd_controle_vetor",
+    "cd_coordenada_x",
+    "cd_coordenada_y",
+    "cd_identificador_original_vegetacao",
+    "cd_identificador_vegetacao",
+    "cd_subcategoria_complementar_vegetacao",
+    "cd_subcategoria_vegetacao",
+    "qt_altura_media_vegetacao",
+    "qt_area_vegetacao",
+    "qt_desvio_altura_vegetacao",
+    "qt_perimetro_vegetacao",
+    "tx_data_voo",
+    "tx_datum",
+    "tx_descricao_categoria_subcategoria",
+    "tx_entrega",
+    "tx_lote",
+    "tx_lote_versao"
+  ],
+  "fields": {
+    "cd_categoria_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1577
+      }
+    },
+    "cd_controle_vetor": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1577
+      }
+    },
+    "cd_coordenada_x": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "number": 1555,
+        "integer": 22
+      }
+    },
+    "cd_coordenada_y": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 12,
+        "number": 1565
+      }
+    },
+    "cd_identificador_original_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1577
+      }
+    },
+    "cd_identificador_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1577
+      }
+    },
+    "cd_subcategoria_complementar_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1577
+      }
+    },
+    "cd_subcategoria_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1576,
+        "number": 1
+      }
+    },
+    "qt_altura_media_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1574,
+        "number": 3
+      }
+    },
+    "qt_area_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "number": 1577
+      }
+    },
+    "qt_desvio_altura_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "integer": 1574,
+        "number": 3
+      }
+    },
+    "qt_perimetro_vegetacao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "number": 1577
+      }
+    },
+    "tx_data_voo": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    },
+    "tx_datum": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    },
+    "tx_descricao_categoria_subcategoria": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    },
+    "tx_entrega": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    },
+    "tx_lote": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    },
+    "tx_lote_versao": {
+      "non_missing_feature_count": 1577,
+      "types": {
+        "string": 1577
+      }
+    }
+  },
+  "sample_features": [
+    {
+      "id": "cobertura_vegetal.21899",
+      "properties": {
+        "cd_identificador_vegetacao": 21899,
+        "cd_identificador_original_vegetacao": 22007,
+        "cd_controle_vetor": 25835,
+        "tx_datum": "SIRGAS 2000,4 - 23S      ",
+        "cd_coordenada_x": 330652.09,
+        "cd_coordenada_y": 7394742,
+        "cd_categoria_vegetacao": 14,
+        "cd_subcategoria_vegetacao": 0,
+        "cd_subcategoria_complementar_vegetacao": 0,
+        "tx_descricao_categoria_subcategoria": "Vegetação herbáceo-arbustiva",
+        "qt_area_vegetacao": 36.8292,
+        "qt_perimetro_vegetacao": 26.92856,
+        "qt_altura_media_vegetacao": 0,
+        "qt_desvio_altura_vegetacao": 0,
+        "tx_data_voo": "2017",
+        "tx_entrega": "05_2018",
+        "tx_lote": "002",
+        "tx_lote_versao": "V1"
+      }
+    },
+    {
+      "id": "cobertura_vegetal.21678",
+      "properties": {
+        "cd_identificador_vegetacao": 21678,
+        "cd_identificador_original_vegetacao": 21786,
+        "cd_controle_vetor": 25837,
+        "tx_datum": "SIRGAS 2000,4 - 23S      ",
+        "cd_coordenada_x": 330671.25,
+        "cd_coordenada_y": 7394598.85,
+        "cd_categoria_vegetacao": 14,
+        "cd_subcategoria_vegetacao": 0,
+        "cd_subcategoria_complementar_vegetacao": 0,
+        "tx_descricao_categoria_subcategoria": "Vegetação herbáceo-arbustiva",
+        "qt_area_vegetacao": 27.08075,
+        "qt_perimetro_vegetacao": 20.75294,
+        "qt_altura_media_vegetacao": 0,
+        "qt_desvio_altura_vegetacao": 0,
+        "tx_data_voo": "2017",
+        "tx_entrega": "05_2018",
+        "tx_lote": "002",
+        "tx_lote_versao": "V1"
+      }
+    },
+    {
+      "id": "cobertura_vegetal.21895",
+      "properties": {
+        "cd_identificador_vegetacao": 21895,
+        "cd_identificador_original_vegetacao": 22003,
+        "cd_controle_vetor": 26969,
+        "tx_datum": "SIRGAS 2000,4 - 23S      ",
+        "cd_coordenada_x": 330922.7,
+        "cd_coordenada_y": 7394718.75,
+        "cd_categoria_vegetacao": 13,
+        "cd_subcategoria_vegetacao": 0,
+        "cd_subcategoria_complementar_vegetacao": 0,
+        "tx_descricao_categoria_subcategoria": "Média a alta cobertura arbórea, arbóreo-arbustiva e ou arborescente",
+        "qt_area_vegetacao": 36.7389,
+        "qt_perimetro_vegetacao": 23.22319,
+        "qt_altura_media_vegetacao": 0,
+        "qt_desvio_altura_vegetacao": 0,
+        "tx_data_voo": "2017",
+        "tx_entrega": "05_2018",
+        "tx_lote": "002",
+        "tx_lote_versao": "V1"
+      }
+    },
+    {
+      "id": "cobertura_vegetal.21903",
+      "properties": {
+        "cd_identificador_vegetacao": 21903,
+        "cd_identificador_original_vegetacao": 22011,
+        "cd_controle_vetor": 25813,
+        "tx_datum": "SIRGAS 2000,4 - 23S      ",
+        "cd_coordenada_x": 330916.59,
+        "cd_coordenada_y": 7394714.25,
+        "cd_categoria_vegetacao": 13,
+        "cd_subcategoria_vegetacao": 0,
+        "cd_subcategoria_complementar_vegetacao": 0,
+        "tx_descricao_categoria_subcategoria": "Média a alta cobertura arbórea, arbóreo-arbustiva e ou arborescente",
+        "qt_area_vegetacao": 36.8912,
+        "qt_perimetro_vegetacao": 25.79637,
+        "qt_altura_media_vegetacao": 0,
+        "qt_desvio_altura_vegetacao": 0,
+        "tx_data_voo": "2017",
+        "tx_entrega": "05_2018",
+        "tx_lote": "002",
+        "tx_lote_versao": "V1"
+      }
+    },
+    {
+      "id": "cobertura_vegetal.21910",
+      "properties": {
+        "cd_identificador_vegetacao": 21910,
+        "cd_identificador_original_vegetacao": 22018,
+        "cd_controle_vetor": 25982,
+        "tx_datum": "SIRGAS 2000,4 - 23S      ",
+        "cd_coordenada_x": 330752.59,
+        "cd_coordenada_y": 7394683.09,
+        "cd_categoria_vegetacao": 13,
+        "cd_subcategoria_vegetacao": 0,
+        "cd_subcategoria_complementar_vegetacao": 0,
+        "tx_descricao_categoria_subcategoria": "Média a alta cobertura arbórea, arbóreo-arbustiva e ou arborescente",
+        "qt_area_vegetacao": 37.0685,
+        "qt_perimetro_vegetacao": 22.27526,
+        "qt_altura_media_vegetacao": 0,
+        "qt_desvio_altura_vegetacao": 0,
+        "tx_data_voo": "2017",
+        "tx_entrega": "05_2018",
+        "tx_lote": "002",
+        "tx_lote_versao": "V1"
+      }
+    }
+  ]
+}

@@ -7,13 +7,17 @@ on:
       - research/valor-territorial-entorno
     paths:
       - "scripts/fetch_pgv_2026_source.py"
+      - "scripts/parse_pgv_2026_pdf.py"
       - "scripts/discover_geosampa_land_value_layers.py"
+      - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
   pull_request:
     paths:
       - "scripts/fetch_pgv_2026_source.py"
+      - "scripts/parse_pgv_2026_pdf.py"
       - "scripts/discover_geosampa_land_value_layers.py"
+      - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
 
@@ -23,7 +27,7 @@ permissions:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - name: Baixar repositório
@@ -34,11 +38,20 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Instalar extrator de PDF
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
       - name: Descobrir e preservar a fonte da PGV 2026
         run: python scripts/fetch_pgv_2026_source.py
 
+      - name: Extrair a listagem de valores da PGV 2026
+        run: python scripts/parse_pgv_2026_pdf.py
+
       - name: Inventariar camadas territoriais do GeoSampa
         run: python scripts/discover_geosampa_land_value_layers.py
+
+      - name: Inspecionar a camada de quadras fiscais
+        run: python scripts/inspect_geosampa_quadra_fiscal.py
 
       - name: Registrar produtos da coleta
         if: github.event_name != 'pull_request'
@@ -47,11 +60,14 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/raw/pgv_2026 data/raw/geosampa/wfs_capabilities.xml \
             data/processed/pgv_2026_source_metadata.json \
-            data/processed/geosampa_land_value_layer_candidates.json
+            data/processed/pgv_2026_faces.csv \
+            data/processed/pgv_2026_faces_metadata.json \
+            data/processed/geosampa_land_value_layer_candidates.json \
+            data/processed/geosampa_quadra_fiscal_sample.json
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos produtos da coleta."
           else
-            git commit -m "Coleta fontes oficiais de valor territorial"
+            git commit -m "Extrai PGV 2026 e inspeciona quadras fiscais"
             git push
           fi
 
@@ -61,7 +77,9 @@ jobs:
         with:
           name: valor-territorial-diagnostico
           path: |
-            data/raw/pgv_2026
-            data/raw/geosampa/wfs_capabilities.xml
+            data/raw/pgv_2026/anexo_lei_18330_2025_145975345.pdf
             data/processed/pgv_2026_source_metadata.json
+            data/processed/pgv_2026_faces.csv
+            data/processed/pgv_2026_faces_metadata.json
             data/processed/geosampa_land_value_layer_candidates.json
+            data/processed/geosampa_quadra_fiscal_sample.json

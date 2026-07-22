@@ -44,13 +44,25 @@ Cada equipamento foi associado ao distrito que contém a maior parcela de sua á
 Por estrato tarifário:
 
 | Estrato | Cemitérios | Renda mediana distrital média | Proporção preta+parda média |
-|---:|---:|---:|---:|
+|---:|---:|---:|
 | 1 | 6 | R$ 7.733 | 17,5% |
 | 2 | 7 | R$ 4.072 | 30,2% |
 | 3 | 6 | R$ 1.800 | 54,5% |
 | 4 | 3 | R$ 3.000 | 34,7% |
 
 Os resultados são descritivos e se referem à **localização do cemitério**, não ao perfil individual dos mortos ou de suas famílias. A tabela completa está em [`docs/RESULTADOS_SOCIOECONOMICOS.md`](docs/RESULTADOS_SOCIOECONOMICOS.md).
+
+## Fluxo demográfico dos mortos
+
+A integração das bases Seade Mortalidade e Seade Estatísticas Vitais produz painéis municipais, estaduais e distritais por residência. Na série consolidada de 2000 a 2024:
+
+- o Estado de São Paulo registrou **7.070.549 óbitos** de residentes;
+- 2024 teve **351.354 óbitos**, aproximadamente 960 por dia;
+- 74,7% das mortes de 2024 ocorreram entre pessoas de 60 anos ou mais;
+- o Município de São Paulo registrou **87.352 óbitos** em 2024;
+- o pico foi 2021, com **429.481 óbitos**.
+
+Esses números representam fluxo de óbitos por residência. Não equivalem a sepultamentos, cremações, ocupação de jazigos nem destino cemiterial. A auditoria, as inconsistências encontradas e as regras de uso estão em [`docs/RESULTADOS_SEADE_MORTALIDADE.md`](docs/RESULTADOS_SEADE_MORTALIDADE.md) e [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md).
 
 ## Desigualdade temporal do direito ao sepulcro
 
@@ -84,6 +96,9 @@ O plano analítico e seus limites de inferência estão em [`docs/PLANO_ANALISE_
 - [`data/processed/cemiterios_concessao_31983.geojson`](data/processed/cemiterios_concessao_31983.geojson) — polígonos para análise métrica;
 - [`data/processed/cemiterios_concessao_4326.geojson`](data/processed/cemiterios_concessao_4326.geojson) — polígonos para mapas web;
 - [`data/processed/cemiterios_contexto_socioeconomico.csv`](data/processed/cemiterios_contexto_socioeconomico.csv) — renda e composição racial do distrito de localização;
+- [`data/processed/seade_mortalidade_municipio_ano.csv`](data/processed/seade_mortalidade_municipio_ano.csv) — óbitos, população, taxas e mortalidade infantil por município-ano;
+- [`data/processed/seade_mortalidade_estado_ano.csv`](data/processed/seade_mortalidade_estado_ano.csv) — série estadual calculada;
+- [`data/processed/seade_mortalidade_distrito_sp_ano.csv`](data/processed/seade_mortalidade_distrito_sp_ano.csv) — óbitos por distrito de residência na capital;
 - [`data/processed/resumo_estratos_renda_raca.json`](data/processed/resumo_estratos_renda_raca.json) — resultados agregados;
 - [`data/processed/distancias_centroide_se.csv`](data/processed/distancias_centroide_se.csv) — indicador preliminar de centralidade.
 
@@ -103,13 +118,14 @@ O perfil socioeconômico do território onde está um cemitério não equivale a
 
 ## Automação
 
-O workflow consulta o GeoSampa, preserva dados brutos, filtra e dissolve geometrias, baixa os 96 distritos, integra o Censo 2022, extrai o anexo contratual sobre ossadas, calcula indicadores e recria os mapas.
+O workflow consulta o GeoSampa, preserva dados brutos, filtra e dissolve geometrias, baixa os 96 distritos, integra o Censo 2022 e o IPVS, audita as bases de mortalidade do Seade, extrai o anexo contratual sobre ossadas, calcula indicadores e recria os mapas.
 
 ## Próximas etapas
 
 - localizar e validar os portões de acesso público;
 - georreferenciar as 40 agências funerárias;
 - medir distâncias e tempos de deslocamento pela rede;
+- cruzar fluxo de óbitos, tarifas, gratuidade e capacidade funerária;
 - obter atas e propostas dos grupos de trabalho sobre ossadas;
 - localizar relatórios de estoque de ossadas por cemitério;
 - buscar registros anonimizados de origem e destino dos sepultamentos.
@@ -121,6 +137,7 @@ As pendências documentais estão em [`docs/PENDENCIAS_DOCUMENTAIS.md`](docs/PEN
 - Prefeitura de São Paulo — edital, contratos, anexos e legislação;
 - SP Regula — endereços, concessionárias, agências, gratuidades e tarifas;
 - GeoSampa — camadas geográficas municipais, sob licença CC BY-SA 4.0;
+- Fundação Seade — Mortalidade, Estatísticas Vitais, regionalizações e IPVS;
 - IBGE — Censo Demográfico 2022.
 
 A metodologia completa está em [`docs/METODOLOGIA.md`](docs/METODOLOGIA.md).

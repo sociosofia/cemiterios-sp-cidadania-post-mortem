@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
 """Cruza os cemitérios concedidos com a cobertura vegetal oficial de 2017.
 
-A rotina distingue explicitamente:
-- área territorial do equipamento;
-- área classificada como cobertura vegetal;
-- proporção territorial coberta por vegetação;
-- composição por categoria do mapeamento municipal.
+Resultados:
+- área territorial e cobertura vegetal por equipamento;
+- composição pelas 15 categorias oficiais;
+- agregado por bloco contratual;
+- subtotal das classes com componente arbóreo explicitamente reconhecido.
 
-Não se usa a expressão "cobertura de copas" para os resultados desta rotina. O
-produto municipal de copas é distinto e não foi localizado como camada vetorial
-pública no WFS durante esta etapa.
-
-Saídas:
-- data/processed/cemiterios_cobertura_vegetal_2017.csv
-- data/processed/resumo_cobertura_vegetal_cemiterios_2017.json
-- docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md
+O subtotal arbóreo não equivale à cobertura de copas: ele soma polígonos cujas
+classes oficiais mencionam floresta, bosque, maciço ou cobertura arbórea. O
+produto municipal específico de copas é distinto.
 """
 
 from __future__ import annotations
@@ -30,26 +25,12 @@ from shapely.geometry import shape
 from shapely.ops import unary_union
 
 ROOT = Path(__file__).resolve().parents[1]
-CEMETERIES_PATH = ROOT / "data" / "processed" / "cemiterios_concessao_31983.geojson"
-VEGETATION_PATH = (
-    ROOT
-    / "data"
-    / "raw"
-    / "geosampa"
-    / "cobertura_vegetal_2017_entorno_cemiterios_31983.geojson"
-)
-VEGETATION_METADATA_PATH = (
-    ROOT
-    / "data"
-    / "raw"
-    / "geosampa"
-    / "cobertura_vegetal_2017_entorno_cemiterios_metadata.json"
-)
-OUTPUT_CSV = ROOT / "data" / "processed" / "cemiterios_cobertura_vegetal_2017.csv"
-OUTPUT_JSON = (
-    ROOT / "data" / "processed" / "resumo_cobertura_vegetal_cemiterios_2017.json"
-)
-OUTPUT_REPORT = ROOT / "docs" / "RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md"
+CEMETERIES = ROOT / "data/processed/cemiterios_concessao_31983.geojson"
+VEGETATION = ROOT / "data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_31983.geojson"
+VEGETATION_METADATA = ROOT / "data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_metadata.json"
+OUTPUT_CSV = ROOT / "data/processed/cemiterios_cobertura_vegetal_2017.csv"
+OUTPUT_JSON = ROOT / "data/processed/resumo_cobertura_vegetal_cemiterios_2017.json"
+OUTPUT_REPORT = ROOT / "docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md"
 
 CATEGORY_NAMES = {
     1: "Floresta Ombrófila Densa Secundária — estágio avançado/primária",
@@ -68,6 +49,7 @@ CATEGORY_NAMES = {
     14: "Vegetação Herbáceo-Arbustiva",
     15: "Mista",
 }
+TREE_COMPONENT_CATEGORIES = {1, 2, 3, 4, 5, 9, 10, 11, 13}
 
 
 def valid_geometry(feature: dict[str, Any]):
@@ -77,16 +59,28 @@ def valid_geometry(feature: dict[str, Any]):
     return geometry
 
 
-def bboxes_intersect(
-    a: tuple[float, float, float, float], b: tuple[float, float, float, float]
-) -> bool:
+def intersects_bounds(a, b) -> bool:
     return not (a[2] < b[0] or b[2] < a[0] or a[3] < b[1] or b[3] < a[1])
 
 
 def category_code(properties: dict[str, Any]) -> int | None:
-    for field in ("vg_categ", "CAT", "cat", "categoria", "CATEGORY"):
+    preferred = (
+        "cd_categoria_vegetacao",
+        "vg_categ",
+        "CAT",
+        "categoria",
+    )
+    for field in preferred:
         value = properties.get(field)
         if value in (None, ""):
+            continue
+        try:
+            return int(float(value))
+        except (TypeError, ValueError):
+            pass
+    for field, value in properties.items():
+        key = field.lower()
+        if "categoria" not in key or "subcategoria" in key:
             continue
         try:
             return int(float(value))
@@ -96,156 +90,158 @@ def category_code(properties: dict[str, Any]) -> int | None:
 
 
 def category_description(properties: dict[str, Any], code: int | None) -> str:
-    for field in ("vg_descric", "DESCRICAO", "descricao", "description"):
+    preferred = (
+        "tx_descricao_categoria_subcategoria",
+        "vg_descric",
+        "DESCRICAO",
+        "descricao",
+    )
+    for field in preferred:
         value = properties.get(field)
         if value not in (None, ""):
             return str(value).strip()
-    if code is None:
-        return "Categoria não identificada"
-    return CATEGORY_NAMES.get(code, f"Categoria {code}")
+    return CATEGORY_NAMES.get(code, "Categoria não identificada")
 
 
-def format_number(value: float, decimals: int = 2) -> str:
-    formatted = f"{value:,.{decimals}f}"
-    return formatted.replace(",", "X").replace(".", ",").replace("X", ".")
+def union_area(geometries: list[Any]) -> float:
+    return float(unary_union(geometries).area) if geometries else 0.0
 
 
-def report_table(rows: list[dict[str, Any]]) -> str:
-    lines = [
-        "| Cemitério/equipamento | Bloco | Área territorial (m²) | Cobertura vegetal (m²) | Cobertura (%) |",
-        "|---|---:|---:|---:|---:|",
+def aggregate(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    territorial = sum(float(row["area_territorial_m2"]) for row in rows)
+    vegetation = sum(float(row["cobertura_vegetal_m2"]) for row in rows)
+    tree_component = sum(float(row["componente_arboreo_explicito_m2"]) for row in rows)
+    return {
+        "equipment_count": len(rows),
+        "area_territorial_m2": round(territorial, 3),
+        "cobertura_vegetal_m2": round(vegetation, 3),
+        "cobertura_vegetal_percentual": round(vegetation / territorial * 100 if territorial else 0, 4),
+        "componente_arboreo_explicito_m2": round(tree_component, 3),
+        "componente_arboreo_percentual_do_territorio": round(
+            tree_component / territorial * 100 if territorial else 0, 4
+        ),
+        "componente_arboreo_percentual_da_vegetacao": round(
+            tree_component / vegetation * 100 if vegetation else 0, 4
+        ),
+    }
+
+
+def br(value: float, decimals: int = 2) -> str:
+    result = f"{value:,.{decimals}f}"
+    return result.replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def create_report(rows, summary, category_totals) -> str:
+    general = summary["geral_23_equipamentos"]
+    cemeteries = summary["somente_22_cemiterios"]
+
+    block_lines = [
+        "| Bloco | Concessionária | Área territorial (m²) | Vegetação (m²) | Vegetação (%) | Componente arbóreo explícito (%) |",
+        "|---:|---|---:|---:|---:|---:|",
+    ]
+    for item in summary["por_bloco"]:
+        block_lines.append(
+            f"| {item['bloco_concessao']} | {item['concessionaria']} | "
+            f"{br(item['area_territorial_m2'], 1)} | {br(item['cobertura_vegetal_m2'], 1)} | "
+            f"{br(item['cobertura_vegetal_percentual'], 2)} | "
+            f"{br(item['componente_arboreo_percentual_do_territorio'], 2)} |"
+        )
+
+    equipment_lines = [
+        "| Equipamento | Bloco | Área (m²) | Vegetação (m²) | Vegetação (%) | Arbóreo explícito (%) |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
-        lines.append(
-            "| {name} | {block} | {area} | {vegetation} | {pct} |".format(
-                name=row["nome_oficial"],
-                block=row["bloco_concessao"],
-                area=format_number(row["area_territorial_m2"], 1),
-                vegetation=format_number(row["cobertura_vegetal_m2"], 1),
-                pct=format_number(row["cobertura_vegetal_percentual"], 2),
-            )
+        equipment_lines.append(
+            f"| {row['nome_oficial']} | {row['bloco_concessao']} | "
+            f"{br(row['area_territorial_m2'], 1)} | {br(row['cobertura_vegetal_m2'], 1)} | "
+            f"{br(row['cobertura_vegetal_percentual'], 2)} | "
+            f"{br(row['componente_arboreo_percentual_do_territorio'], 2)} |"
         )
-    return "\n".join(lines)
-
-
-def build_report(
-    rows: list[dict[str, Any]],
-    summary: dict[str, Any],
-    category_totals: list[dict[str, Any]],
-) -> str:
-    overall = summary["geral_23_equipamentos"]
-    cemeteries = summary["somente_22_cemiterios"]
-    blocks = summary["por_bloco"]
 
     category_lines = [
-        "| Categoria | Descrição | Área dentro dos equipamentos (m²) | Participação na cobertura (%) |",
+        "| Categoria | Descrição | Área (m²) | Participação na vegetação (%) |",
         "|---:|---|---:|---:|",
     ]
     for item in category_totals:
         category_lines.append(
-            f"| {item['categoria']} | {item['descricao']} | "
-            f"{format_number(item['area_m2'], 1)} | "
-            f"{format_number(item['participacao_na_cobertura_percentual'], 2)} |"
-        )
-
-    block_lines = [
-        "| Bloco | Concessionária | Área territorial (m²) | Cobertura vegetal (m²) | Cobertura (%) |",
-        "|---:|---|---:|---:|---:|",
-    ]
-    for block in blocks:
-        block_lines.append(
-            f"| {block['bloco_concessao']} | {block['concessionaria']} | "
-            f"{format_number(block['area_territorial_m2'], 1)} | "
-            f"{format_number(block['cobertura_vegetal_m2'], 1)} | "
-            f"{format_number(block['cobertura_vegetal_percentual'], 2)} |"
+            f"| {item['categoria']} | {item['descricao']} | {br(item['area_m2'], 1)} | "
+            f"{br(item['participacao_na_cobertura_percentual'], 2)} |"
         )
 
     return f"""# Cobertura vegetal nos cemitérios públicos concedidos de São Paulo
 
 ## Resultado principal
 
-O cruzamento usa os polígonos oficiais dos 23 equipamentos da concessão e o
-**Mapeamento Digital da Cobertura Vegetal 2017**, produzido com fotointerpretação
-de ortofotos de 2017/2018 e apoio LiDAR, publicado pela Secretaria Municipal do
-Verde e do Meio Ambiente em 2020.
+O cruzamento utiliza os polígonos oficiais dos equipamentos e o **Mapeamento
+Digital da Cobertura Vegetal 2017**, elaborado com ortofotos de 2017/2018 e apoio
+LiDAR e publicado pela SVMA em 2020.
 
 Nos 23 equipamentos, incluindo o Crematório Vila Alpina, foram identificados
-**{format_number(overall['cobertura_vegetal_m2'], 1)} m² de cobertura vegetal**, o
-que corresponde a **{format_number(overall['cobertura_vegetal_percentual'], 2)}%**
-da área territorial analisada. Considerando apenas os 22 cemitérios, o total é de
-**{format_number(cemeteries['cobertura_vegetal_m2'], 1)} m²**, ou
-**{format_number(cemeteries['cobertura_vegetal_percentual'], 2)}%** de seus
-perímetros atuais.
+**{br(general['cobertura_vegetal_m2'], 1)} m² de cobertura vegetal**, equivalentes
+a **{br(general['cobertura_vegetal_percentual'], 2)}%** da área territorial. As
+classes que explicitamente indicam floresta, bosque, maciço ou componente arbóreo
+ocupam **{br(general['componente_arboreo_explicito_m2'], 1)} m²**, ou
+**{br(general['componente_arboreo_percentual_do_territorio'], 2)}%** do território.
+
+Considerando somente os 22 cemitérios, a cobertura vegetal é de
+**{br(cemeteries['cobertura_vegetal_m2'], 1)} m²**
+(**{br(cemeteries['cobertura_vegetal_percentual'], 2)}%**).
 
 ## Cautela conceitual
 
-Este resultado mede **cobertura vegetal**, composta por 15 categorias que incluem
-florestas, bosques urbanos, vegetação arbórea, formações herbáceo-arbustivas,
-agricultura e classes mistas. Ele **não equivale à cobertura de copas de árvores**.
-O relatório municipal informa a existência de um produto específico de copas,
-derivado do Modelo Digital de Vegetação Normalizado, mas esse produto não foi
-localizado como camada vetorial pública no WFS usado nesta rotina.
+Cobertura vegetal não é sinônimo de área territorial, área permeável ou cobertura
+de copas. O subtotal de componente arbóreo é uma agregação das categorias oficiais
+1–5, 9–11 e 13; ele indica classes que contêm árvores, mas não mede diretamente a
+projeção horizontal das copas. A categoria 15, mista, permanece separada porque sua
+composição não pode ser atribuída integralmente ao estrato arbóreo.
 
-Também não se confunde cobertura vegetal com área permeável. A interseção mede a
-parcela dos polígonos cemiteriais classificada como vegetação na base de 2017/2018.
-
-## Resultado por bloco contratual
+## Por bloco contratual
 
 {"\n".join(block_lines)}
 
-## Resultado por equipamento
+As diferenças são uma **linha de base pré-concessão**, pois as imagens são de
+2017/2018. Elas não medem o desempenho posterior das concessionárias.
 
-{report_table(rows)}
+## Por equipamento
 
-## Composição das classes de vegetação
+{"\n".join(equipment_lines)}
+
+## Classes de vegetação
 
 {"\n".join(category_lines)}
 
-## Leitura para o Artigo Holanda
+## Interpretação para o Artigo Holanda
 
-A medição permite substituir a fusão discursiva entre **área cemiterial** e **área
-verde** por uma descrição verificável. Os cemitérios formam uma rede territorial de
-quase 296 hectares, mas apenas a parcela efetivamente classificada como cobertura
-vegetal deve ser mobilizada como indicador ambiental.
+A análise permite separar três afirmações que apareciam fundidas no discurso
+institucional: os cemitérios formam uma rede territorial de quase 296 hectares;
+parte desse território foi classificada como cobertura vegetal; e uma parcela ainda
+mais específica pertence a classes com componente arbóreo explícito. Essa distinção
+preserva a força do argumento ambiental sem converter automaticamente todo solo
+cemiterial em área verde.
 
-A base também permite comparar os quatro blocos concessionados. Isso abre uma
-frente empírica sobre a fragmentação contratual de uma infraestrutura verde que o
-Plano Diretor tratou como sistema municipal integrado. Diferenças entre blocos não
-provam desempenho das concessionárias, porque o mapeamento retrata imagens de
-2017/2018, anteriores ao início da concessão. Elas funcionam como **linha de base
-pré-concessão** para análises posteriores.
+O Plano Diretor integrou os cemitérios a um sistema municipal de áreas verdes e
+espaços livres. A concessão dividiu essa infraestrutura em quatro blocos. O dado
+pré-concessão permite examinar futuramente se manejo, compensações ambientais e
+investimentos preservaram, ampliaram ou reduziram essa cobertura.
 
 ## Limites
 
-- referência temporal da vegetação: ortofotos de 2017/2018;
-- referência atual dos perímetros cemiteriais: camada consultada no GeoSampa pelo
-  workflow do projeto;
-- pequenas diferenças de data e de delimitação podem afetar as bordas;
-- a análise não mede saúde das árvores, biodiversidade, conectividade ecológica,
-  permeabilidade nem acesso público;
-- a afirmação histórica de que os cemitérios constituíam a segunda maior área
-  arborizada da cidade ainda exige uma comparação homogênea com parques e outras
-  classes de áreas verdes.
-
-## Fontes
-
-- Prefeitura de São Paulo / SVMA. *Mapeamento Digital da Cobertura Vegetal do
-  Município de São Paulo*. Relatório final, 2020.
-- Catálogo de Metadados Geográficos do GeoSampa: registro
-  `367916b7-3af4-44be-ab72-cd07a4996b66`.
-- GeoSampa: camada WFS identificada e registrada automaticamente nos metadados da
-  coleta.
+- vegetação referente a ortofotos de 2017/2018;
+- perímetros cemiteriais consultados no GeoSampa pelo workflow atual;
+- não mede saúde das árvores, biodiversidade, conectividade, permeabilidade ou
+  acesso público;
+- não demonstra ainda que os cemitérios constituam a segunda maior área arborizada;
+  essa afirmação requer comparação homogênea com parques e outras áreas verdes.
 """
 
 
 def main() -> int:
-    cemeteries_data = json.loads(CEMETERIES_PATH.read_text(encoding="utf-8"))
-    vegetation_data = json.loads(VEGETATION_PATH.read_text(encoding="utf-8"))
-    vegetation_metadata = json.loads(
-        VEGETATION_METADATA_PATH.read_text(encoding="utf-8")
-    )
+    cemetery_data = json.loads(CEMETERIES.read_text(encoding="utf-8"))
+    vegetation_data = json.loads(VEGETATION.read_text(encoding="utf-8"))
+    metadata = json.loads(VEGETATION_METADATA.read_text(encoding="utf-8"))
 
-    vegetation_features: list[dict[str, Any]] = []
+    vegetation_features = []
     for feature in vegetation_data.get("features", []):
         geometry = valid_geometry(feature)
         if geometry.is_empty:
@@ -261,155 +257,119 @@ def main() -> int:
             }
         )
 
-    rows: list[dict[str, Any]] = []
-    all_category_geometries: dict[int | None, list[Any]] = defaultdict(list)
+    rows = []
+    global_categories: dict[int | None, list[Any]] = defaultdict(list)
 
-    for feature in cemeteries_data.get("features", []):
+    for feature in cemetery_data.get("features", []):
         cemetery = valid_geometry(feature)
         properties = feature.get("properties") or {}
-        territorial_area = float(properties.get("area_m2_31983") or cemetery.area)
-
-        intersections: list[Any] = []
-        category_intersections: dict[int | None, list[Any]] = defaultdict(list)
-        category_descriptions: dict[int | None, str] = {}
+        territorial = float(properties.get("area_m2_31983") or cemetery.area)
+        all_intersections = []
+        by_category: dict[int | None, list[Any]] = defaultdict(list)
+        descriptions: dict[int | None, str] = {}
 
         for vegetation in vegetation_features:
-            if not bboxes_intersect(cemetery.bounds, vegetation["bounds"]):
+            if not intersects_bounds(cemetery.bounds, vegetation["bounds"]):
                 continue
             intersection = cemetery.intersection(vegetation["geometry"])
             if intersection.is_empty or intersection.area <= 0:
                 continue
-            intersections.append(intersection)
-            category = vegetation["category"]
-            category_intersections[category].append(intersection)
-            category_descriptions[category] = vegetation["description"]
-            all_category_geometries[category].append(intersection)
+            code = vegetation["category"]
+            all_intersections.append(intersection)
+            by_category[code].append(intersection)
+            global_categories[code].append(intersection)
+            descriptions[code] = vegetation["description"]
 
-        vegetation_union = unary_union(intersections) if intersections else None
-        vegetation_area = float(vegetation_union.area) if vegetation_union else 0.0
-        percentage = (vegetation_area / territorial_area * 100) if territorial_area else 0.0
-
-        category_areas: dict[str, float] = {}
-        category_labels: dict[str, str] = {}
-        for category, geometries in category_intersections.items():
-            category_union = unary_union(geometries)
-            key = "na" if category is None else str(category)
-            category_areas[key] = round(float(category_union.area), 3)
-            category_labels[key] = category_descriptions.get(
-                category, CATEGORY_NAMES.get(category, "Categoria não identificada")
-            )
+        vegetation_area = union_area(all_intersections)
+        category_areas = {code: union_area(items) for code, items in by_category.items()}
+        tree_area = sum(
+            area for code, area in category_areas.items() if code in TREE_COMPONENT_CATEGORIES
+        )
+        encoded_areas = {"na" if code is None else str(code): round(area, 3) for code, area in category_areas.items()}
+        encoded_labels = {
+            "na" if code is None else str(code): descriptions.get(code, CATEGORY_NAMES.get(code, "Categoria não identificada"))
+            for code in category_areas
+        }
 
         rows.append(
             {
                 "id_equipamento": properties.get("id_equipamento") or feature.get("id"),
                 "nome_oficial": properties.get("nome_oficial"),
                 "tipo": properties.get("tipo"),
-                "bloco_concessao": properties.get("bloco_concessao"),
+                "bloco_concessao": int(properties.get("bloco_concessao")),
                 "concessionaria": properties.get("concessionaria"),
-                "area_territorial_m2": round(territorial_area, 3),
+                "area_territorial_m2": round(territorial, 3),
                 "cobertura_vegetal_m2": round(vegetation_area, 3),
-                "cobertura_vegetal_percentual": round(percentage, 4),
-                "categorias_area_m2_json": json.dumps(
-                    category_areas, ensure_ascii=False, sort_keys=True
-                ),
-                "categorias_descricao_json": json.dumps(
-                    category_labels, ensure_ascii=False, sort_keys=True
-                ),
+                "cobertura_vegetal_percentual": round(vegetation_area / territorial * 100 if territorial else 0, 4),
+                "componente_arboreo_explicito_m2": round(tree_area, 3),
+                "componente_arboreo_percentual_do_territorio": round(tree_area / territorial * 100 if territorial else 0, 4),
+                "categorias_area_m2_json": json.dumps(encoded_areas, ensure_ascii=False, sort_keys=True),
+                "categorias_descricao_json": json.dumps(encoded_labels, ensure_ascii=False, sort_keys=True),
                 "referencia_imagens": "2017/2018",
-                "fonte_cobertura_vegetal": vegetation_metadata.get("layer"),
+                "fonte_cobertura_vegetal": metadata.get("layer"),
             }
         )
 
-    rows.sort(key=lambda item: (int(item["bloco_concessao"]), item["nome_oficial"]))
-
+    rows.sort(key=lambda row: (row["bloco_concessao"], row["nome_oficial"]))
     OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_CSV.open("w", encoding="utf-8", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(file, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
-    def aggregate(selected: list[dict[str, Any]]) -> dict[str, Any]:
-        territorial = sum(float(row["area_territorial_m2"]) for row in selected)
-        vegetation = sum(float(row["cobertura_vegetal_m2"]) for row in selected)
-        return {
-            "equipment_count": len(selected),
-            "area_territorial_m2": round(territorial, 3),
-            "cobertura_vegetal_m2": round(vegetation, 3),
-            "cobertura_vegetal_percentual": round(
-                vegetation / territorial * 100 if territorial else 0.0, 4
-            ),
-        }
-
-    by_block: list[dict[str, Any]] = []
-    block_groups: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    blocks = []
+    grouped: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
-        block_groups[int(row["bloco_concessao"])].append(row)
-    for block, selected in sorted(block_groups.items()):
+        grouped[row["bloco_concessao"]].append(row)
+    for block, selected in sorted(grouped.items()):
         item = aggregate(selected)
-        item.update(
-            {
-                "bloco_concessao": block,
-                "concessionaria": selected[0]["concessionaria"],
-            }
-        )
-        by_block.append(item)
+        item.update({"bloco_concessao": block, "concessionaria": selected[0]["concessionaria"]})
+        blocks.append(item)
 
-    total_category_area = 0.0
-    category_totals: list[dict[str, Any]] = []
-    temporary: list[tuple[int | None, str, float]] = []
-    for category, geometries in all_category_geometries.items():
-        area = float(unary_union(geometries).area)
-        description = CATEGORY_NAMES.get(category, "Categoria não identificada")
-        temporary.append((category, description, area))
-        total_category_area += area
-    for category, description, area in sorted(
-        temporary, key=lambda item: (999 if item[0] is None else item[0])
-    ):
-        category_totals.append(
+    category_items = []
+    category_total = 0.0
+    raw_category_totals = []
+    for code, geometries in global_categories.items():
+        area = union_area(geometries)
+        raw_category_totals.append((code, area))
+        category_total += area
+    for code, area in sorted(raw_category_totals, key=lambda item: 999 if item[0] is None else item[0]):
+        category_items.append(
             {
-                "categoria": "não identificada" if category is None else category,
-                "descricao": description,
+                "categoria": "não identificada" if code is None else code,
+                "descricao": CATEGORY_NAMES.get(code, "Categoria não identificada"),
                 "area_m2": round(area, 3),
-                "participacao_na_cobertura_percentual": round(
-                    area / total_category_area * 100 if total_category_area else 0.0, 4
-                ),
+                "participacao_na_cobertura_percentual": round(area / category_total * 100 if category_total else 0, 4),
+                "componente_arboreo_explicito": code in TREE_COMPONENT_CATEGORIES,
             }
         )
 
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "dataset": vegetation_metadata.get("dataset"),
-        "layer": vegetation_metadata.get("layer"),
-        "imagery_reference": vegetation_metadata.get("imagery_reference"),
+        "dataset": metadata.get("dataset"),
+        "layer": metadata.get("layer"),
+        "imagery_reference": metadata.get("imagery_reference"),
         "source_crs": "EPSG:31983",
         "geral_23_equipamentos": aggregate(rows),
-        "somente_22_cemiterios": aggregate(
-            [row for row in rows if row["tipo"] == "cemiterio"]
-        ),
-        "crematorio_vila_alpina": aggregate(
-            [row for row in rows if row["tipo"] == "crematorio"]
-        ),
-        "por_bloco": by_block,
-        "categorias": category_totals,
+        "somente_22_cemiterios": aggregate([row for row in rows if row["tipo"] == "cemiterio"]),
+        "crematorio_vila_alpina": aggregate([row for row in rows if row["tipo"] == "crematorio"]),
+        "por_bloco": blocks,
+        "categorias": category_items,
+        "tree_component_categories": sorted(TREE_COMPONENT_CATEGORIES),
         "interpretation_notes": [
-            "O indicador mede cobertura vegetal classificada em 15 categorias.",
-            "Não equivale a cobertura estrita de copas nem a área permeável.",
+            "Cobertura vegetal não equivale a cobertura estrita de copas nem a área permeável.",
+            "O componente arbóreo explícito agrega categorias cuja definição oficial menciona floresta, bosque, maciço ou cobertura arbórea.",
             "A referência de 2017/2018 é anterior à concessão e funciona como linha de base.",
-            "A soma por bloco não mede desempenho posterior das concessionárias.",
         ],
     }
-    OUTPUT_JSON.write_text(
-        json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    OUTPUT_REPORT.write_text(
-        build_report(rows, summary, category_totals), encoding="utf-8"
-    )
+    OUTPUT_JSON.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUTPUT_REPORT.write_text(create_report(rows, summary, category_items), encoding="utf-8")
 
-    overall = summary["geral_23_equipamentos"]
+    result = summary["geral_23_equipamentos"]
     print(
-        "Cobertura vegetal: "
-        f"{overall['cobertura_vegetal_m2']:.3f} m² "
-        f"({overall['cobertura_vegetal_percentual']:.2f}%) em 23 equipamentos."
+        f"Cobertura vegetal: {result['cobertura_vegetal_m2']:.3f} m² "
+        f"({result['cobertura_vegetal_percentual']:.2f}%); "
+        f"componente arbóreo explícito: {result['componente_arboreo_explicito_m2']:.3f} m²."
     )
     return 0
 

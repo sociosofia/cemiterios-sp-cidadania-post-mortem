@@ -60,10 +60,12 @@ jobs:
         run: python scripts/inspect_geosampa_quadra_fiscal.py
 
       - name: Calcular valor territorial no entorno dos cemitérios
-        run: python scripts/analyze_cemetery_land_values_2026.py
+        run: |
+          set -o pipefail
+          python scripts/analyze_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-analysis.log
 
       - name: Registrar produtos da coleta
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -88,11 +90,13 @@ jobs:
           fi
 
       - name: Publicar diagnóstico como artefato
-        if: github.event_name == 'pull_request'
+        if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: valor-territorial-diagnostico
+          if-no-files-found: warn
           path: |
+            valor-territorial-analysis.log
             data/raw/pgv_2026/anexo_lei_18330_2025_145975345.pdf
             data/processed/pgv_2026_source_metadata.json
             data/processed/pgv_2026_faces.csv

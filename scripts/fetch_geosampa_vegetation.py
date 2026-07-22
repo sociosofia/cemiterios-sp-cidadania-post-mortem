@@ -179,9 +179,16 @@ def probe_layer(
     bbox: tuple[float, float, float, float],
 ) -> bool:
     try:
-        data, _ = request_feature_collection(endpoint, layer, bbox, count=1)
+        data, _ = request_feature_collection(endpoint, layer, bbox, count=PAGE_SIZE)
         return data.get("type") == "FeatureCollection"
-    except (HTTPError, URLError, TimeoutError, ValueError, json.JSONDecodeError):
+    except (
+        HTTPError,
+        URLError,
+        TimeoutError,
+        RuntimeError,
+        ValueError,
+        json.JSONDecodeError,
+    ):
         return False
 
 

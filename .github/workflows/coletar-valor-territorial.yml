@@ -11,6 +11,7 @@ on:
       - "scripts/discover_geosampa_land_value_layers.py"
       - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "scripts/analyze_cemetery_land_values_2026.py"
+      - "scripts/run_cemetery_land_values_2026.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
   pull_request:
@@ -20,6 +21,7 @@ on:
       - "scripts/discover_geosampa_land_value_layers.py"
       - "scripts/inspect_geosampa_quadra_fiscal.py"
       - "scripts/analyze_cemetery_land_values_2026.py"
+      - "scripts/run_cemetery_land_values_2026.py"
       - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
 
@@ -62,7 +64,7 @@ jobs:
       - name: Calcular valor territorial no entorno dos cemitérios
         run: |
           set -o pipefail
-          python scripts/analyze_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-analysis.log
+          python scripts/run_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-analysis.log
 
       - name: Registrar produtos da coleta
         if: github.event_name != 'pull_request' && success()

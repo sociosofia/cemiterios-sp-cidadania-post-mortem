@@ -53,14 +53,18 @@ jobs:
         run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl pyshp dbfread
 
       - name: Coletar, integrar e validar a mortalidade do Seade
-        run: python scripts/fetch_seade_mortalidade.py
+        run: |
+          set -o pipefail
+          python scripts/fetch_seade_mortalidade.py 2>&1 | tee seade-mortalidade-run.log
 
       - name: Publicar auditoria autônoma da mortalidade do Seade
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: auditoria-seade-mortalidade
-          if-no-files-found: error
+          if-no-files-found: warn
           path: |
+            seade-mortalidade-run.log
             data/processed/seade_mortalidade_municipio_ano.csv
             data/processed/seade_mortalidade_estado_ano.csv
             data/processed/seade_mortalidade_distrito_sp_ano.csv

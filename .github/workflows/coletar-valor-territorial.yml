@@ -8,6 +8,7 @@ on:
     paths:
       - "scripts/fetch_pgv_2026_source.py"
       - "scripts/discover_geosampa_land_value_layers.py"
+      - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
       - ".github/workflows/coletar-valor-territorial.yml"
 
 permissions:

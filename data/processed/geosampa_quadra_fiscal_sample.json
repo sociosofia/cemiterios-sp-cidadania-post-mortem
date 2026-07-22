@@ -1,5 +1,5 @@
 {
-  "captured_at_utc": "2026-07-22T22:56:27.134187+00:00",
+  "captured_at_utc": "2026-07-22T23:18:14.145140+00:00",
   "source": "GeoSampa — WFS",
   "layer": "geoportal:quadra_fiscal",
   "request_url": "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&count=10",
@@ -20,7 +20,7 @@
   "sample": [
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-122e",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11ca",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1733,7 +1733,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-122d",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c9",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -1962,7 +1962,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-122c",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c8",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2007,7 +2007,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-122b",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c7",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2136,7 +2136,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-122a",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c6",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2485,7 +2485,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-1229",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c5",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2546,7 +2546,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-1228",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c4",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -2903,7 +2903,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-1227",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c3",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3296,7 +3296,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-1226",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c2",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -3545,7 +3545,7 @@
     },
     {
       "type": "Feature",
-      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-1225",
+      "id": "quadra_fiscal.fid-10153096_19f8b9bdfa2_-11c1",
       "geometry": {
         "type": "Polygon",
         "coordinates": [

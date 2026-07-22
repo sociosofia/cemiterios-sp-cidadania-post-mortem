@@ -1,0 +1,76 @@
+unidade_analise,id_equipamento,nome_oficial,tipo,complexo,bloco_concessao,concessionaria,categoria_tarifaria,destino_gratuidade_hipossuficiencia,anel,distancia_interna_m,distancia_externa_m,area_anel_m2,quadras_intersectadas,quadras_com_pgv,quadras_sem_pgv,registros_face_pgv,cobertura_area_quadras_pgv_pct,cobertura_area_anel_por_quadras_pct,vm2t_faces_mediana,vm2t_faces_q1,vm2t_faces_q3,vm2t_faces_min,vm2t_faces_max,vm2t_mediana_das_quadras,vm2t_media_quadras_ponderada_area
+ponto_operacional,cem_consolacao,Cemitério da Consolação,cemiterio,,1,Consolare,1,False,0-250m,0,250,512622.59,34,34,0,138,100.0,74.61,15625.0,13114.5,18473.75,4510.0,23988.0,14895.75,14866.97
+ponto_operacional,cem_consolacao,Cemitério da Consolação,cemiterio,,1,Consolare,1,False,250-500m,250,500,896830.75,71,71,0,276,100.0,78.53,13445.0,7970.5,18504.5,4482.0,38466.0,13236.5,14439.72
+ponto_operacional,cem_consolacao,Cemitério da Consolação,cemiterio,,1,Consolare,1,False,500-1000m,500,1000,2970143.21,216,215,1,835,98.36,73.7,11776.0,5981.5,17760.0,4340.0,44673.0,9959.5,12921.9
+ponto_operacional,cem_quarta_parada,Cemitério da Quarta Parada,cemiterio,,1,Consolare,1,False,0-250m,0,250,650643.01,46,45,1,187,99.86,66.33,2894.0,2627.5,3022.0,1783.0,3926.0,2838.0,2854.11
+ponto_operacional,cem_quarta_parada,Cemitério da Quarta Parada,cemiterio,,1,Consolare,1,False,250-500m,250,500,1042664.15,99,98,1,443,99.89,71.47,3063.0,2856.0,3445.0,1736.0,5235.0,2999.25,2981.86
+ponto_operacional,cem_quarta_parada,Cemitério da Quarta Parada,cemiterio,,1,Consolare,1,False,500-1000m,500,1000,3261632.53,249,247,2,1103,99.95,73.93,3338.0,3019.5,3549.0,1047.0,5341.0,3306.0,3236.45
+ponto_operacional,cem_santana,Cemitério Santana (Chora Menino),cemiterio,,1,Consolare,2,False,0-250m,0,250,399512.91,25,24,1,116,99.94,82.0,1925.0,1699.0,2522.0,1252.0,3499.0,1900.5,2018.25
+ponto_operacional,cem_santana,Cemitério Santana (Chora Menino),cemiterio,,1,Consolare,2,False,250-500m,250,500,791241.49,68,68,0,313,100.0,80.43,2115.0,1876.0,2557.0,1437.0,6470.0,2075.5,2176.66
+ponto_operacional,cem_santana,Cemitério Santana (Chora Menino),cemiterio,,1,Consolare,2,False,500-1000m,500,1000,2758411.75,189,188,1,854,99.99,79.55,2117.0,1858.75,2781.5,1390.0,6470.0,2113.0,2352.79
+ponto_operacional,cem_tremembe,Cemitério do Tremembé,cemiterio,,1,Consolare,2,False,0-250m,0,250,509261.4,57,56,1,221,99.98,74.94,1502.0,1365.0,1696.0,625.0,2219.0,1469.5,1547.32
+ponto_operacional,cem_tremembe,Cemitério do Tremembé,cemiterio,,1,Consolare,2,False,250-500m,250,500,897178.18,89,86,3,393,99.93,79.31,1454.0,1306.0,1722.0,602.0,2436.0,1549.25,1447.73
+ponto_operacional,cem_tremembe,Cemitério do Tremembé,cemiterio,,1,Consolare,2,False,500-1000m,500,1000,2967251.79,241,233,8,991,85.82,81.18,1365.0,1231.0,1703.0,320.0,13861.0,1342.0,1464.73
+ponto_operacional,cem_vila_formosa_i,Cemitério Vila Formosa I,cemiterio,,1,Consolare,4,True,0-250m,0,250,861312.11,76,72,4,311,99.4,80.07,1606.0,1413.0,1834.5,1288.0,2230.0,1536.0,1669.33
+ponto_operacional,cem_vila_formosa_i,Cemitério Vila Formosa I,cemiterio,,1,Consolare,4,True,250-500m,250,500,1229723.44,147,134,13,557,98.15,76.42,1580.0,1403.0,1823.0,1280.0,2260.0,1570.0,1633.74
+ponto_operacional,cem_vila_formosa_i,Cemitério Vila Formosa I,cemiterio,,1,Consolare,4,True,500-1000m,500,1000,3624419.99,370,360,10,1505,98.36,76.09,1649.0,1403.0,1878.0,693.0,2979.0,1623.25,1654.01
+ponto_operacional,cem_vila_formosa_ii,Cemitério Vila Formosa II,cemiterio,,1,Consolare,4,True,0-250m,0,250,801243.44,75,73,2,320,99.96,78.82,1715.5,1431.75,1843.5,716.0,2219.0,1630.5,1701.08
+ponto_operacional,cem_vila_formosa_ii,Cemitério Vila Formosa II,cemiterio,,1,Consolare,4,True,250-500m,250,500,1174573.06,132,129,3,562,99.32,80.03,1701.0,1405.0,1822.0,712.0,2186.0,1702.0,1661.05
+ponto_operacional,cem_vila_formosa_ii,Cemitério Vila Formosa II,cemiterio,,1,Consolare,4,True,500-1000m,500,1000,3517345.6,353,336,17,1398,98.75,72.7,1530.0,1335.25,1848.75,487.0,2681.0,1504.5,1537.06
+ponto_operacional,cem_vila_mariana,Cemitério Vila Mariana,cemiterio,,1,Consolare,1,False,0-250m,0,250,478991.53,47,47,0,209,100.0,71.62,5270.0,4017.0,5832.0,2200.0,8233.0,5104.5,4779.6
+ponto_operacional,cem_vila_mariana,Cemitério Vila Mariana,cemiterio,,1,Consolare,1,False,250-500m,250,500,865107.21,79,79,0,366,100.0,76.77,5090.0,3885.25,5642.5,2200.0,13854.0,5358.0,5101.46
+ponto_operacional,cem_vila_mariana,Cemitério Vila Mariana,cemiterio,,1,Consolare,1,False,500-1000m,500,1000,2904915.0,208,207,1,917,99.99,73.74,5158.0,3803.0,6044.0,1395.0,14326.0,5167.0,5030.85
+ponto_operacional,cem_araca,Cemitério do Araçá,cemiterio,,2,Cortel SP,1,False,0-250m,0,250,766543.21,60,60,0,224,100.0,69.21,4807.0,4731.0,5963.75,4340.0,20341.0,4793.5,7504.06
+ponto_operacional,cem_araca,Cemitério do Araçá,cemiterio,,2,Cortel SP,1,False,250-500m,250,500,1152988.66,96,95,1,356,99.91,74.85,5946.5,4736.0,13651.0,4482.0,38466.0,5925.5,10798.18
+ponto_operacional,cem_araca,Cemitério do Araçá,cemiterio,,2,Cortel SP,1,False,500-1000m,500,1000,3479104.2,246,241,5,949,98.17,75.03,9264.0,5128.0,19216.0,2822.0,44673.0,7767.0,13447.07
+ponto_operacional,cem_dom_bosco,Cemitério Dom Bosco,cemiterio,,2,Cortel SP,3,True,0-250m,0,250,672477.69,5,2,3,10,53.26,75.11,407.0,397.25,618.5,337.0,2089.0,898.0,706.48
+ponto_operacional,cem_dom_bosco,Cemitério Dom Bosco,cemiterio,,2,Cortel SP,3,True,250-500m,250,500,1057949.11,9,5,4,18,55.4,62.35,407.0,394.75,585.0,158.0,2089.0,407.0,429.42
+ponto_operacional,cem_dom_bosco,Cemitério Dom Bosco,cemiterio,,2,Cortel SP,3,True,500-1000m,500,1000,3290008.02,53,46,7,172,71.47,54.51,652.0,512.25,694.25,133.0,894.0,651.75,493.24
+ponto_operacional,cem_santo_amaro,Cemitério Santo Amaro,cemiterio,,2,Cortel SP,2,False,0-250m,0,250,394345.17,36,36,0,169,100.0,77.54,3713.0,3446.0,4669.0,2702.0,8334.0,3675.0,4430.33
+ponto_operacional,cem_santo_amaro,Cemitério Santo Amaro,cemiterio,,2,Cortel SP,2,False,250-500m,250,500,783991.61,57,57,0,271,100.0,81.5,3992.0,3466.0,7270.0,1166.0,8392.0,3851.0,4808.05
+ponto_operacional,cem_santo_amaro,Cemitério Santo Amaro,cemiterio,,2,Cortel SP,2,False,500-1000m,500,1000,2742606.04,147,147,0,701,100.0,80.9,3635.0,3226.0,5125.0,1150.0,8392.0,3662.0,3964.52
+ponto_operacional,cem_sao_paulo,Cemitério São Paulo,cemiterio,,2,Cortel SP,1,False,0-250m,0,250,537803.17,50,48,2,193,99.0,70.9,8662.0,5944.0,13250.0,3969.0,15634.0,8923.5,10567.96
+ponto_operacional,cem_sao_paulo,Cemitério São Paulo,cemiterio,,2,Cortel SP,1,False,250-500m,250,500,928877.93,85,85,0,362,100.0,75.87,8740.5,6617.75,13613.25,4511.0,19420.0,9139.0,10816.02
+ponto_operacional,cem_sao_paulo,Cemitério São Paulo,cemiterio,,2,Cortel SP,1,False,500-1000m,500,1000,3033933.18,229,226,3,945,99.77,73.65,10243.0,5874.0,14395.0,2890.0,25134.0,10443.75,11234.21
+ponto_operacional,cem_vila_nova_cachoeirinha,Cemitério Vila Nova Cachoeirinha,cemiterio,,2,Cortel SP,3,False,0-250m,0,250,751942.79,50,50,0,237,100.0,77.99,1412.0,1313.0,1621.0,596.0,2321.0,1403.75,1171.44
+ponto_operacional,cem_vila_nova_cachoeirinha,Cemitério Vila Nova Cachoeirinha,cemiterio,,2,Cortel SP,3,False,250-500m,250,500,1141898.96,106,106,0,464,100.0,78.39,1457.5,1343.0,1598.5,577.0,2355.0,1480.0,1396.96
+ponto_operacional,cem_vila_nova_cachoeirinha,Cemitério Vila Nova Cachoeirinha,cemiterio,,2,Cortel SP,3,False,500-1000m,500,1000,3459289.86,334,330,4,1331,99.62,77.62,1452.0,1351.0,1573.0,577.0,2288.0,1459.0,1447.02
+ponto_operacional,cem_campo_grande,Cemitério Campo Grande,cemiterio,,3,Grupo Maya,2,False,0-250m,0,250,544259.03,48,48,0,208,100.0,77.22,2574.0,2454.75,2815.0,950.0,3754.0,2559.75,2615.32
+ponto_operacional,cem_campo_grande,Cemitério Campo Grande,cemiterio,,3,Grupo Maya,2,False,250-500m,250,500,931016.31,82,82,0,369,100.0,79.34,2565.0,2319.0,2975.0,907.0,4033.0,2555.25,2622.8
+ponto_operacional,cem_campo_grande,Cemitério Campo Grande,cemiterio,,3,Grupo Maya,2,False,500-1000m,500,1000,3036746.3,178,172,6,774,99.69,83.16,2406.0,1990.5,2897.0,828.0,4033.0,2392.25,2741.92
+ponto_operacional,cem_lageado,Cemitério do Lageado,cemiterio,,3,Grupo Maya,3,False,0-250m,0,250,442660.95,34,34,0,150,100.0,54.7,630.5,561.75,820.0,426.0,937.0,634.0,678.35
+ponto_operacional,cem_lageado,Cemitério do Lageado,cemiterio,,3,Grupo Maya,3,False,250-500m,250,500,829360.18,54,54,0,235,100.0,50.77,610.0,438.0,754.0,426.0,944.0,612.5,638.36
+ponto_operacional,cem_lageado,Cemitério do Lageado,cemiterio,,3,Grupo Maya,3,False,500-1000m,500,1000,2834425.32,146,146,0,605,100.0,58.21,644.0,511.0,749.0,401.0,962.0,640.75,630.17
+ponto_operacional,cem_lapa,Cemitério da Lapa,cemiterio,,3,Grupo Maya,1,False,0-250m,0,250,586049.17,69,67,2,248,99.55,72.06,4428.5,4287.75,4562.0,3207.0,9776.0,4439.0,4366.4
+ponto_operacional,cem_lapa,Cemitério da Lapa,cemiterio,,3,Grupo Maya,1,False,250-500m,250,500,967750.38,87,86,1,338,99.98,77.37,4515.5,4205.0,4805.25,2877.0,11081.0,4527.75,4626.45
+ponto_operacional,cem_lapa,Cemitério da Lapa,cemiterio,,3,Grupo Maya,1,False,500-1000m,500,1000,3103940.11,174,171,3,670,98.32,78.66,4510.5,3430.0,5128.0,1717.0,12627.0,4518.0,4563.12
+ponto_operacional,cem_parelheiros,Cemitério de Parelheiros,cemiterio,,3,Grupo Maya,3,False,0-250m,0,250,281044.82,24,16,8,50,45.69,81.8,320.0,320.0,320.0,310.0,320.0,320.0,319.89
+ponto_operacional,cem_parelheiros,Cemitério de Parelheiros,cemiterio,,3,Grupo Maya,3,False,250-500m,250,500,671657.24,35,27,8,91,42.11,88.98,320.0,320.0,320.0,262.0,320.0,320.0,319.66
+ponto_operacional,cem_parelheiros,Cemitério de Parelheiros,cemiterio,,3,Grupo Maya,3,False,500-1000m,500,1000,2519320.96,74,57,17,188,53.4,91.33,320.0,320.0,320.0,159.0,320.0,320.0,319.54
+ponto_operacional,cem_saudade,Cemitério da Saudade,cemiterio,,3,Grupo Maya,3,True,0-250m,0,250,586767.98,93,93,0,377,100.0,70.89,1160.0,962.0,1248.0,450.0,1652.0,1141.5,1107.91
+ponto_operacional,cem_saudade,Cemitério da Saudade,cemiterio,,3,Grupo Maya,3,True,250-500m,250,500,969978.56,147,146,1,607,99.88,74.91,1165.0,1028.5,1251.0,442.0,1792.0,1143.0,1133.45
+ponto_operacional,cem_saudade,Cemitério da Saudade,cemiterio,,3,Grupo Maya,3,True,500-1000m,500,1000,3113748.82,348,343,5,1477,99.74,75.21,1160.0,1046.0,1264.0,381.0,1820.0,1160.0,1197.87
+ponto_operacional,cem_freguesia_do_o,Cemitério da Freguesia do Ó,cemiterio,,4,Velar SP,2,False,0-250m,0,250,332847.44,41,40,1,173,99.92,75.08,1638.0,1600.0,1753.0,1293.0,2419.0,1626.75,1658.73
+ponto_operacional,cem_freguesia_do_o,Cemitério da Freguesia do Ó,cemiterio,,4,Velar SP,2,False,250-500m,250,500,723135.66,70,70,0,296,100.0,77.97,1655.5,1590.0,1860.0,959.0,2419.0,1634.75,1689.07
+ponto_operacional,cem_freguesia_do_o,Cemitério da Freguesia do Ó,cemiterio,,4,Velar SP,2,False,500-1000m,500,1000,2622292.36,196,192,4,810,99.83,76.06,1658.0,1495.75,1808.5,930.0,2823.0,1665.5,1669.1
+ponto_operacional,cem_itaquera,Cemitério de Itaquera,cemiterio,,4,Velar SP,3,False,0-250m,0,250,524837.03,55,54,1,207,93.35,80.79,1361.0,1030.5,1771.0,422.0,1979.0,1196.25,1368.97
+ponto_operacional,cem_itaquera,Cemitério de Itaquera,cemiterio,,4,Velar SP,3,False,250-500m,250,500,916415.0,82,79,3,295,98.52,84.76,1641.0,1070.5,1810.0,420.0,1975.0,1150.5,1289.6
+ponto_operacional,cem_itaquera,Cemitério de Itaquera,cemiterio,,4,Velar SP,3,False,500-1000m,500,1000,3008745.26,186,183,3,694,94.15,82.58,1220.5,1095.25,1755.0,471.0,1988.0,1196.5,1219.44
+ponto_operacional,cem_penha,Cemitério da Penha,cemiterio,,4,Velar SP,2,False,0-250m,0,250,321863.11,30,30,0,136,100.0,77.25,1515.5,1361.5,1623.25,1115.0,3128.0,1516.5,1550.21
+ponto_operacional,cem_penha,Cemitério da Penha,cemiterio,,4,Velar SP,2,False,250-500m,250,500,713929.26,63,62,1,286,99.99,78.44,1579.0,1493.0,1777.5,1115.0,3134.0,1571.25,1616.94
+ponto_operacional,cem_penha,Cemitério da Penha,cemiterio,,4,Velar SP,2,False,500-1000m,500,1000,2604046.34,182,179,3,856,99.76,77.66,1562.0,1399.0,1713.0,588.0,3134.0,1554.0,1575.47
+ponto_operacional,cem_sao_luiz,Cemitério São Luiz,cemiterio,,4,Velar SP,4,True,0-250m,0,250,751569.21,52,52,0,218,100.0,84.6,864.5,825.0,916.75,476.0,1679.0,857.25,859.98
+ponto_operacional,cem_sao_luiz,Cemitério São Luiz,cemiterio,,4,Velar SP,4,True,250-500m,250,500,1112295.43,118,116,2,474,99.69,80.42,886.0,846.5,1064.5,476.0,1679.0,886.0,920.51
+ponto_operacional,cem_sao_luiz,Cemitério São Luiz,cemiterio,,4,Velar SP,4,True,500-1000m,500,1000,3389490.97,272,269,3,1071,99.72,77.19,1079.0,970.0,1203.0,446.0,3045.0,1076.5,1063.14
+ponto_operacional,cem_sao_pedro,Cemitério São Pedro,cemiterio,,4,Velar SP,2,False,0-250m,0,250,662856.76,42,41,1,180,99.75,76.38,1965.5,1615.0,2197.5,1270.0,3037.0,2000.0,1955.41
+ponto_operacional,cem_sao_pedro,Cemitério São Pedro,cemiterio,,4,Velar SP,2,False,250-500m,250,500,1053086.15,98,96,2,404,99.9,78.54,2016.0,1672.0,2142.5,1155.0,3024.0,2031.0,1956.95
+ponto_operacional,cem_sao_pedro,Cemitério São Pedro,cemiterio,,4,Velar SP,2,False,500-1000m,500,1000,3282571.79,282,278,4,1157,99.91,76.99,1832.0,1704.0,2080.0,746.0,3024.0,1817.25,1836.57
+ponto_operacional,crem_vila_alpina,Crematório Vila Alpina,crematorio,,4,Velar SP,,True,0-250m,0,250,487372.4,23,23,0,94,100.0,78.36,2781.0,1933.5,2882.0,1393.0,3037.0,2828.0,1900.06
+ponto_operacional,crem_vila_alpina,Crematório Vila Alpina,crematorio,,4,Velar SP,,True,250-500m,250,500,863308.56,69,68,1,283,99.81,76.59,2015.0,1807.0,2467.5,1393.0,3024.0,2026.0,2009.14
+ponto_operacional,crem_vila_alpina,Crematório Vila Alpina,crematorio,,4,Velar SP,,True,500-1000m,500,1000,2900468.36,246,242,4,1045,99.96,76.91,2019.0,1780.0,2193.0,746.0,3013.0,2022.75,1960.3
+complexo_territorial,complexo_vila_formosa,Complexo Vila Formosa I e II,complexo_cemiterial,Vila Formosa I e II,1,Consolare,4,True,0-250m,0,250,1183402.67,121,116,5,502,99.52,75.49,1639.5,1416.25,1830.0,716.0,2230.0,1613.75,1653.94
+complexo_territorial,complexo_vila_formosa,Complexo Vila Formosa I e II,complexo_cemiterial,Vila Formosa I e II,1,Consolare,4,True,250-500m,250,500,1543947.06,190,177,13,756,98.51,75.8,1639.0,1403.0,1814.25,712.0,2260.0,1624.0,1619.33
+complexo_territorial,complexo_vila_formosa,Complexo Vila Formosa I e II,complexo_cemiterial,Vila Formosa I e II,1,Consolare,4,True,500-1000m,500,1000,4248877.07,425,410,15,1712,97.94,73.3,1584.0,1347.75,1878.0,487.0,2979.0,1580.0,1588.29
+complexo_territorial,complexo_vila_alpina,Complexo São Pedro e Crematório Vila Alpina,complexo_cemiterial,São Pedro e Crematório Vila Alpina,4,Velar SP,,True,0-250m,0,250,771382.65,51,50,1,214,99.78,74.58,2003.0,1661.5,2781.0,1270.0,3037.0,2031.0,1999.81
+complexo_territorial,complexo_vila_alpina,Complexo São Pedro e Crematório Vila Alpina,complexo_cemiterial,São Pedro e Crematório Vila Alpina,4,Velar SP,,True,250-500m,250,500,1156873.38,107,105,2,445,99.91,76.87,2000.0,1701.0,2129.0,1155.0,3024.0,2012.0,1998.88
+complexo_territorial,complexo_vila_alpina,Complexo São Pedro e Crematório Vila Alpina,complexo_cemiterial,São Pedro e Crematório Vila Alpina,4,Velar SP,,True,500-1000m,500,1000,3486005.59,314,309,5,1293,99.91,77.23,1863.0,1727.0,2127.0,746.0,3013.0,1833.0,1853.43

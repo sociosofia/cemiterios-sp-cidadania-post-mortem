@@ -1,0 +1,48 @@
+name: Coletar fontes de valor territorial
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/valor-territorial-entorno
+    paths:
+      - "scripts/fetch_pgv_2026_source.py"
+      - "scripts/discover_geosampa_land_value_layers.py"
+      - ".github/workflows/coletar-valor-territorial.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Descobrir e preservar a fonte da PGV 2026
+        run: python scripts/fetch_pgv_2026_source.py
+
+      - name: Inventariar camadas territoriais do GeoSampa
+        run: python scripts/discover_geosampa_land_value_layers.py
+
+      - name: Registrar produtos da coleta
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/pgv_2026 data/raw/geosampa/wfs_capabilities.xml \
+            data/processed/pgv_2026_source_metadata.json \
+            data/processed/geosampa_land_value_layer_candidates.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração nos produtos da coleta."
+          else
+            git commit -m "Coleta fontes oficiais de valor territorial"
+            git push
+          fi

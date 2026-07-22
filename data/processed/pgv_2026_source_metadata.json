@@ -1,0 +1,59 @@
+{
+  "captured_at_utc": "2026-07-22T23:41:22.145335+00:00",
+  "law": "Lei municipal 18.330/2025",
+  "document_id": "145975345",
+  "law_url": "https://legislacao.prefeitura.sp.gov.br/lei-18330-de-11-de-novembro-de-2025",
+  "official_gazette_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=edicao_consultar&dta=12%2F11%2F2025&formato=O",
+  "pages": [
+    {
+      "label": "lei",
+      "requested_url": "https://legislacao.prefeitura.sp.gov.br/lei-18330-de-11-de-novembro-de-2025",
+      "final_url": "https://legislacao.prefeitura.sp.gov.br/lei-18330-de-11-de-novembro-de-2025",
+      "error": null,
+      "bytes": 41104,
+      "sha256": "1bb03a0e7656fc3631d4b7e1d16dfe07ec4a475b69c38c1915d99e2ff5fea6c9",
+      "content_type": "text/html; charset=utf-8",
+      "saved_as": "data/raw/pgv_2026/pagina_lei.html"
+    },
+    {
+      "label": "diario_oficial",
+      "requested_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=edicao_consultar&dta=12%2F11%2F2025&formato=O",
+      "final_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=edicao_consultar&dta=12%2F11%2F2025&formato=O",
+      "error": null,
+      "bytes": 10843527,
+      "sha256": "3c57ca8d1175b9b0aca1ae48e8b434dce8fd395be9b2e4db028050dbf8a20ba6",
+      "content_type": "text/html; charset=ISO-8859-1",
+      "saved_as": "data/raw/pgv_2026/pagina_diario_oficial.html"
+    }
+  ],
+  "candidate_count": 3666,
+  "attempts": [
+    {
+      "candidate": "http://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?FRhs6SZ5r6HQXRGerPkxou5heOZ2othv1kZciU33GQOkwzvLzUx_VhFuDlrjFyizPSWmvrGMKsC2SVcfRv6PUU9VN-k8ITcCkc-xGOBYC23eTAbEG7XWj027E3HXHYlf",
+      "final_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?FRhs6SZ5r6HQXRGerPkxou5heOZ2othv1kZciU33GQOkwzvLzUx_VhFuDlrjFyizPSWmvrGMKsC2SVcfRv6PUU9VN-k8ITcCkc-xGOBYC23eTAbEG7XWj027E3HXHYlf",
+      "error": null,
+      "bytes": 4400803,
+      "sha256": "4a043e5ceb80d550e37bbdcd478cf807f74b7d51aae2742fe95938460fa39fd7",
+      "content_type": "application/pdf;",
+      "detected_extension": ".pdf"
+    }
+  ],
+  "selected_attachment": {
+    "candidate": "http://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?FRhs6SZ5r6HQXRGerPkxou5heOZ2othv1kZciU33GQOkwzvLzUx_VhFuDlrjFyizPSWmvrGMKsC2SVcfRv6PUU9VN-k8ITcCkc-xGOBYC23eTAbEG7XWj027E3HXHYlf",
+    "final_url": "https://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?FRhs6SZ5r6HQXRGerPkxou5heOZ2othv1kZciU33GQOkwzvLzUx_VhFuDlrjFyizPSWmvrGMKsC2SVcfRv6PUU9VN-k8ITcCkc-xGOBYC23eTAbEG7XWj027E3HXHYlf",
+    "error": null,
+    "bytes": 4400803,
+    "sha256": "4a043e5ceb80d550e37bbdcd478cf807f74b7d51aae2742fe95938460fa39fd7",
+    "content_type": "application/pdf;",
+    "detected_extension": ".pdf",
+    "saved_as": "data/raw/pgv_2026/anexo_lei_18330_2025_145975345.pdf",
+    "candidate_rank": 1
+  },
+  "status": "attachment_downloaded",
+  "notes": [
+    "A listagem de valores da PGV 2026 está no Anexo II da Lei 18.330/2025.",
+    "A coleta preserva a fonte bruta antes de qualquer extração tabular.",
+    "A ausência de arquivo baixado não significa ausência da fonte; pode refletir URL dinâmica do Diário Oficial.",
+    "PGV_SOURCE_URL pode ser informado para fixar manualmente a URL oficial do anexo."
+  ]
+}

@@ -1,0 +1,129 @@
+name: Coletar fontes de valor territorial
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - research/valor-territorial-entorno
+    paths:
+      - "scripts/fetch_pgv_2026_source.py"
+      - "scripts/parse_pgv_2026_pdf.py"
+      - "scripts/discover_geosampa_land_value_layers.py"
+      - "scripts/inspect_geosampa_quadra_fiscal.py"
+      - "scripts/analyze_cemetery_land_values_2026.py"
+      - "scripts/run_cemetery_land_values_2026.py"
+      - "scripts/analyze_private_cemetery_land_values_2026.py"
+      - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
+      - ".github/workflows/coletar-valor-territorial.yml"
+  pull_request:
+    paths:
+      - "scripts/fetch_pgv_2026_source.py"
+      - "scripts/parse_pgv_2026_pdf.py"
+      - "scripts/discover_geosampa_land_value_layers.py"
+      - "scripts/inspect_geosampa_quadra_fiscal.py"
+      - "scripts/analyze_cemetery_land_values_2026.py"
+      - "scripts/run_cemetery_land_values_2026.py"
+      - "scripts/analyze_private_cemetery_land_values_2026.py"
+      - "docs/VALOR_TERRITORIAL_ENTORNO_CEMITERIOS.md"
+      - ".github/workflows/coletar-valor-territorial.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install --upgrade pip
+          python -m pip install geopandas pyogrio
+
+      - name: Descobrir e preservar a fonte da PGV 2026
+        run: python scripts/fetch_pgv_2026_source.py
+
+      - name: Extrair a listagem de valores da PGV 2026
+        run: python scripts/parse_pgv_2026_pdf.py
+
+      - name: Inventariar camadas territoriais do GeoSampa
+        run: python scripts/discover_geosampa_land_value_layers.py
+
+      - name: Inspecionar a camada de quadras fiscais
+        run: python scripts/inspect_geosampa_quadra_fiscal.py
+
+      - name: Calcular valor territorial no entorno da rede municipal
+        run: |
+          set -o pipefail
+          python scripts/run_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-analysis.log
+
+      - name: Calcular valor territorial no entorno dos cemitérios particulares candidatos
+        run: |
+          set -o pipefail
+          python scripts/analyze_private_cemetery_land_values_2026.py 2>&1 | tee valor-territorial-particulares-analysis.log
+
+      - name: Registrar produtos da coleta
+        if: github.event_name != 'pull_request' && success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/pgv_2026 \
+            data/raw/geosampa/wfs_capabilities.xml \
+            data/raw/geosampa/quadra_fiscal_entorno_cemiterios_31983.geojson \
+            data/raw/geosampa/quadra_fiscal_entorno_cemiterios_particulares_31983.geojson \
+            data/processed/pgv_2026_source_metadata.json \
+            data/processed/pgv_2026_faces.csv \
+            data/processed/pgv_2026_faces_metadata.json \
+            data/processed/geosampa_land_value_layer_candidates.json \
+            data/processed/geosampa_quadra_fiscal_sample.json \
+            data/processed/cemiterios_valor_territorial_2026.csv \
+            data/processed/categorias_valor_territorial_2026.csv \
+            data/processed/complexos_valor_territorial_2026.csv \
+            data/processed/cemiterios_valor_territorial_2026_metadata.json \
+            data/processed/cemiterios_particulares_valor_territorial_2026.csv \
+            data/processed/cemiterios_particulares_valor_territorial_2026_resumo.csv \
+            data/processed/cemiterios_particulares_valor_territorial_2026_metadata.json \
+            docs/RESULTADOS_VALOR_TERRITORIAL_2026.md \
+            docs/RESULTADOS_VALOR_TERRITORIAL_PARTICULARES_2026.md
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração nos produtos da coleta."
+          else
+            git commit -m "Calcula PGV 2026 no entorno dos cemitérios públicos e particulares candidatos"
+            git push
+          fi
+
+      - name: Publicar diagnóstico como artefato
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: valor-territorial-diagnostico
+          if-no-files-found: warn
+          path: |
+            valor-territorial-analysis.log
+            valor-territorial-particulares-analysis.log
+            data/raw/pgv_2026/anexo_lei_18330_2025_145975345.pdf
+            data/processed/pgv_2026_source_metadata.json
+            data/processed/pgv_2026_faces.csv
+            data/processed/pgv_2026_faces_metadata.json
+            data/processed/geosampa_land_value_layer_candidates.json
+            data/processed/geosampa_quadra_fiscal_sample.json
+            data/processed/cemiterios_valor_territorial_2026.csv
+            data/processed/categorias_valor_territorial_2026.csv
+            data/processed/complexos_valor_territorial_2026.csv
+            data/processed/cemiterios_valor_territorial_2026_metadata.json
+            data/processed/cemiterios_particulares_valor_territorial_2026.csv
+            data/processed/cemiterios_particulares_valor_territorial_2026_resumo.csv
+            data/processed/cemiterios_particulares_valor_territorial_2026_metadata.json
+            docs/RESULTADOS_VALOR_TERRITORIAL_2026.md
+            docs/RESULTADOS_VALOR_TERRITORIAL_PARTICULARES_2026.md

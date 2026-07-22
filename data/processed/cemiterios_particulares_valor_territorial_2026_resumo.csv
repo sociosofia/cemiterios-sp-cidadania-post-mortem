@@ -1,0 +1,4 @@
+universo,anel,cemiterios_n,cemiterios_com_valor_n,mediana_das_medianas_cemiteriais,q1_das_medianas_cemiteriais,q3_das_medianas_cemiteriais,min_das_medianas_cemiteriais,max_das_medianas_cemiteriais
+candidatos_particulares_ou_nao_concessionados,0-250m,21,20,920.5,562.25,3472.5,320.0,17906.0
+candidatos_particulares_ou_nao_concessionados,250-500m,21,21,978.5,446.0,2970.5,320.0,16620.5
+candidatos_particulares_ou_nao_concessionados,500-1000m,21,21,1005.0,494.0,2788.0,320.0,12733.0

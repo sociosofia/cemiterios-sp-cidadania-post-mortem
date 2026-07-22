@@ -11,6 +11,8 @@ on:
   push:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/fetch_geosampa_vegetation.py"
+      - "scripts/analyze_cemetery_vegetation.py"
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/fetch_ibge_districts_sp.py"
       - "scripts/extract_ibge_income_dictionary.py"
@@ -38,7 +40,7 @@ permissions:
 jobs:
   coletar-e-processar:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
 
     steps:
       - name: Baixar repositório
@@ -79,6 +81,12 @@ jobs:
       - name: Validar a extensão territorial dos equipamentos
         run: python scripts/validate_cemetery_environmental_footprint.py
 
+      - name: Coletar cobertura vegetal de 2017 no entorno dos cemitérios
+        run: python scripts/fetch_geosampa_vegetation.py
+
+      - name: Calcular cobertura vegetal dentro dos cemitérios
+        run: python scripts/analyze_cemetery_vegetation.py
+
       - name: Associar distritos e subprefeituras por área
         run: python scripts/spatial_join_admin.py
 
@@ -114,19 +122,23 @@ jobs:
             data/processed/agencias_geocodificadas.csv
             data/processed/agencias_geocodificadas_4326.geojson
             data/processed/resumo_area_territorial_cemiterios.json
+            data/processed/cemiterios_cobertura_vegetal_2017.csv
+            data/processed/resumo_cobertura_vegetal_cemiterios_2017.json
+            data/raw/geosampa/cobertura_vegetal_2017_entorno_cemiterios_metadata.json
             docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
             docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md
             docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md
+            docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md
 
       - name: Registrar produtos atualizados
         if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md
+          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md docs/RESULTADOS_COBERTURA_VEGETAL_CEMITERIOS.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza mapa real, agências e contexto socioespacial"
+            git commit -m "Atualiza cobertura vegetal e contexto socioespacial"
             git push
           fi

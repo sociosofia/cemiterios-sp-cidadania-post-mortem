@@ -4,19 +4,11 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - "scripts/**"
-      - "data/reference/**"
-      - "docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md"
-      - ".github/workflows/atualizar-geosampa.yml"
-  push:
-    paths:
       - "scripts/fetch_geosampa_cemiterios.py"
       - "scripts/fetch_geosampa_contexto.py"
       - "scripts/fetch_ibge_districts_sp.py"
       - "scripts/extract_ibge_income_dictionary.py"
       - "scripts/fetch_ipvs_2022.py"
-      - "scripts/fetch_seade_mortalidade.py"
-      - "scripts/run_seade_mortalidade.py"
       - "scripts/build_ipvs_context.py"
       - "scripts/inspect_sim_mortality.py"
       - "scripts/fetch_ossuary_annex.py"
@@ -31,7 +23,28 @@ on:
       - "data/reference/cemiterios_crematorio.csv"
       - "data/reference/agencias_funerarias.csv"
       - "data/reference/geosampa_mapping.csv"
-      - ".github/workflows/atualizar-geosampa.yml"
+      - "docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md"
+  push:
+    paths:
+      - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/fetch_geosampa_contexto.py"
+      - "scripts/fetch_ibge_districts_sp.py"
+      - "scripts/extract_ibge_income_dictionary.py"
+      - "scripts/fetch_ipvs_2022.py"
+      - "scripts/build_ipvs_context.py"
+      - "scripts/inspect_sim_mortality.py"
+      - "scripts/fetch_ossuary_annex.py"
+      - "scripts/geocode_agencias.py"
+      - "scripts/build_cemiterios_concessao.py"
+      - "scripts/spatial_join_admin.py"
+      - "scripts/build_socioeconomic_context.py"
+      - "scripts/analyze_center_periphery.py"
+      - "scripts/build_interactive_map.py"
+      - "scripts/build_static_map.py"
+      - "scripts/build_network_map.py"
+      - "data/reference/cemiterios_crematorio.csv"
+      - "data/reference/agencias_funerarias.csv"
+      - "data/reference/geosampa_mapping.csv"
 
 permissions:
   contents: write
@@ -39,7 +52,7 @@ permissions:
 jobs:
   coletar-e-processar:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 35
 
     steps:
       - name: Baixar repositório
@@ -52,28 +65,6 @@ jobs:
 
       - name: Instalar dependências
         run: python -m pip install --upgrade pip pyproj shapely folium matplotlib adjustText pypdf openpyxl pyshp dbfread
-
-      - name: Coletar, integrar e validar a mortalidade do Seade
-        run: |
-          set -o pipefail
-          python scripts/run_seade_mortalidade.py 2>&1 | tee seade-mortalidade-run.log
-
-      - name: Publicar auditoria autônoma da mortalidade do Seade
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: auditoria-seade-mortalidade
-          if-no-files-found: warn
-          path: |
-            seade-mortalidade-run.log
-            data/processed/seade_mortalidade_municipio_ano.csv
-            data/processed/seade_mortalidade_estado_ano.csv
-            data/processed/seade_mortalidade_distrito_sp_ano.csv
-            data/processed/seade_mortalidade_corrente_mes.csv
-            data/raw/seade/mortalidade/manifest.json
-            data/raw/seade/mortalidade/quality_report.json
-            docs/RESULTADOS_SEADE_MORTALIDADE.md
-            docs/FONTE_SEADE_MORTALIDADE.md
 
       - name: Consultar cemitérios no WFS do GeoSampa
         run: python scripts/fetch_geosampa_cemiterios.py
@@ -123,23 +114,16 @@ jobs:
       - name: Gerar mapa real da rede funerária
         run: python scripts/build_network_map.py
 
-      - name: Publicar artefato cartográfico, demográfico e metodológico
+      - name: Publicar artefato cartográfico e metodológico
         uses: actions/upload-artifact@v4
         with:
-          name: rede-funeraria-mortalidade-e-metodologia
+          name: mapa-rede-funeraria-e-metodologia
           if-no-files-found: error
           path: |
             maps/mapa_rede_funeraria_real.png
             maps/mapa_rede_funeraria_real.svg
             data/processed/agencias_geocodificadas.csv
             data/processed/agencias_geocodificadas_4326.geojson
-            data/processed/seade_mortalidade_municipio_ano.csv
-            data/processed/seade_mortalidade_estado_ano.csv
-            data/processed/seade_mortalidade_distrito_sp_ano.csv
-            data/processed/seade_mortalidade_corrente_mes.csv
-            data/raw/seade/mortalidade/manifest.json
-            data/raw/seade/mortalidade/quality_report.json
-            docs/RESULTADOS_SEADE_MORTALIDADE.md
             docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
             docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md
 
@@ -148,10 +132,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RESULTADOS_SEADE_MORTALIDADE.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
+          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
           if git diff --cached --quiet; then
-            echo "Nenhuma alteração nos dados territoriais, demográficos e documentais."
+            echo "Nenhuma alteração nos dados territoriais e documentais."
           else
-            git commit -m "Atualiza mapa real, mortalidade e contexto socioespacial"
+            git commit -m "Atualiza mapa real, agências e contexto socioespacial"
             git push
           fi

@@ -28,29 +28,167 @@
     "difference_percent_of_reference": 17.78
   },
   "equipment": [
-    {"id_equipamento": "cem_vila_formosa_i", "nome_oficial": "Cemitério Vila Formosa I", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 373387.695},
-    {"id_equipamento": "cem_vila_formosa_ii", "nome_oficial": "Cemitério Vila Formosa II", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 300363.48},
-    {"id_equipamento": "cem_sao_luiz", "nome_oficial": "Cemitério São Luiz", "tipo": "cemiterio", "bloco_concessao": 4, "area_m2": 235332.92},
-    {"id_equipamento": "cem_vila_nova_cachoeirinha", "nome_oficial": "Cemitério Vila Nova Cachoeirinha", "tipo": "cemiterio", "bloco_concessao": 2, "area_m2": 231460.667},
-    {"id_equipamento": "cem_dom_bosco", "nome_oficial": "Cemitério Dom Bosco", "tipo": "cemiterio", "bloco_concessao": 2, "area_m2": 224577.305},
-    {"id_equipamento": "cem_sao_pedro", "nome_oficial": "Cemitério São Pedro", "tipo": "cemiterio", "bloco_concessao": 4, "area_m2": 223941.397},
-    {"id_equipamento": "cem_araca", "nome_oficial": "Cemitério do Araçá", "tipo": "cemiterio", "bloco_concessao": 2, "area_m2": 221429.873},
-    {"id_equipamento": "cem_quarta_parada", "nome_oficial": "Cemitério da Quarta Parada", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 169440.942},
-    {"id_equipamento": "cem_saudade", "nome_oficial": "Cemitério da Saudade", "tipo": "cemiterio", "bloco_concessao": 3, "area_m2": 131382.446},
-    {"id_equipamento": "cem_itaquera", "nome_oficial": "Cemitério de Itaquera", "tipo": "cemiterio", "bloco_concessao": 4, "area_m2": 111866.265},
-    {"id_equipamento": "cem_campo_grande", "nome_oficial": "Cemitério Campo Grande", "tipo": "cemiterio", "bloco_concessao": 3, "area_m2": 110607.455},
-    {"id_equipamento": "cem_lapa", "nome_oficial": "Cemitério da Lapa", "tipo": "cemiterio", "bloco_concessao": 3, "area_m2": 110241.855},
-    {"id_equipamento": "cem_sao_paulo", "nome_oficial": "Cemitério São Paulo", "tipo": "cemiterio", "bloco_concessao": 2, "area_m2": 102400.574},
-    {"id_equipamento": "cem_consolacao", "nome_oficial": "Cemitério da Consolação", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 69220.547},
-    {"id_equipamento": "cem_tremembe", "nome_oficial": "Cemitério do Tremembé", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 64912.726},
-    {"id_equipamento": "cem_vila_mariana", "nome_oficial": "Cemitério Vila Mariana", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 63421.017},
-    {"id_equipamento": "cem_lageado", "nome_oficial": "Cemitério do Lageado", "tipo": "cemiterio", "bloco_concessao": 3, "area_m2": 54982.115},
-    {"id_equipamento": "crem_vila_alpina", "nome_oficial": "Crematório Vila Alpina", "tipo": "crematorio", "bloco_concessao": 4, "area_m2": 53515.717},
-    {"id_equipamento": "cem_santana", "nome_oficial": "Cemitério Santana (Chora Menino)", "tipo": "cemiterio", "bloco_concessao": 1, "area_m2": 41425.204},
-    {"id_equipamento": "cem_santo_amaro", "nome_oficial": "Cemitério Santo Amaro", "tipo": "cemiterio", "bloco_concessao": 2, "area_m2": 29896.431},
-    {"id_equipamento": "cem_penha", "nome_oficial": "Cemitério da Penha", "tipo": "cemiterio", "bloco_concessao": 4, "area_m2": 16261.302},
-    {"id_equipamento": "cem_freguesia_do_o", "nome_oficial": "Cemitério da Freguesia do Ó", "tipo": "cemiterio", "bloco_concessao": 4, "area_m2": 14420.431},
-    {"id_equipamento": "cem_parelheiros", "nome_oficial": "Cemitério de Parelheiros", "tipo": "cemiterio", "bloco_concessao": 3, "area_m2": 5428.486}
+    {
+      "id_equipamento": "cem_vila_formosa_i",
+      "nome_oficial": "Cemitério Vila Formosa I",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 373387.695
+    },
+    {
+      "id_equipamento": "cem_vila_formosa_ii",
+      "nome_oficial": "Cemitério Vila Formosa II",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 300363.48
+    },
+    {
+      "id_equipamento": "cem_sao_luiz",
+      "nome_oficial": "Cemitério São Luiz",
+      "tipo": "cemiterio",
+      "bloco_concessao": 4,
+      "area_m2": 235332.92
+    },
+    {
+      "id_equipamento": "cem_vila_nova_cachoeirinha",
+      "nome_oficial": "Cemitério Vila Nova Cachoeirinha",
+      "tipo": "cemiterio",
+      "bloco_concessao": 2,
+      "area_m2": 231460.667
+    },
+    {
+      "id_equipamento": "cem_dom_bosco",
+      "nome_oficial": "Cemitério Dom Bosco",
+      "tipo": "cemiterio",
+      "bloco_concessao": 2,
+      "area_m2": 224577.305
+    },
+    {
+      "id_equipamento": "cem_sao_pedro",
+      "nome_oficial": "Cemitério São Pedro",
+      "tipo": "cemiterio",
+      "bloco_concessao": 4,
+      "area_m2": 223941.397
+    },
+    {
+      "id_equipamento": "cem_araca",
+      "nome_oficial": "Cemitério do Araçá",
+      "tipo": "cemiterio",
+      "bloco_concessao": 2,
+      "area_m2": 221429.873
+    },
+    {
+      "id_equipamento": "cem_quarta_parada",
+      "nome_oficial": "Cemitério da Quarta Parada",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 169440.942
+    },
+    {
+      "id_equipamento": "cem_saudade",
+      "nome_oficial": "Cemitério da Saudade",
+      "tipo": "cemiterio",
+      "bloco_concessao": 3,
+      "area_m2": 131382.446
+    },
+    {
+      "id_equipamento": "cem_itaquera",
+      "nome_oficial": "Cemitério de Itaquera",
+      "tipo": "cemiterio",
+      "bloco_concessao": 4,
+      "area_m2": 111866.265
+    },
+    {
+      "id_equipamento": "cem_campo_grande",
+      "nome_oficial": "Cemitério Campo Grande",
+      "tipo": "cemiterio",
+      "bloco_concessao": 3,
+      "area_m2": 110607.455
+    },
+    {
+      "id_equipamento": "cem_lapa",
+      "nome_oficial": "Cemitério da Lapa",
+      "tipo": "cemiterio",
+      "bloco_concessao": 3,
+      "area_m2": 110241.855
+    },
+    {
+      "id_equipamento": "cem_sao_paulo",
+      "nome_oficial": "Cemitério São Paulo",
+      "tipo": "cemiterio",
+      "bloco_concessao": 2,
+      "area_m2": 102400.574
+    },
+    {
+      "id_equipamento": "cem_consolacao",
+      "nome_oficial": "Cemitério da Consolação",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 69220.547
+    },
+    {
+      "id_equipamento": "cem_tremembe",
+      "nome_oficial": "Cemitério do Tremembé",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 64912.726
+    },
+    {
+      "id_equipamento": "cem_vila_mariana",
+      "nome_oficial": "Cemitério Vila Mariana",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 63421.017
+    },
+    {
+      "id_equipamento": "cem_lageado",
+      "nome_oficial": "Cemitério do Lageado",
+      "tipo": "cemiterio",
+      "bloco_concessao": 3,
+      "area_m2": 54982.115
+    },
+    {
+      "id_equipamento": "crem_vila_alpina",
+      "nome_oficial": "Crematório Vila Alpina",
+      "tipo": "crematorio",
+      "bloco_concessao": 4,
+      "area_m2": 53515.717
+    },
+    {
+      "id_equipamento": "cem_santana",
+      "nome_oficial": "Cemitério Santana (Chora Menino)",
+      "tipo": "cemiterio",
+      "bloco_concessao": 1,
+      "area_m2": 41425.204
+    },
+    {
+      "id_equipamento": "cem_santo_amaro",
+      "nome_oficial": "Cemitério Santo Amaro",
+      "tipo": "cemiterio",
+      "bloco_concessao": 2,
+      "area_m2": 29896.431
+    },
+    {
+      "id_equipamento": "cem_penha",
+      "nome_oficial": "Cemitério da Penha",
+      "tipo": "cemiterio",
+      "bloco_concessao": 4,
+      "area_m2": 16261.302
+    },
+    {
+      "id_equipamento": "cem_freguesia_do_o",
+      "nome_oficial": "Cemitério da Freguesia do Ó",
+      "tipo": "cemiterio",
+      "bloco_concessao": 4,
+      "area_m2": 14420.431
+    },
+    {
+      "id_equipamento": "cem_parelheiros",
+      "nome_oficial": "Cemitério de Parelheiros",
+      "tipo": "cemiterio",
+      "bloco_concessao": 3,
+      "area_m2": 5428.486
+    }
   ],
   "interpretive_limits": [
     "A soma mede a extensão territorial dos equipamentos, não a cobertura vegetal.",

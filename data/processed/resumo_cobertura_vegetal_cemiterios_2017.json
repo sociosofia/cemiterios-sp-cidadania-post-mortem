@@ -1,0 +1,73 @@
+{
+  "generated_at_utc": "2026-07-22T22:11:55.794702+00:00",
+  "dataset": "Mapeamento Digital da Cobertura Vegetal 2017",
+  "layer": "geoportal:cobertura_vegetal",
+  "imagery_reference": "ortofotos 2017/2018 com apoio LiDAR",
+  "source_crs": "EPSG:31983",
+  "geral_23_equipamentos": {
+    "equipment_count": 23,
+    "area_territorial_m2": 2959916.85,
+    "cobertura_vegetal_m2": 1789599.753,
+    "cobertura_vegetal_percentual": 60.4611
+  },
+  "somente_22_cemiterios": {
+    "equipment_count": 22,
+    "area_territorial_m2": 2906401.133,
+    "cobertura_vegetal_m2": 1748647.399,
+    "cobertura_vegetal_percentual": 60.1654
+  },
+  "crematorio_vila_alpina": {
+    "equipment_count": 1,
+    "area_territorial_m2": 53515.717,
+    "cobertura_vegetal_m2": 40952.354,
+    "cobertura_vegetal_percentual": 76.524
+  },
+  "por_bloco": [
+    {
+      "equipment_count": 7,
+      "area_territorial_m2": 1082171.611,
+      "cobertura_vegetal_m2": 566065.017,
+      "cobertura_vegetal_percentual": 52.3082,
+      "bloco_concessao": 1,
+      "concessionaria": "Consolare"
+    },
+    {
+      "equipment_count": 5,
+      "area_territorial_m2": 809764.85,
+      "cobertura_vegetal_m2": 476826.233,
+      "cobertura_vegetal_percentual": 58.8845,
+      "bloco_concessao": 2,
+      "concessionaria": "Cortel SP"
+    },
+    {
+      "equipment_count": 5,
+      "area_territorial_m2": 412642.357,
+      "cobertura_vegetal_m2": 243788.338,
+      "cobertura_vegetal_percentual": 59.0798,
+      "bloco_concessao": 3,
+      "concessionaria": "Grupo Maya"
+    },
+    {
+      "equipment_count": 6,
+      "area_territorial_m2": 655338.032,
+      "cobertura_vegetal_m2": 502920.165,
+      "cobertura_vegetal_percentual": 76.7421,
+      "bloco_concessao": 4,
+      "concessionaria": "Velar SP"
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "não identificada",
+      "descricao": "Categoria não identificada",
+      "area_m2": 1789599.751,
+      "participacao_na_cobertura_percentual": 100.0
+    }
+  ],
+  "interpretation_notes": [
+    "O indicador mede cobertura vegetal classificada em 15 categorias.",
+    "Não equivale a cobertura estrita de copas nem a área permeável.",
+    "A referência de 2017/2018 é anterior à concessão e funciona como linha de base.",
+    "A soma por bloco não mede desempenho posterior das concessionárias."
+  ]
+}

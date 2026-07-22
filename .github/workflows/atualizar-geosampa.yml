@@ -20,6 +20,7 @@ on:
       - "scripts/fetch_ossuary_annex.py"
       - "scripts/geocode_agencias.py"
       - "scripts/build_cemiterios_concessao.py"
+      - "scripts/validate_cemetery_environmental_footprint.py"
       - "scripts/spatial_join_admin.py"
       - "scripts/build_socioeconomic_context.py"
       - "scripts/analyze_center_periphery.py"
@@ -75,6 +76,9 @@ jobs:
       - name: Filtrar equipamentos da concessão e calcular centroides
         run: python scripts/build_cemiterios_concessao.py
 
+      - name: Validar a extensão territorial dos equipamentos
+        run: python scripts/validate_cemetery_environmental_footprint.py
+
       - name: Associar distritos e subprefeituras por área
         run: python scripts/spatial_join_admin.py
 
@@ -109,15 +113,17 @@ jobs:
             maps/mapa_rede_funeraria_real.svg
             data/processed/agencias_geocodificadas.csv
             data/processed/agencias_geocodificadas_4326.geojson
+            data/processed/resumo_area_territorial_cemiterios.json
             docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
             docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md
+            docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md
 
       - name: Registrar produtos atualizados
         if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md
+          git add data/raw/geosampa data/raw/ibge data/raw/seade data/raw/sim data/raw/contracts data/raw/geocoding data/processed maps docs/RESULTADOS_PRELIMINARES.md docs/RESULTADOS_SOCIOECONOMICOS.md docs/RESULTADOS_IPVS_2022.md docs/RELATORIO_GEOCODIFICACAO_AGENCIAS.md docs/VALIDACAO_AREA_TERRITORIAL_E_COBERTURA_VERDE.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteração nos dados territoriais e documentais."
           else

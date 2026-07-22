@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Executa a análise territorial com consulta WFS tolerante a variantes de BBOX.
 
-O GeoServer do GeoSampa rejeita algumas combinações de WFS 2.0 e CRS no
-parâmetro BBOX. Este lançador testa, em ordem, BBOX sem CRS explícito e BBOX
-com URN OGC, preservando `srsName=EPSG:31983` na resposta.
+A camada `quadra_fiscal` não possui chave primária declarada no GeoServer. O
+uso de `startIndex` faz o WFS tentar uma ordenação natural e falhar. Como cada
+consulta cobre apenas o entorno de 1 km de um equipamento, este lançador pede
+até 10 mil feições numa única resposta, sem paginação, e rejeita silenciosamente
+qualquer resultado que atinja esse teto.
 """
 
 from __future__ import annotations
@@ -16,6 +18,8 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 import analyze_cemetery_land_values_2026 as analysis
+
+MAX_FEATURES_PER_BBOX = 10_000
 
 
 def request_payload(url: str) -> tuple[dict[str, Any], str]:
@@ -47,39 +51,30 @@ def robust_fetch_quadras_bbox(
 
     for endpoint in analysis.WFS_ENDPOINTS:
         for bbox_value in bbox_variants:
-            features_all: list[dict[str, Any]] = []
-            request_urls: list[str] = []
-            start_index = 0
             try:
-                while True:
-                    params = {
-                        "service": "WFS",
-                        "version": "2.0.0",
-                        "request": "GetFeature",
-                        "typeNames": analysis.LAYER,
-                        "outputFormat": "application/json",
-                        "srsName": analysis.CRS_METRIC,
-                        "bbox": bbox_value,
-                        "count": analysis.PAGE_SIZE,
-                        "startIndex": start_index,
-                    }
-                    url = f"{endpoint}?{urlencode(params)}"
-                    payload, final_url = request_payload(url)
-                    request_urls.append(final_url)
-                    features = payload.get("features", [])
-                    features_all.extend(features)
-                    returned = payload.get("numberReturned", len(features))
-                    matched = payload.get("numberMatched")
-                    if not features or returned < analysis.PAGE_SIZE:
-                        break
-                    start_index += len(features)
-                    if isinstance(matched, int) and start_index >= matched:
-                        break
-                    if start_index > 250_000:
-                        raise RuntimeError(
-                            "Paginação excedeu 250 mil feições para uma única BBOX."
-                        )
-                return features_all, request_urls
+                params = {
+                    "service": "WFS",
+                    "version": "2.0.0",
+                    "request": "GetFeature",
+                    "typeNames": analysis.LAYER,
+                    "outputFormat": "application/json",
+                    "srsName": analysis.CRS_METRIC,
+                    "bbox": bbox_value,
+                    "count": MAX_FEATURES_PER_BBOX,
+                }
+                url = f"{endpoint}?{urlencode(params)}"
+                payload, final_url = request_payload(url)
+                features = payload.get("features", [])
+                returned = payload.get("numberReturned", len(features))
+                matched = payload.get("numberMatched")
+                if returned >= MAX_FEATURES_PER_BBOX or (
+                    isinstance(matched, int) and matched > MAX_FEATURES_PER_BBOX
+                ):
+                    raise RuntimeError(
+                        "A consulta atingiu o teto de 10 mil feições; reduza a BBOX "
+                        "antes de aceitar o resultado."
+                    )
+                return features, [final_url]
             except (
                 HTTPError,
                 URLError,

@@ -1,0 +1,80 @@
+{
+  "generated_at_utc": "2026-07-22T23:44:18.799006+00:00",
+  "interpretive_status": "preliminary inventory and spatial comparison; external legal and operational validation required",
+  "crs": "EPSG:31983",
+  "rings_m": [
+    {
+      "inner": 0,
+      "outer": 250
+    },
+    {
+      "inner": 250,
+      "outer": 500
+    },
+    {
+      "inner": 500,
+      "outer": 1000
+    }
+  ],
+  "sources": {
+    "cemetery_polygons": "data/raw/geosampa/equipamento_cemiterio_31983.geojson",
+    "public_mapping": "data/reference/geosampa_mapping.csv",
+    "pgv": "data/processed/pgv_2026_faces.csv",
+    "quadras_wfs_layer": "geoportal:quadra_fiscal"
+  },
+  "source_sha256": {
+    "cemetery_polygons": "ad427a3edcc5515e70e08e91cb0ffe745b9bb92598ab6d65c9d69259583a9012",
+    "public_mapping": "fab6ba8d4a8ff402a23658e7d83384e0515b6db25f7e7370fe3637204c3d2a81",
+    "pgv": "a84d43a0e039c5fa57ebc29b08eead203df46b56f1063f170b2bdf5d94bee173"
+  },
+  "candidate_feature_count": 22,
+  "candidate_unit_count": 21,
+  "candidate_status_counts": {
+    "pendente": 21
+  },
+  "quadra_sq_count": 3515,
+  "quadra_sq_with_pgv_count": 3323,
+  "quadra_sq_match_rate_pct": 94.5,
+  "wfs_request_count": 21,
+  "wfs_request_urls": [
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=326050.1919991754%2C7360418.338879522%2C328112.69271511503%2C7362490.344091701&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=320609.98987793317%2C7386350.309886443%2C323134.50073125237%2C7388781.635431912&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=329966.2685905163%2C7393585.119082173%2C332059.9736216435%2C7395663.072346226&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=326719.59175409353%2C7381413.153436505%2C329296.1394251876%2C7383853.67955494&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=353239.9365661374%2C7392330.137420632%2C355634.6321845233%2C7394738.010790356&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=352780.5223414775%2C7392046.279321765%2C355290.56259456655%2C7394388.046580545&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=322793.6970583159%2C7384871.505669495%2C325439.7014452575%2C7387776.0437530745&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=329940.19065883156%2C7393620.680661351%2C332038.29182565474%2C7395706.139774075&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=322208.5713055113%2C7386853.625691084%2C324558.9380741088%2C7389477.778277748&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=334826.5692769959%2C7404629.581887678%2C337037.40359857224%2C7407098.326555344&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=332839.6732020569%2C7390148.230362731%2C335060.11112096545%2C7392274.090771013&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=316986.29328210617%2C7388246.646931773%2C319733.02915473434%2C7390998.1245170245&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=350717.3218614053%2C7390584.6900539715%2C353024.5488399588%2C7392829.981049782&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=317507.8742850971%2C7373484.460008978%2C319882.14122300834%2C7376055.280418629&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=316546.31168542895%2C7405278.156976838%2C319056.59784293664%2C7407810.423077005&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=337553.9287922255%2C7406930.893210485%2C339741.18881211453%2C7409178.310379964&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=322139.15521905205%2C7363082.0052408315%2C324786.81599805667%2C7365733.544142695&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=338143.64617102477%2C7404973.550174298%2C340809.2160253201%2C7408039.309751239&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=316522.9998191468%2C7404964.5177524965%2C319174.8727229757%2C7408029.7744342545&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=327961.22036277055%2C7393194.231732771%2C330131.9837992658%2C7395321.908062408&count=10000",
+    "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/geoportal/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal%3Aquadra_fiscal&outputFormat=application%2Fjson&srsName=EPSG%3A31983&bbox=327962.279035198%2C7393338.562441823%2C330085.50568305247%2C7395450.783800559&count=10000"
+  ],
+  "quadra_data_dates": [
+    "2026-07-21T03:00:00Z"
+  ],
+  "method": {
+    "universe": "set difference between all GeoSampa cemetery features and feature IDs in the municipal-concession mapping",
+    "deduplication": "normalized cemetery name plus normalized address",
+    "primary_indicator": "median of all PGV face values in intersecting fiscal blocks",
+    "secondary_indicator": "median of block medians",
+    "weighted_indicator": "mean of block medians weighted by intersection area with ring",
+    "spatial_unit": "external annuli around official GeoSampa cemetery polygons",
+    "pgv_join": "SQ = zero-padded cd_setor_fiscal + cd_quadra_fiscal"
+  },
+  "limitations": [
+    "PGV is an official fiscal value, not a market transaction price.",
+    "Legal ownership, operational status and access regime remain pending external validation.",
+    "The GeoSampa administrative-sphere field labels all cemetery features as MUNICIPAL and is not used to infer ownership.",
+    "Association with the private-candidate universe does not establish a causal effect of ownership regime on land value."
+  ]
+}

@@ -6,11 +6,17 @@ on:
     paths:
       - "scripts/analyze_district_mortality_context.py"
       - "tests/test_mortality_district_context.py"
+      - "docs/RESULTADOS_MORTALIDADE_DISTRITAL.md"
+      - "data/processed/mortalidade_distrital_*.csv"
+      - "README.md"
       - ".github/workflows/validar-analise-mortalidade-distrital.yml"
   push:
     paths:
       - "scripts/analyze_district_mortality_context.py"
       - "tests/test_mortality_district_context.py"
+      - "docs/RESULTADOS_MORTALIDADE_DISTRITAL.md"
+      - "data/processed/mortalidade_distrital_*.csv"
+      - "README.md"
       - ".github/workflows/validar-analise-mortalidade-distrital.yml"
 
 permissions:

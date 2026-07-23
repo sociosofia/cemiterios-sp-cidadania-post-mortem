@@ -96,11 +96,23 @@ O plano analítico e seus limites de inferência estão em [`docs/PLANO_ANALISE_
 - [`data/processed/cemiterios_concessao_31983.geojson`](data/processed/cemiterios_concessao_31983.geojson) — polígonos para análise métrica;
 - [`data/processed/cemiterios_concessao_4326.geojson`](data/processed/cemiterios_concessao_4326.geojson) — polígonos para mapas web;
 - [`data/processed/cemiterios_contexto_socioeconomico.csv`](data/processed/cemiterios_contexto_socioeconomico.csv) — renda e composição racial do distrito de localização;
-- [`data/processed/seade_mortalidade_municipio_ano.csv`](data/processed/seade_mortalidade_municipio_ano.csv) — óbitos, população, taxas e mortalidade infantil por município-ano;
-- [`data/processed/seade_mortalidade_estado_ano.csv`](data/processed/seade_mortalidade_estado_ano.csv) — série estadual calculada;
-- [`data/processed/seade_mortalidade_distrito_sp_ano.csv`](data/processed/seade_mortalidade_distrito_sp_ano.csv) — óbitos por distrito de residência na capital;
 - [`data/processed/resumo_estratos_renda_raca.json`](data/processed/resumo_estratos_renda_raca.json) — resultados agregados;
 - [`data/processed/distancias_centroide_se.csv`](data/processed/distancias_centroide_se.csv) — indicador preliminar de centralidade.
+
+### Rotinas e documentação da mortalidade
+
+- [`scripts/fetch_seade_mortalidade.py`](scripts/fetch_seade_mortalidade.py) — coleta, integração, validação e geração dos painéis Seade;
+- [`tests/test_seade_mortalidade.py`](tests/test_seade_mortalidade.py) — teste integral offline com fixture coerente;
+- [`docs/RESULTADOS_SEADE_MORTALIDADE.md`](docs/RESULTADOS_SEADE_MORTALIDADE.md) — resultados auditados e inconsistências encontradas;
+- [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md) — arquitetura das fontes, API, limites e regras de uso.
+
+A execução bem-sucedida da rotina gera, sem que esses snapshots estejam ainda incorporados ao branch:
+
+- `data/processed/seade_mortalidade_municipio_ano.csv`;
+- `data/processed/seade_mortalidade_estado_ano.csv`;
+- `data/processed/seade_mortalidade_distrito_sp_ano.csv`;
+- `data/processed/seade_mortalidade_corrente_mes.csv`;
+- `data/raw/seade/mortalidade/manifest.json` e `quality_report.json`.
 
 ### Mapas
 
@@ -118,14 +130,14 @@ O perfil socioeconômico do território onde está um cemitério não equivale a
 
 ## Automação
 
-O workflow consulta o GeoSampa, preserva dados brutos, filtra e dissolve geometrias, baixa os 96 distritos, integra o Censo 2022 e o IPVS, audita as bases de mortalidade do Seade, extrai o anexo contratual sobre ossadas, calcula indicadores e recria os mapas.
+O workflow territorial continua responsável por GeoSampa, Censo 2022, IPVS, documentos e mapas. A mortalidade possui validação separada: o GitHub compila a rotina e reproduz todas as transformações sobre uma fixture offline. A extração real dos CSVs precisa ser executada localmente, porque o recurso principal não está ativo no DataStore e o Cloudflare do portal bloqueia runners hospedados pelo GitHub. O procedimento e os comandos estão documentados em [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md).
 
 ## Próximas etapas
 
-- localizar e validar os portões de acesso público;
-- georreferenciar as 40 agências funerárias;
-- medir distâncias e tempos de deslocamento pela rede;
+- incorporar snapshots versionados dos painéis após definir política de atualização e reutilização;
 - cruzar fluxo de óbitos, tarifas, gratuidade e capacidade funerária;
+- localizar e validar os portões de acesso público;
+- medir distâncias e tempos de deslocamento pela rede;
 - obter atas e propostas dos grupos de trabalho sobre ossadas;
 - localizar relatórios de estoque de ossadas por cemitério;
 - buscar registros anonimizados de origem e destino dos sepultamentos.

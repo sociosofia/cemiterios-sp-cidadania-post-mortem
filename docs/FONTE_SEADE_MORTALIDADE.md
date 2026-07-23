@@ -73,6 +73,28 @@ Cada arquivo é identificado por:
 - cabeçalhos e número de linhas;
 - cobertura temporal inferida do conteúdo.
 
+### 3.1. Limite operacional da automação
+
+O recurso principal informa `datastore_active: false`. Logo, a Action API funciona como catálogo, mas não oferece consulta linha a linha para a base central. Em testes realizados em 22 de julho de 2026, o Cloudflare do domínio `repositorio.seade.gov.br` respondeu HTTP 403 tanto aos arquivos `/download/` quanto às chamadas da Action API originadas de runners hospedados pelo GitHub.
+
+A coleta real, portanto, deve ser executada em ambiente local ou institucional que tenha acesso ao portal:
+
+```bash
+python scripts/fetch_seade_mortalidade.py
+```
+
+Quando os CSVs já tiverem sido baixados e auditados, a reprodução integral pode ser feita sem rede:
+
+```bash
+python scripts/fetch_seade_mortalidade.py \
+  --offline-dir /caminho/para/os/csvs \
+  --root .
+```
+
+O workflow `validar-seade-mortalidade.yml` não simula atualização remota. Ele compila o código e executa toda a transformação sobre uma fixture sintética internamente coerente. Isso testa parsing, reconciliações, relatórios e produtos, mas não substitui a auditoria de uma nova versão dos arquivos oficiais.
+
+Essa separação é deliberada: é preferível declarar uma barreira externa a publicar como “automática” uma coleta que depende de contornar mecanismos de proteção do portal ou de proxies não auditados.
+
 ## 4. Arquivos anuais e arquivos correntes
 
 Arquivos anuais consolidados são preservados em:

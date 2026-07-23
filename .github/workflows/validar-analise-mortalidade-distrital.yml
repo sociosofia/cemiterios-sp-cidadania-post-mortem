@@ -1,0 +1,38 @@
+name: Validar análise de mortalidade distrital
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/analyze_district_mortality_context.py"
+      - "tests/test_mortality_district_context.py"
+      - ".github/workflows/validar-analise-mortalidade-distrital.yml"
+  push:
+    paths:
+      - "scripts/analyze_district_mortality_context.py"
+      - "tests/test_mortality_district_context.py"
+      - ".github/workflows/validar-analise-mortalidade-distrital.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências analíticas
+        run: python -m pip install --upgrade pip pandas geopandas scipy matplotlib
+
+      - name: Compilar e executar testes
+        run: |
+          python -m py_compile scripts/analyze_district_mortality_context.py tests/test_mortality_district_context.py
+          python -m unittest -v tests.test_mortality_district_context

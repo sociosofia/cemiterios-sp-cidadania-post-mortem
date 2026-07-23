@@ -31,6 +31,32 @@ jobs:
       - name: Coletar agregados distritais brutos do Censo 2022
         run: python scripts/fetch_ibge_districts_sp.py
 
+      - name: Coletar a tabela demográfica distrital e inventariar o diretório
+        run: |
+          python - <<'PY'
+          import csv, io, json, re, urllib.request, zipfile
+          from pathlib import Path
+          base = 'https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/Agregados_por_Distrito_csv/'
+          out = Path('data/raw/ibge/distritos_sp_demografia')
+          out.mkdir(parents=True, exist_ok=True)
+          req = urllib.request.Request(base, headers={'User-Agent':'cemiterios-sp-cidadania-post-mortem/1.0'})
+          html = urllib.request.urlopen(req, timeout=120).read().decode('utf-8', errors='replace')
+          (out/'directory_index.html').write_text(html, encoding='utf-8')
+          links = sorted(set(re.findall(r'href=["\']([^"\']+)["\']', html, re.I)))
+          (out/'directory_links.json').write_text(json.dumps(links, ensure_ascii=False, indent=2), encoding='utf-8')
+          url = base + 'Agregados_por_distritos_demografia_BR.zip'
+          raw = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent':'cemiterios-sp-cidadania-post-mortem/1.0'}), timeout=180).read()
+          (out/'Agregados_por_distritos_demografia_BR.zip').write_bytes(raw)
+          inventory = {'source_url':url,'size_bytes':len(raw),'members':[]}
+          with zipfile.ZipFile(io.BytesIO(raw)) as z:
+              for name in z.namelist():
+                  inventory['members'].append(name)
+                  if name.lower().endswith(('.csv','.txt','.xlsx','.xls','.ods','.pdf')):
+                      target = out/Path(name).name
+                      target.write_bytes(z.read(name))
+          (out/'inventory.json').write_text(json.dumps(inventory, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
+
       - name: Listar arquivos disponíveis
         run: |
           for path in \
@@ -45,7 +71,7 @@ jobs:
               printf 'AUSENTE\t%s\n' "$path"
             fi
           done | tee contexto-arquivos.txt
-          find data/raw/ibge/distritos_sp -type f -printf '%p\t%s bytes\n' | sort | tee ibge-distritos-arquivos.txt
+          find data/raw/ibge/distritos_sp data/raw/ibge/distritos_sp_demografia -type f -printf '%p\t%s bytes\n' | sort | tee ibge-distritos-arquivos.txt
 
       - name: Publicar contexto territorial e tabelas brutas do Censo
         uses: actions/upload-artifact@v4
@@ -56,6 +82,7 @@ jobs:
             contexto-arquivos.txt
             ibge-distritos-arquivos.txt
             data/raw/ibge/distritos_sp/
+            data/raw/ibge/distritos_sp_demografia/
             data/raw/ibge/inspection/distritos_sp_inventory.json
             data/processed/distritos_indicadores_sociais.csv
             data/processed/cemiterios_contexto_socioeconomico.csv

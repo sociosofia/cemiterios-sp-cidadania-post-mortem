@@ -38,6 +38,37 @@ jobs:
             fi
           done | tee contexto-arquivos.txt
 
+      - name: Tentar recuperar os recursos oficiais do IPVS
+        continue-on-error: true
+        run: |
+          mkdir -p ipvs-oficial
+          URL_CSV='https://repositorio.seade.gov.br/dataset/59895fe4-4cc3-495a-9ac3-4ff7fc9470de/resource/04f37cbf-880f-43dc-814a-3f18fb0098e0/download/ipvs_msp.csv'
+          URL_XLSX='https://repositorio.seade.gov.br/dataset/d16cd73f-683b-4cd1-b11c-a068fb491d4c/resource/382bcf29-3e79-4c02-90d4-5c3f9c4a4c01/download/ipvs.xlsx'
+          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0 Safari/537.36'
+          set +e
+          curl --http1.1 -L --retry 2 --connect-timeout 30 --max-time 180 \
+            -A "$UA" -H 'Accept: text/csv,*/*' -H 'Referer: https://repositorio.seade.gov.br/' \
+            -D ipvs-oficial/ipvs_msp.headers -o ipvs-oficial/ipvs_msp.csv "$URL_CSV"
+          CSV_STATUS=$?
+          curl --http1.1 -L --retry 2 --connect-timeout 30 --max-time 180 \
+            -A "$UA" -H 'Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*' \
+            -H 'Referer: https://repositorio.seade.gov.br/' \
+            -D ipvs-oficial/ipvs_xlsx.headers -o ipvs-oficial/ipvs.xlsx "$URL_XLSX"
+          XLSX_STATUS=$?
+          {
+            echo "csv_status=$CSV_STATUS"
+            echo "xlsx_status=$XLSX_STATUS"
+            find ipvs-oficial -maxdepth 1 -type f -printf '%f\t%s bytes\n'
+            for file in ipvs-oficial/ipvs_msp.csv ipvs-oficial/ipvs.xlsx; do
+              if [ -f "$file" ]; then
+                printf '%s\t' "$file"
+                file "$file"
+                sha256sum "$file"
+              fi
+            done
+          } | tee ipvs-oficial/diagnostico.txt
+          exit 0
+
       - name: Publicar contexto territorial
         uses: actions/upload-artifact@v4
         with:
@@ -45,6 +76,7 @@ jobs:
           if-no-files-found: warn
           path: |
             contexto-arquivos.txt
+            ipvs-oficial/
             data/processed/distritos_indicadores_sociais.csv
             data/processed/cemiterios_contexto_socioeconomico.csv
             data/processed/cemiterios_contexto_ipvs_2022.csv

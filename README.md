@@ -44,13 +44,39 @@ Cada equipamento foi associado ao distrito que contém a maior parcela de sua á
 Por estrato tarifário:
 
 | Estrato | Cemitérios | Renda mediana distrital média | Proporção preta+parda média |
-|---:|---:|---:|---:|
+|---:|---:|---:|
 | 1 | 6 | R$ 7.733 | 17,5% |
 | 2 | 7 | R$ 4.072 | 30,2% |
 | 3 | 6 | R$ 1.800 | 54,5% |
 | 4 | 3 | R$ 3.000 | 34,7% |
 
 Os resultados são descritivos e se referem à **localização do cemitério**, não ao perfil individual dos mortos ou de suas famílias. A tabela completa está em [`docs/RESULTADOS_SOCIOECONOMICOS.md`](docs/RESULTADOS_SOCIOECONOMICOS.md).
+
+## Fluxo demográfico dos mortos
+
+A integração das bases Seade Mortalidade e Seade Estatísticas Vitais produz painéis municipais, estaduais e distritais por residência. Na série consolidada de 2000 a 2024:
+
+- o Estado de São Paulo registrou **7.070.549 óbitos** de residentes;
+- 2024 teve **351.354 óbitos**, aproximadamente 960 por dia;
+- 74,7% das mortes de 2024 ocorreram entre pessoas de 60 anos ou mais;
+- o Município de São Paulo registrou **87.352 óbitos** em 2024;
+- o pico foi 2021, com **429.481 óbitos**.
+
+Esses números representam fluxo de óbitos por residência. Não equivalem a sepultamentos, cremações, ocupação de jazigos nem destino cemiterial. A auditoria, as inconsistências encontradas e as regras de uso estão em [`docs/RESULTADOS_SEADE_MORTALIDADE.md`](docs/RESULTADOS_SEADE_MORTALIDADE.md) e [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md).
+
+## Desigualdade distrital do morrer
+
+A taxa bruta de mortalidade é maior nos distritos mais ricos porque sua população é mais envelhecida. Depois da padronização etária, o gradiente se inverte. Em 2022:
+
+- a mortalidade padronizada antes dos 70 anos nos 24 distritos de menor renda foi **1,97 vez** a dos 24 de maior renda;
+- a idade média aproximada ao morrer diferiu em **14,2 anos** entre esses grupos;
+- nos distritos de menor renda, **43,7%** das mortes ocorreram antes dos 65 anos, contra **16,2%** nos de maior renda;
+- a correlação da mortalidade antes dos 70 anos foi **ρ = -0,85** com a renda e **ρ = 0,83** com a proporção preta+parda;
+- o choque de mortes em 2020–2022 foi maior nos distritos mais pobres e com maior proporção preta+parda.
+
+A distância reta mediana entre o ponto representativo do distrito e um cemitério concedido é 2,9 km; até um dos cinco destinos ordinários da gratuidade, 8,4 km. Marsilac, Parelheiros e Iguatemi combinam baixa renda, mortalidade prematura elevada e grande distância do destino gratuito mais próximo.
+
+O relatório completo, a padronização e os limites de inferência estão em [`docs/RESULTADOS_MORTALIDADE_DISTRITAL.md`](docs/RESULTADOS_MORTALIDADE_DISTRITAL.md). O IPVS não foi incorporado porque o recurso oficial não pôde ser recuperado de forma reproduzível; nenhum índice substituto foi apresentado como IPVS.
 
 ## Desigualdade temporal do direito ao sepulcro
 
@@ -84,8 +110,29 @@ O plano analítico e seus limites de inferência estão em [`docs/PLANO_ANALISE_
 - [`data/processed/cemiterios_concessao_31983.geojson`](data/processed/cemiterios_concessao_31983.geojson) — polígonos para análise métrica;
 - [`data/processed/cemiterios_concessao_4326.geojson`](data/processed/cemiterios_concessao_4326.geojson) — polígonos para mapas web;
 - [`data/processed/cemiterios_contexto_socioeconomico.csv`](data/processed/cemiterios_contexto_socioeconomico.csv) — renda e composição racial do distrito de localização;
+- [`data/processed/mortalidade_distrital_correlacoes.csv`](data/processed/mortalidade_distrital_correlacoes.csv) — associações territoriais auditáveis;
+- [`data/processed/mortalidade_distrital_resumo_quartis_renda.csv`](data/processed/mortalidade_distrital_resumo_quartis_renda.csv) — síntese por quartis de renda;
+- [`data/processed/mortalidade_distrital_resumo_quartis_raca.csv`](data/processed/mortalidade_distrital_resumo_quartis_raca.csv) — síntese por quartis de composição racial;
 - [`data/processed/resumo_estratos_renda_raca.json`](data/processed/resumo_estratos_renda_raca.json) — resultados agregados;
 - [`data/processed/distancias_centroide_se.csv`](data/processed/distancias_centroide_se.csv) — indicador preliminar de centralidade.
+
+### Rotinas e documentação da mortalidade
+
+- [`scripts/fetch_seade_mortalidade.py`](scripts/fetch_seade_mortalidade.py) — coleta, integração, validação e geração dos painéis Seade;
+- [`scripts/analyze_district_mortality_context.py`](scripts/analyze_district_mortality_context.py) — padronização etária e integração distrital;
+- [`tests/test_seade_mortalidade.py`](tests/test_seade_mortalidade.py) — teste integral offline com fixture coerente;
+- [`tests/test_mortality_district_context.py`](tests/test_mortality_district_context.py) — testes de códigos, grupos etários e padronização;
+- [`docs/RESULTADOS_SEADE_MORTALIDADE.md`](docs/RESULTADOS_SEADE_MORTALIDADE.md) — resultados auditados e inconsistências encontradas;
+- [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md) — arquitetura das fontes, API, limites e regras de uso;
+- [`docs/RESULTADOS_MORTALIDADE_DISTRITAL.md`](docs/RESULTADOS_MORTALIDADE_DISTRITAL.md) — desigualdade social, mortalidade prematura e distância da gratuidade.
+
+A execução bem-sucedida da rotina Seade gera, sem que esses snapshots estejam ainda incorporados ao branch:
+
+- `data/processed/seade_mortalidade_municipio_ano.csv`;
+- `data/processed/seade_mortalidade_estado_ano.csv`;
+- `data/processed/seade_mortalidade_distrito_sp_ano.csv`;
+- `data/processed/seade_mortalidade_corrente_mes.csv`;
+- `data/raw/seade/mortalidade/manifest.json` e `quality_report.json`.
 
 ### Mapas
 
@@ -103,16 +150,16 @@ O perfil socioeconômico do território onde está um cemitério não equivale a
 
 ## Automação
 
-O workflow consulta o GeoSampa, preserva dados brutos, filtra e dissolve geometrias, baixa os 96 distritos, integra o Censo 2022, extrai o anexo contratual sobre ossadas, calcula indicadores e recria os mapas.
+O workflow territorial continua responsável por GeoSampa, Censo 2022, IPVS, documentos e mapas. A mortalidade possui validações separadas: o GitHub compila as rotinas e reproduz as transformações sobre fixtures offline. A extração real dos CSVs precisa ser executada localmente, porque o recurso principal não está ativo no DataStore e o Cloudflare do portal bloqueia runners hospedados pelo GitHub. O procedimento e os comandos estão documentados em [`docs/FONTE_SEADE_MORTALIDADE.md`](docs/FONTE_SEADE_MORTALIDADE.md).
 
 ## Próximas etapas
 
+- incorporar snapshots versionados dos painéis após definir política de atualização e reutilização;
+- obter a matriz administrativa residência → modalidade → destino → permanência;
 - localizar e validar os portões de acesso público;
-- georreferenciar as 40 agências funerárias;
 - medir distâncias e tempos de deslocamento pela rede;
 - obter atas e propostas dos grupos de trabalho sobre ossadas;
-- localizar relatórios de estoque de ossadas por cemitério;
-- buscar registros anonimizados de origem e destino dos sepultamentos.
+- localizar relatórios de estoque de ossadas por cemitério.
 
 As pendências documentais estão em [`docs/PENDENCIAS_DOCUMENTAIS.md`](docs/PENDENCIAS_DOCUMENTAIS.md).
 
@@ -121,6 +168,7 @@ As pendências documentais estão em [`docs/PENDENCIAS_DOCUMENTAIS.md`](docs/PEN
 - Prefeitura de São Paulo — edital, contratos, anexos e legislação;
 - SP Regula — endereços, concessionárias, agências, gratuidades e tarifas;
 - GeoSampa — camadas geográficas municipais, sob licença CC BY-SA 4.0;
+- Fundação Seade — Mortalidade, Estatísticas Vitais, regionalizações e IPVS;
 - IBGE — Censo Demográfico 2022.
 
 A metodologia completa está em [`docs/METODOLOGIA.md`](docs/METODOLOGIA.md).

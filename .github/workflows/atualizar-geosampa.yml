@@ -4,10 +4,26 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - "scripts/**"
-      - "data/reference/**"
+      - "scripts/fetch_geosampa_cemiterios.py"
+      - "scripts/fetch_geosampa_contexto.py"
+      - "scripts/fetch_ibge_districts_sp.py"
+      - "scripts/extract_ibge_income_dictionary.py"
+      - "scripts/fetch_ipvs_2022.py"
+      - "scripts/build_ipvs_context.py"
+      - "scripts/inspect_sim_mortality.py"
+      - "scripts/fetch_ossuary_annex.py"
+      - "scripts/geocode_agencias.py"
+      - "scripts/build_cemiterios_concessao.py"
+      - "scripts/spatial_join_admin.py"
+      - "scripts/build_socioeconomic_context.py"
+      - "scripts/analyze_center_periphery.py"
+      - "scripts/build_interactive_map.py"
+      - "scripts/build_static_map.py"
+      - "scripts/build_network_map.py"
+      - "data/reference/cemiterios_crematorio.csv"
+      - "data/reference/agencias_funerarias.csv"
+      - "data/reference/geosampa_mapping.csv"
       - "docs/PROTOCOLO_ESTATISTICO_REPLICAVEL.md"
-      - ".github/workflows/atualizar-geosampa.yml"
   push:
     paths:
       - "scripts/fetch_geosampa_cemiterios.py"
@@ -29,7 +45,6 @@ on:
       - "data/reference/cemiterios_crematorio.csv"
       - "data/reference/agencias_funerarias.csv"
       - "data/reference/geosampa_mapping.csv"
-      - ".github/workflows/atualizar-geosampa.yml"
 
 permissions:
   contents: write

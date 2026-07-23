@@ -1,0 +1,44 @@
+name: Validar integração Seade Mortalidade
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/fetch_seade_mortalidade.py"
+      - "tests/test_seade_mortalidade.py"
+      - "docs/FONTE_SEADE_MORTALIDADE.md"
+      - "docs/RESULTADOS_SEADE_MORTALIDADE.md"
+      - ".github/workflows/validar-seade-mortalidade.yml"
+  push:
+    paths:
+      - "scripts/fetch_seade_mortalidade.py"
+      - "tests/test_seade_mortalidade.py"
+      - "docs/FONTE_SEADE_MORTALIDADE.md"
+      - "docs/RESULTADOS_SEADE_MORTALIDADE.md"
+      - ".github/workflows/validar-seade-mortalidade.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compilar rotinas
+        run: python -m py_compile scripts/fetch_seade_mortalidade.py tests/test_seade_mortalidade.py
+
+      - name: Verificar interface da linha de comando
+        run: python scripts/fetch_seade_mortalidade.py --help
+
+      - name: Executar testes offline
+        run: python -m unittest -v tests.test_seade_mortalidade

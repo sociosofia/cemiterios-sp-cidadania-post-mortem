@@ -6,11 +6,15 @@ on:
     paths:
       - "scripts/fetch_seade_mortalidade.py"
       - "tests/test_seade_mortalidade.py"
+      - "docs/FONTE_SEADE_MORTALIDADE.md"
+      - "docs/RESULTADOS_SEADE_MORTALIDADE.md"
       - ".github/workflows/validar-seade-mortalidade.yml"
   push:
     paths:
       - "scripts/fetch_seade_mortalidade.py"
       - "tests/test_seade_mortalidade.py"
+      - "docs/FONTE_SEADE_MORTALIDADE.md"
+      - "docs/RESULTADOS_SEADE_MORTALIDADE.md"
       - ".github/workflows/validar-seade-mortalidade.yml"
 
 permissions:
@@ -32,6 +36,9 @@ jobs:
 
       - name: Compilar rotinas
         run: python -m py_compile scripts/fetch_seade_mortalidade.py tests/test_seade_mortalidade.py
+
+      - name: Verificar interface da linha de comando
+        run: python scripts/fetch_seade_mortalidade.py --help
 
       - name: Executar testes offline
         run: python -m unittest -v tests.test_seade_mortalidade

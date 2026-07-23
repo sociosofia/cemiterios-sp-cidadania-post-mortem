@@ -1,0 +1,53 @@
+name: Exportar contexto para análise distrital
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/exportar-contexto-mortalidade-distrital.yml"
+      - "data/processed/distritos_indicadores_sociais.csv"
+      - "data/processed/cemiterios_contexto_socioeconomico.csv"
+      - "data/processed/cemiterios_contexto_ipvs_2022.csv"
+      - "data/processed/cemiterios_contexto_administrativo.csv"
+      - "data/processed/cemiterios_concessao_31983.geojson"
+      - "data/raw/geosampa/distritos_31983.geojson"
+
+permissions:
+  contents: read
+
+jobs:
+  exportar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Listar arquivos disponíveis
+        run: |
+          for path in \
+            data/processed/distritos_indicadores_sociais.csv \
+            data/processed/cemiterios_contexto_socioeconomico.csv \
+            data/processed/cemiterios_contexto_ipvs_2022.csv \
+            data/processed/cemiterios_contexto_administrativo.csv \
+            data/processed/cemiterios_concessao_31983.geojson \
+            data/raw/geosampa/distritos_31983.geojson; do
+            if [ -f "$path" ]; then
+              printf '%s\t%s bytes\n' "$path" "$(stat -c%s "$path")"
+            else
+              printf 'AUSENTE\t%s\n' "$path"
+            fi
+          done | tee contexto-arquivos.txt
+
+      - name: Publicar contexto territorial
+        uses: actions/upload-artifact@v4
+        with:
+          name: contexto-mortalidade-distrital
+          if-no-files-found: warn
+          path: |
+            contexto-arquivos.txt
+            data/processed/distritos_indicadores_sociais.csv
+            data/processed/cemiterios_contexto_socioeconomico.csv
+            data/processed/cemiterios_contexto_ipvs_2022.csv
+            data/processed/cemiterios_contexto_administrativo.csv
+            data/processed/cemiterios_concessao_31983.geojson
+            data/raw/geosampa/distritos_31983.geojson
